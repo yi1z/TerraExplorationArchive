@@ -145,7 +145,7 @@ export default function LibraryArtwork({
     artworks.find((image) => /portrait|立绘|初始|main/.test(image.role)) ??
     artworks[0];
   const path = thumbnail
-    ? (art?.thumbnail ?? entry.artwork?.thumbnail ?? art?.preview ?? art?.path)
+    ? (art?.preview ?? art?.thumbnail ?? entry.artwork?.thumbnail ?? art?.path)
     : (art?.path ?? entry.artwork?.full ?? entry.artwork?.preview);
   const url = localAssetPath(path);
   const [failed, setFailed] = useState<string | null>(null);

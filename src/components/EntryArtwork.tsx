@@ -11,16 +11,16 @@ export function artworkFor(
 ) {
   const kind =
     entry.kind === "operator"
-      ? thumbnail
-        ? "thumbnail"
-        : elite
-          ? "elite"
-          : "portrait"
+      ? elite
+        ? "elite"
+        : "portrait"
       : entry.kind === "enemy"
         ? "enemy"
         : "item";
   const image =
-    (thumbnail ? catalogueAssetFor(entry.id, "thumbnail") : undefined) ??
+    (thumbnail && entry.kind !== "operator"
+      ? catalogueAssetFor(entry.id, "thumbnail")
+      : undefined) ??
     catalogueAssetFor(entry.id, kind) ??
     (entry.kind === "operator"
       ? catalogueAssetFor(entry.id, "portrait")

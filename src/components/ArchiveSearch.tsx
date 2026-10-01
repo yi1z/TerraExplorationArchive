@@ -32,6 +32,8 @@ import {
 import Dialog from "./Dialog";
 import EntryArtwork from "./EntryArtwork";
 import LibraryArtwork from "./LibraryArtwork";
+import { catalogueAssetFor } from "../data/catalogue-assets";
+import { requestedPage } from "../lib/pagination";
 
 export type SearchScope = "all" | "favorites" | "recent";
 const english: Record<(typeof libraryKinds)[number], string> = {
@@ -64,6 +66,23 @@ function ResultArtwork({
   thumbnail?: boolean;
 }) {
   const curated = entryById[entry.id];
+  if (entry.kind === "operator") {
+    const portrait = catalogueAssetFor(entry.id, "portrait");
+    return (
+      <LibraryArtwork
+        entry={{
+          ...entry,
+          artwork: {
+            ...entry.artwork,
+            thumbnail: portrait?.path,
+            full: portrait?.path,
+          },
+        }}
+        thumbnail={thumbnail}
+        decorative
+      />
+    );
+  }
   return curated ? (
     <EntryArtwork entry={curated} thumbnail={thumbnail} decorative />
   ) : (
@@ -88,6 +107,8 @@ export default function ArchiveSearch({
   const [scope, setScope] = useState<SearchScope>(initialScope);
   const [preview, setPreview] = useState<string | null>(null);
   const [page, setPage] = useState(0);
+  const [pageInput, setPageInput] = useState("1");
+  const [pageError, setPageError] = useState("");
   const { result, loading, error, library, retry } = useLibrarySearch({
     query,
     kind,
@@ -146,6 +167,10 @@ export default function ArchiveSearch({
   useEffect(() => {
     scroll.current?.scrollTo({ top: 0 });
     setPreview(null);
+  }, [page]);
+  useEffect(() => {
+    setPageInput(String(page + 1));
+    setPageError("");
   }, [page]);
   useEffect(() => {
     if (!loading && page >= pages) setPage(pages - 1);
@@ -351,6 +376,38 @@ export default function ArchiveSearch({
                   <span>
                     {page + 1} / {pages}
                   </span>
+                  <form
+                    className="page-jump"
+                    onSubmit={(event) => {
+                      event.preventDefault();
+                      if (loading) return;
+                      const next = requestedPage(pageInput, pages);
+                      if (next === null) {
+                        setPageError("请输入整数页码");
+                        return;
+                      }
+                      setPageError("");
+                      setPageInput(String(next + 1));
+                      setPage(next);
+                    }}
+                  >
+                    <label>
+                      跳至
+                      <input
+                        aria-label="跳转页码"
+                        inputMode="numeric"
+                        value={pageInput}
+                        disabled={loading}
+                        maxLength={9}
+                        onChange={(event) => setPageInput(event.target.value)}
+                        aria-invalid={!!pageError}
+                      />
+                    </label>
+                    <button type="submit" disabled={loading}>
+                      跳转
+                    </button>
+                    {pageError && <small role="status">{pageError}</small>}
+                  </form>
                   <button
                     disabled={page >= pages - 1 || loading}
                     onClick={() => setPage((value) => value + 1)}

@@ -1,5 +1,32 @@
 export const clamp = (v: number, min: number, max: number) =>
   Math.max(min, Math.min(max, v));
+export const neutralPointer = {
+  x: 50,
+  y: 50,
+  tiltX: 0,
+  tiltY: 0,
+  magnetX: 0,
+  magnetY: 0,
+};
+export type PointerResponse = typeof neutralPointer;
+export function approachPointer(
+  current: PointerResponse,
+  target: PointerResponse,
+  elapsedMs: number,
+) {
+  const alpha = 1 - Math.exp(-clamp(elapsedMs, 0, 64) / 90);
+  const result = { ...current };
+  let settled = true;
+  for (const key of Object.keys(result) as (keyof PointerResponse)[]) {
+    const value = current[key] + (target[key] - current[key]) * alpha;
+    if (Math.abs(target[key] - value) < 0.01) result[key] = target[key];
+    else {
+      result[key] = value;
+      settled = false;
+    }
+  }
+  return { value: result, settled };
+}
 export function pointerResponse(
   x: number,
   y: number,
