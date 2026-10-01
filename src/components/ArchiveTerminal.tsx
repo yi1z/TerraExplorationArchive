@@ -521,6 +521,7 @@ export default function ArchiveTerminal({
       }
       aria-label={`${entry.name}档案主舞台`}
     >
+      <div className="dossier-focus-scrim" aria-hidden="true" />
       <VisualScene
         entry={entry}
         reading={dossier.reading}

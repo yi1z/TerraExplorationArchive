@@ -2,6 +2,37 @@
   --dossier-accent: var(--terminal-accent);
   --dossier-secondary: var(--terminal-blue);
 }
+.dossier-focus-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background: #060d142e;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 180ms ease,
+    visibility 180ms;
+}
+.archive-terminal[data-dossier-phase="departing"] > .dossier-focus-scrim,
+.archive-terminal[data-dossier-phase="reading"] > .dossier-focus-scrim {
+  opacity: 1;
+  visibility: visible;
+}
+.archive-terminal.interface-hidden > .dossier-focus-scrim {
+  opacity: 0;
+  visibility: hidden;
+}
+.reduce-motion .dossier-focus-scrim {
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dossier-focus-scrim {
+    transition: none;
+  }
+}
 .database-app:has(.archive-terminal[data-dossier-phase="reading"])
   .terminal-connection,
 .database-app:has(.archive-terminal[data-dossier-phase="returning"])

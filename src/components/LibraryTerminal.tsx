@@ -155,6 +155,7 @@ export default function LibraryTerminal({
       }
       aria-label={`${record.name}档案主舞台`}
     >
+      <div className="dossier-focus-scrim" aria-hidden="true" />
       <VisualScene
         entry={record}
         reading={dossier.reading}
