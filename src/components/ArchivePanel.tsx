@@ -12,7 +12,6 @@ import {
   RotateCcw,
 } from "lucide-react";
 import {
-  entries,
   entryById,
   events,
   kindNames,
@@ -25,6 +24,9 @@ import Emblem from "./Emblem";
 import GameArtwork from "./GameArtwork";
 import AssetCredits from "./AssetCredits";
 import EntryArtwork from "./EntryArtwork";
+import LibraryArtwork from "./LibraryArtwork";
+import { useLibraryEntry } from "../lib/library";
+import { relatedRecords, relatedMapTarget } from "../lib/related-records";
 import { useFloatingPanel } from "../lib/useFloatingPanel";
 export default function ArchivePanel() {
   const {
@@ -32,12 +34,14 @@ export default function ArchivePanel() {
     preferences,
     close,
     select,
+    openEntry,
     favorite,
     toggleCompare,
     compare,
     togglePreference,
     activeEvent,
   } = useArchiveStore();
+  const { entry: libraryEntry } = useLibraryEntry(selected);
   const { panel, grip, reset } = useFloatingPanel();
   const body = useRef<HTMLDivElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -67,35 +71,7 @@ export default function ArchivePanel() {
   );
   const saved = preferences.favorites.includes(entry.id);
   const sections = visibleSections(entry, preferences.spoilers);
-  const relations = new Map<string, string>();
-  for (const relation of entry.relationships ??
-    entry.related.map((target) => ({
-      target,
-      label: "关联档案",
-      spoiler: false,
-    }))) {
-    if (
-      entryById[relation.target] &&
-      (preferences.spoilers || !relation.spoiler)
-    )
-      relations.set(relation.target, relation.label);
-  }
-  for (const candidate of entries) {
-    if (
-      candidate.id === entry.id ||
-      !["operator", "enemy", "item"].includes(candidate.kind)
-    )
-      continue;
-    const related = candidate.relationships
-      ? candidate.relationships.some(
-          (relation) =>
-            relation.target === entry.id &&
-            (preferences.spoilers || !relation.spoiler),
-        )
-      : candidate.related.includes(entry.id);
-    if (related && !relations.has(candidate.id))
-      relations.set(candidate.id, kindNames[candidate.kind]);
-  }
+  const relations = relatedRecords(entry, preferences.spoilers, libraryEntry);
   return (
     <aside
       ref={panel}
@@ -246,16 +222,20 @@ export default function ArchivePanel() {
         <section className="related-section">
           <div className="section-label">
             <span className="section-number">CONTINUE EXPLORING</span>
-            <span>关联档案 · {relations.size}</span>
+            <span>关联档案 · {relations.length}</span>
           </div>
-          {[...relations].map(([id, label]) => (
+          {relations.map(({ target: id, label, record }) => (
             <button
               key={id}
-              onClick={() => select(id)}
-              data-record-kind={entryById[id].kind}
+              onClick={() => {
+                const mapTarget = relatedMapTarget(record);
+                if (mapTarget) select(mapTarget);
+                else openEntry(id);
+              }}
+              data-record-kind={record.kind}
             >
               <span className="related-icon">
-                {["operator", "enemy", "item"].includes(entryById[id].kind) ? (
+                {entryById[id] ? (
                   <EntryArtwork
                     entry={entryById[id]}
                     thumbnail
@@ -263,13 +243,19 @@ export default function ArchivePanel() {
                     className="game-artwork"
                   />
                 ) : (
-                  <Emblem id={id} />
+                  <LibraryArtwork
+                    entry={record}
+                    thumbnail
+                    decorative
+                    className="game-artwork"
+                  />
                 )}
               </span>
               <span>
-                {entryById[id].name}
+                {record.name}
                 <small>
-                  {label} / {entryById[id].en}
+                  {label}
+                  {record.en ? ` / ${record.en}` : ""}
                 </small>
               </span>
               <ArrowUpRight size={17} />

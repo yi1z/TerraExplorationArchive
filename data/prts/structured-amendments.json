@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-01",
+  "potential": [
+    {
+      "id": "prts-operator-1719",
+      "characterId": "char_235_jesica",
+      "rank": 4,
+      "attribute": "攻击",
+      "value": 24,
+      "source": {
+        "title": "杰西卡 · 潜能模板交叉核验",
+        "url": "https://prts.wiki/w/杰西卡?oldid=392142",
+        "pageId": 1719,
+        "revisionId": 392142,
+        "publisher": "PRTS 玩家社区 / 游戏资料"
+      },
+      "gameSource": {
+        "url": "https://github.com/Kengxxiao/ArknightsGameData/blob/a550f5e048bb94e7cdefc6eb97a4091f0c4c7add/zh_CN/gamedata/excel/character_table.json",
+        "server": "zh_CN",
+        "commit": "a550f5e048bb94e7cdefc6eb97a4091f0c4c7add",
+        "path": "zh_CN/gamedata/excel/character_table.json",
+        "sha256": "68e3a3b5ee0d407ce234afaa5867c6fda6379a6843c7d5317a7bbda4779f8697",
+        "bytes": 14975251,
+        "retrievedAt": "2026-10-01"
+      },
+      "gameEvidence": {
+        "description": "攻击力+24",
+        "modifier": { "attributeType": "ATK", "formulaItem": "ADDITION", "value": 24 },
+        "prtsAttributeValue": 24,
+        "prtsPotentialDescription": "攻击力+23"
+      },
+      "note": "潜能4按固定国服游戏数据核验为攻击力+24：角色 char_235_jesica 的文字描述与 ATK 数值修正均为24。PRTS 修订392142的属性模板同为24，但同页潜能提升模板写作攻击力+23；原模板记录继续保留，以说明来源差异。游戏表版本为 a550f5e048bb94e7cdefc6eb97a4091f0c4c7add。"
+    }
+  ],
+  "acquisition": [
+    {
+      "id": "prts-operator-1719",
+      "stageId": "prts-stage-2073",
+      "sources": [
+        { "title": "杰西卡 · 获得方式", "url": "https://prts.wiki/w/杰西卡?oldid=392142", "pageId": 1719, "revisionId": 392142, "publisher": "PRTS 玩家社区 / 游戏资料" },
+        { "title": "TR-3 精确打击 · 首次奖励", "url": "https://prts.wiki/w/TR-3_精确打击?oldid=254434", "pageId": 2073, "revisionId": 254434, "publisher": "PRTS 玩家社区 / 游戏资料" }
+      ]
+    }
+  ],
+  "relationships": [
+    { "id": "prts-operator-1719", "relationships": [{ "target": "prts-operator-58745", "label": "异格干员", "reverseLabel": "同一人物的早期干员档案", "spoiler": true }] }
+  ]
+}

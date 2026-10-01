@@ -759,7 +759,8 @@ export const useArchiveStore = create<Store>((set, get) => ({
       selected: r.selected,
       dossierOpen: r.dossierOpen,
       dossierSection: r.dossierSection,
-      layers: r.layers,
+      // Search and archive hashes do not carry atlas layer settings.
+      layers: r.view === "atlas" ? r.layers : current.layers,
       kind: catalogueView ? r.kind : current.kind,
       facet: catalogueView ? r.facet : current.facet,
       releaseFilter: catalogueView ? r.releaseFilter : current.releaseFilter,

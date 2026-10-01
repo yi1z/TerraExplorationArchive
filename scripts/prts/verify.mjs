@@ -11,6 +11,7 @@ import {
 } from "./wikitext.mjs";
 import { gameplayFields } from "./gameplay.mjs";
 import { taskMapRules } from "./support.mjs";
+import { loadLegacy } from "./normalize.mjs";
 
 assert.deepEqual(splitTop("a|{{color|red|x=y}}|[[target|label]]"), [
   "a",
@@ -115,6 +116,61 @@ for (const shard of manifest.detailShards) {
 }
 const ids = new Set(records.map((record) => record.id));
 assert.equal(ids.size, records.length, "Unique canonical IDs");
+const recordById = new Map(records.map((record) => [record.id, record]));
+assert.equal(
+  coverage.tokenRelationships.unresolved.length,
+  0,
+  "Individual tokens require unambiguous game IDs and matching purpose",
+);
+assert.equal(
+  coverage.tokenRelationships.matched.length,
+  coverage.tokenRelationships.ordinary + coverage.tokenRelationships.kernel,
+);
+for (const match of coverage.tokenRelationships.matched) {
+  const token = recordById.get(match.id);
+  const owner = recordById.get(match.target);
+  assert.ok(owner.aliases.includes(match.gameId));
+  assert.ok(
+    token.relationships.some(
+      (r) => r.target === owner.id && r.label === "潜能提升干员",
+    ),
+  );
+  assert.ok(
+    owner.relationships.some(
+      (r) => r.target === token.id && r.label === match.category,
+    ),
+  );
+}
+for (const [tokenId, ownerId] of [
+  ["prts-item-36817", "prts-operator-36791"],
+  ["prts-item-77601", "prts-operator-77286"],
+])
+  assert.equal(
+    recordById
+      .get(tokenId)
+      .relationships.find((r) => r.label === "潜能提升干员").target,
+    ownerId,
+    "Namesakes must not replace the game-ID owner",
+  );
+const reviewedJessica = recordById.get("prts-operator-1719");
+assert.equal(reviewedJessica.fields.attributes.潜能提升[2].变化, "24");
+assert.equal(reviewedJessica.fields.潜能核验.核验结果, "攻击力+24");
+assert.equal(
+  reviewedJessica.templates.find((t) => t.name === "潜能提升").params.潜能4,
+  "攻击力+23",
+);
+assert.ok(
+  reviewedJessica.relationships.some(
+    (r) => r.target === "prts-stage-2073" && r.label === "主线获取关卡",
+  ),
+);
+assert.ok(
+  recordById
+    .get("prts-stage-2073")
+    .relationships.some(
+      (r) => r.target === reviewedJessica.id && r.label === "首次通关干员奖励",
+    ),
+);
 assert.equal(
   records.length,
   Object.values(manifest.counts).reduce((a, b) => a + b, 0),
@@ -178,6 +234,44 @@ const search = new Map();
 for (const shard of manifest.searchShards)
   for (const record of (await json(path.resolve("public", shard.path))).records)
     search.set(record.id, record);
+const currentLeithanien = loadLegacy().entries.find(
+  (entry) => entry.id === "leithanien",
+);
+const publishedLeithanien = recordById.get("leithanien");
+for (const fact of currentLeithanien.facts) {
+  assert.ok(
+    publishedLeithanien.facts.some(
+      (published) =>
+        published.label === fact.label && published.value === fact.value,
+    ),
+    "Current curated facts are included in the snapshot",
+  );
+  assert.ok(
+    search
+      .get("leithanien")
+      .text.includes(
+        `${fact.label} ${fact.value}`.normalize("NFKC").toLowerCase(),
+      ),
+    "Current curated facts are searchable",
+  );
+}
+for (const section of currentLeithanien.sections) {
+  assert.ok(
+    publishedLeithanien.sections.some(
+      (published) =>
+        published.title === section.title && published.body === section.body,
+    ),
+    "Current curated prose is included in the snapshot",
+  );
+  assert.ok(
+    section.spoiler
+      ? search.get("leithanien").spoilerText.includes(section.body)
+      : search
+          .get("leithanien")
+          .text.includes(section.body.normalize("NFKC").toLowerCase()),
+    "Current curated prose uses the correct search spoiler channel",
+  );
+}
 for (const record of records) {
   assert.ok(
     record.name && record.source.url.startsWith("https://"),

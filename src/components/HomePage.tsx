@@ -124,16 +124,13 @@ export default function HomePage() {
             href="#home-pathways"
             onClick={(event) => {
               event.preventDefault();
-              document
-                .getElementById("home-pathways")
-                ?.scrollIntoView({
-                  behavior:
-                    store.preferences.reducedMotion ||
-                    window.matchMedia("(prefers-reduced-motion: reduce)")
-                      .matches
-                      ? "instant"
-                      : "smooth",
-                });
+              document.getElementById("home-pathways")?.scrollIntoView({
+                behavior:
+                  store.preferences.reducedMotion ||
+                  window.matchMedia("(prefers-reduced-motion: reduce)").matches
+                    ? "instant"
+                    : "smooth",
+              });
             }}
           >
             继续探索 <ArrowDown size={14} />

@@ -30,7 +30,7 @@ const fixture = (
   artworkRefs: [],
 });
 describe("reviewed snapshot amendments", () => {
-  it("shows Jessica source conflicts without replacing either recorded potential value", () => {
+  it("preserves imported Jessica verification without restoring the obsolete pending warning", () => {
     const original = fixture("prts-operator-1719");
     original.fields = {
       attributes: {
@@ -41,20 +41,23 @@ describe("reviewed snapshot amendments", () => {
       },
     };
     original.templates = [{ name: "潜能提升", params: { 潜能4: "攻击力+23" } }];
+    original.sections = [
+      {
+        title: "潜能数值核验",
+        body: "国服固定版本数值+24，PRTS旧模板+23，已交叉核验。",
+        sourceKind: "gameplay",
+      },
+    ];
     original.missingFacts = ["既有缺失说明"];
     const corrected = applyLibraryDetailOverrides(original);
     expect(corrected.fields).toBe(original.fields);
     expect(corrected.templates).toBe(original.templates);
+    expect(corrected.sections).toBe(original.sections);
     expect(corrected.missingFacts).toContain("既有缺失说明");
     expect(
-      corrected.missingFacts?.some(
-        (note) =>
-          note.includes("392142") &&
-          note.includes("+24") &&
-          note.includes("+23"),
-      ),
-    ).toBe(true);
-    expect(applyLibraryDetailOverrides(corrected).missingFacts).toHaveLength(2);
+      corrected.missingFacts?.some((note) => note.includes("待核验")),
+    ).toBe(false);
+    expect(applyLibraryDetailOverrides(corrected).missingFacts).toHaveLength(1);
     expect(readableValue("re_deploy")).toBe("再部署时间变化（秒）");
   });
   it("preserves downloaded source and gameplay fields while adding reciprocal spoiler links", () => {

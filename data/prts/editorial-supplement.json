@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "leithanien",
+      "kind": "country",
+      "sourceTitle": "泰拉大典:地理/莱塔尼亚",
+      "relationships": [
+        {
+          "target": "prts-world-1ca514a9faf79f9f",
+          "label": "历史统治者",
+          "reverseLabel": "统治地区",
+          "spoiler": true
+        },
+        {
+          "target": "prts-world-9031508408cc3ebb",
+          "label": "双子女皇",
+          "reverseLabel": "统治地区",
+          "spoiler": true
+        },
+        {
+          "target": "prts-world-a2d8d56efa54af41",
+          "label": "境内城市",
+          "reverseLabel": "所属国家"
+        },
+        {
+          "target": "prts-world-89fa6649ef079454",
+          "label": "维谢海姆领主",
+          "reverseLabel": "所属国家",
+          "spoiler": true
+        },
+        {
+          "target": "prts-world-2f7937acf52e8113",
+          "label": "品质认证机构",
+          "reverseLabel": "所属国家"
+        },
+        {
+          "target": "prts-world-e4b25f12166b4813",
+          "label": "艺术学府",
+          "reverseLabel": "所属国家"
+        },
+        {
+          "target": "prts-world-2391048ce2bf3947",
+          "label": "高等学府",
+          "reverseLabel": "所属国家"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读本地固定修订的相关情报后原创归纳；不采用页面考据区的现实原型推测",
+        "sourcePageId": 21739,
+        "sourceRevisionId": 337057,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E5%9C%B0%E7%90%86%2F%E8%8E%B1%E5%A1%94%E5%B0%BC%E4%BA%9A?oldid=337057",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-story-39850",
+      "sourceTitle": "杰西卡/干员密录/1",
+      "kind": "story",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "密录提要",
+          "body": "杰西卡准备离开黑钢回到家族企业。雷神工业的瑞蒙以父亲的期望、她的伤势和不够出众的表现劝她回家；尽管装备测试同事认可她的判断，她仍把自己视为勉强合格的新人。雷蛇此时找到她，依据考核记录与耶兰德的推荐，邀请她担任副手。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        },
+        {
+          "title": "转折与选择",
+          "body": "雷蛇用一次短暂对练检验她的射击和应变，说明经验不足不等于能力不合格。听到雷蛇坦言自己只是想做雇佣兵，杰西卡重新确认了外出见识他人生活的初衷。了解B.P.R.S.的感染风险与训练要求后，她撤销离职申请，并亲自请瑞蒙转告父亲：她要留在黑钢，通过保护他人寻找自己的道路。结尾父亲承认让瑞蒙说重话是为了试探她的决心，并接受她继续探索的选择。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "prts-operator-1719",
+          "label": "密录主角",
+          "reverseLabel": "干员密录",
+          "spoiler": true
+        },
+        {
+          "target": "prts-operator-1758",
+          "label": "关键登场干员",
+          "reverseLabel": "登场密录",
+          "spoiler": true
+        },
+        {
+          "target": "prts-world-26113",
+          "label": "故事发生组织",
+          "reverseLabel": "相关密录",
+          "spoiler": true
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "完整阅读缓存修订的密录剧本与演出指令后原创归纳具体事件；替换此前仅依据密录宣传短介绍的笼统提要",
+        "sourcePageId": 39850,
+        "sourceRevisionId": 427345,
+        "sourceUrl": "https://prts.wiki/w/%E6%9D%B0%E8%A5%BF%E5%8D%A1%2F%E5%B9%B2%E5%91%98%E5%AF%86%E5%BD%95%2F1?oldid=427345",
+        "reviewedAt": "2026-10-01"
+      }
+    }
+  ]
+}

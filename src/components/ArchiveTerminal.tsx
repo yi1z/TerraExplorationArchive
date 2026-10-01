@@ -27,50 +27,19 @@ import {
 } from "../data/archive";
 import type { ArchiveEntry } from "../data/types";
 import { useArchiveStore } from "../lib/state";
-import { useLibrary } from "../lib/library";
+import { useLibrary, useLibraryEntry } from "../lib/library";
+import { libraryKindNames } from "../data/library-types";
+import { relatedRecords, type RelatedRecord } from "../lib/related-records";
 import { mapPoint } from "../lib/map";
 import DossierFrame, { DossierVisibilityContext } from "./DossierFrame";
 import { useDossier } from "../lib/useDossier";
 import { sectionForRecord, type DossierSection } from "../lib/dossier";
 import { visualProfileFor } from "../data/visual-profiles";
 import EntryArtwork, { artworkFor } from "./EntryArtwork";
+import LibraryArtwork from "./LibraryArtwork";
 import { catalogueAssetFor } from "../data/catalogue-assets";
 import VisualScene from "./VisualScene";
 import { LibraryGallery, LibrarySupplement } from "./LibraryDossier";
-
-export function relatedRecords(entry: ArchiveEntry, spoilers: boolean) {
-  const own = (
-    entry.relationships ??
-    entry.related.map((target) => ({ target, label: "关联档案" }))
-  ).filter((r) => spoilers || !("spoiler" in r && r.spoiler));
-  const incoming = entries
-    .filter((e) => e.id !== entry.id)
-    .flatMap((e) => {
-      const relation = e.relationships?.find(
-        (r) => r.target === entry.id && (spoilers || !r.spoiler),
-      );
-      return relation
-        ? [
-            {
-              target: e.id,
-              label:
-                relation.label === "所属势力"
-                  ? "所属干员 / 关联记录"
-                  : "关联档案",
-            },
-          ]
-        : !e.relationships && e.related.includes(entry.id)
-          ? [{ target: e.id, label: "关联档案" }]
-          : [];
-    });
-  return [
-    ...new Map(
-      [...own, ...incoming]
-        .filter((r) => entryById[r.target] && r.target !== entry.id)
-        .map((r) => [r.target, r]),
-    ).values(),
-  ];
-}
 
 function StatBlocks({ entry }: { entry: ArchiveEntry }) {
   const stats =
@@ -106,16 +75,17 @@ function StatBlocks({ entry }: { entry: ArchiveEntry }) {
 
 export function DossierContent({
   entry,
+  relations,
   onClose,
   closing = false,
 }: {
   entry: ArchiveEntry;
+  relations: RelatedRecord[];
   onClose: () => void;
   closing?: boolean;
 }) {
   const store = useArchiveStore();
   const tab = sectionForRecord(store.dossierSection, true);
-  const relations = relatedRecords(entry, store.preferences.spoilers);
   const art = artworkFor(entry);
   const isGame = ["operator", "enemy", "item"].includes(entry.kind);
   const tabs: [DossierSection, string][] = [
@@ -362,24 +332,28 @@ export function DossierContent({
           <div className="related-records">
             {relations.map((r) => (
               <button key={r.target} onClick={() => openRelated(r.target)}>
-                <div className={`related-art type-${entryById[r.target].kind}`}>
-                  <EntryArtwork
-                    entry={entryById[r.target]}
-                    thumbnail
-                    decorative
-                  />
+                <div className={`related-art type-${r.record.kind}`}>
+                  {entryById[r.target] ? (
+                    <EntryArtwork
+                      entry={entryById[r.target]}
+                      thumbnail
+                      decorative
+                    />
+                  ) : (
+                    <LibraryArtwork entry={r.record} thumbnail decorative />
+                  )}
                 </div>
                 <span>
                   <small>{r.label}</small>
-                  <strong>{entryById[r.target].name}</strong>
-                  <em>{kindNames[entryById[r.target].kind]}</em>
+                  <strong>{r.record.name}</strong>
+                  <em>{libraryKindNames[r.record.kind]}</em>
                 </span>
                 <ArrowUpRight size={18} />
               </button>
             ))}
           </div>
           {!relations.length && (
-            <p className="record-note">当前精选资料中暂无关联档案。</p>
+            <p className="record-note">当前可见资料中暂无关联档案。</p>
           )}
         </>
       )}
@@ -445,6 +419,7 @@ export default function ArchiveTerminal({
     (store.selected && entryById[store.selected]) ||
     entryById["operator-amiya"] ||
     entries[0];
+  const { entry: libraryEntry } = useLibraryEntry(entry.id);
   const heading = useRef<HTMLHeadingElement>(null);
   const dossier = useDossier(entry.id, hidden);
   const profile = visualProfileFor(entry);
@@ -459,7 +434,11 @@ export default function ArchiveTerminal({
     setLastId(entry.id);
     setElite(false);
   }
-  const related = relatedRecords(entry, store.preferences.spoilers);
+  const related = relatedRecords(
+    entry,
+    store.preferences.spoilers,
+    libraryEntry,
+  );
   const librarySiblings = library.summaries.filter(
     (e) =>
       e.kind === entry.kind &&
@@ -679,7 +658,7 @@ export default function ArchiveTerminal({
           </span>
           {related.slice(0, 3).map((r) => (
             <button key={r.target} onClick={() => store.openEntry(r.target)}>
-              <span>{entryById[r.target].name}</span>
+              <span>{r.record.name}</span>
               <ArrowUpRight size={13} />
             </button>
           ))}
@@ -732,6 +711,7 @@ export default function ArchiveTerminal({
           <DossierContent
             key={`dossier-${entry.id}`}
             entry={entry}
+            relations={related}
             closing={dossier.phase === "returning"}
             onClose={dossier.close}
           />

@@ -1,5 +1,12 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import {
+  mkdtemp,
+  mkdir,
+  readFile,
+  rm,
+  unlink,
+  writeFile,
+} from "node:fs/promises";
 import path from "node:path";
 import os from "node:os";
 import {
@@ -61,6 +68,24 @@ async function fixture() {
   return root;
 }
 describe("online publication tree", () => {
+  it("refuses incomplete art metadata before replacing an existing publication", async () => {
+    const root = await fixture();
+    await publishOnline({ root });
+    const output = path.join(root, "artifacts/online-preview/manifest.json");
+    const before = await readFile(output, "utf8");
+    const source = path.join(
+      root,
+      `public/assets/library/entries/${record.id}.json`,
+    );
+    await unlink(source);
+    await expect(publishOnline({ root })).rejects.toThrow("metadata missing");
+    expect(await readFile(output, "utf8")).toBe(before);
+    await writeFile(source, JSON.stringify({ artworks: {} }));
+    await expect(publishOnline({ root })).rejects.toThrow("artworks array");
+    expect(await readFile(output, "utf8")).toBe(before);
+    await writeFile(source, JSON.stringify({ artworks: [] }));
+    expect((await publishOnline({ root })).artworks).toBe(0);
+  });
   it("writes deterministic compact indices and only public safe artwork metadata", async () => {
     const root = await fixture();
     const first = await publishOnline({ root });

@@ -138,6 +138,7 @@
   margin-bottom: 16px;
   overflow-x: auto;
   scrollbar-width: thin;
+  scrollbar-color: #526e78 #151d23;
 }
 .dossier-workspace .dossier-tabs button {
   flex: none;

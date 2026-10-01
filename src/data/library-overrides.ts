@@ -21,9 +21,6 @@ export const libraryDetailOverrides: Record<
     relationships: [
       { target: "prts-operator-58745", label: "异格干员", spoiler: true },
     ],
-    missingFacts: [
-      "来源数值冲突待核验：PRTS 修订 392142 的属性模板记录攻击潜能 +24，同一修订的潜能提升模板记录攻击力 +23。两值均保留，尚待游戏结构化数据交叉核验。",
-    ],
   },
   "prts-operator-58745": {
     source: {
@@ -53,7 +50,7 @@ export function applyLibraryDetailOverrides(
     const facts = new Map(entry.facts.map((fact) => [fact.label, fact]));
     for (const fact of curated.facts) facts.set(fact.label, fact);
     const amendmentSource: LibrarySource = {
-      title: source.title + " · 地理与教育补订",
+      title: source.title + " · 地理、制度与机构补订",
       url: source.url + "?oldid=337057",
       pageId: 21739,
       revisionId: 337057,

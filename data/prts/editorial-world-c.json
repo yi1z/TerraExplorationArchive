@@ -1,0 +1,628 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "prts-world-35043850913748ef",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "莱塔尼亚北方的山系，环境荒凉，终年积雪。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "莱塔尼亚北方的山系，环境荒凉，终年积雪。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "leithanien",
+          "label": "所属地区",
+          "reverseLabel": "地域档案"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E5%86%AC%E7%81%B5%E5%B1%B1%E8%84%89",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-fd3d9750f035199c",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "维谢海姆供感染者集中居住的城区，夕照厅坐落在这里。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "维谢海姆供感染者集中居住的城区，夕照厅坐落在这里。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "prts-world-a2d8d56efa54af41",
+          "label": "所属城市",
+          "reverseLabel": "城市分区"
+        },
+        {
+          "target": "leithanien",
+          "label": "所属地区",
+          "reverseLabel": "地域档案"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E5%A4%95%E7%85%A7%E5%8C%BA",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-28113",
+      "sourceTitle": "泰拉大典:地理/长泉镇",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "长泉镇位于萨尔贡喇叭山东侧的峡谷附近，是巴耶勒王酋治下的图拉家族领地，镇名来自曾为周边供水的水井。",
+      "sections": [
+        {
+          "title": "地理与治理",
+          "body": "长泉镇也被简称为“长泉”，坐落在喇叭山东侧峡谷附近。图拉家族代巴耶勒王酋管理当地，领主的指令对进入领地的人具有近似法律的约束力；领主卫队负责巡逻、保护居民及抵御外敌。",
+          "spoiler": false,
+          "sourceKind": "community"
+        },
+        {
+          "title": "感染者与设施",
+          "body": "当地设有感染者社区，领主要求卫队同样保护感染者，并限制非感染者随意靠近社区，但偏见仍未消失。北部领主宅邸建有地下避难所；南缘的“瞭望塔33号”是罗德岛安全屋，由奥克芬看守，为外勤人员提供补给与备用武器。",
+          "spoiler": false,
+          "sourceKind": "community"
+        },
+        {
+          "title": "开矿与继承纷争",
+          "body": "并入萨尔贡后，长泉镇作为军功封赏交给图拉家族。采掘源石带来财富，也让矿石病从矿工蔓延至全镇；旧领主在浅层矿藏耗尽后停止开采，禁止继续深入地下。其去世后，皮加尔继位，兄长德鲁奇企图利用变异感染生物夺权，最终被介入的罗德岛干员和外来佣兵挫败。",
+          "spoiler": true,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "sargon",
+          "label": "所属地区",
+          "reverseLabel": "地域档案"
+        },
+        {
+          "target": "prts-world-2c6593f70d274a88",
+          "label": "同地百科短条目",
+          "reverseLabel": "详细地理专题"
+        },
+        {
+          "target": "rhodes-island",
+          "label": "安全屋运营方",
+          "reverseLabel": "安全屋所在地区"
+        },
+        {
+          "target": "prts-world-db4fed49bc834dbf",
+          "label": "境内安全屋",
+          "reverseLabel": "所在城镇"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读独立地理专题缓存修订172755全文后原创归纳；与既有已整理的百科长泉镇短条目分别保留身份，并互相链接",
+        "sourcePageId": 28113,
+        "sourceRevisionId": 172755,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E5%9C%B0%E7%90%86%2F%E9%95%BF%E6%B3%89%E9%95%87?oldid=172755",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-968f6d9276104ab4",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "萨尔贡境内的一座城市，设有罗德岛办事处。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "萨尔贡境内的一座城市，设有罗德岛办事处。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "sargon",
+          "label": "所属地区",
+          "reverseLabel": "地域档案"
+        },
+        {
+          "target": "rhodes-island",
+          "label": "驻地办事处",
+          "reverseLabel": "办事处所在城市"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E5%8F%8C%E6%B2%B3%E5%9F%8E",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-f5ab6e8f0db9bcbb",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "伦蒂尼姆下辖的城区，也是皇家戴尔兵工厂所在的地方。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "伦蒂尼姆下辖的城区，也是皇家戴尔兵工厂所在的地方。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "londinium",
+          "label": "所属城市",
+          "reverseLabel": "城市分区"
+        },
+        {
+          "target": "victoria",
+          "label": "所属地区",
+          "reverseLabel": "地域档案"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E6%B5%B7%E5%B8%83%E9%87%8C%E5%8C%BA",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-4f71453c256ecaf8",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "维多利亚的有港口地区，干员微风来自这里。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "维多利亚的有港口地区，干员微风来自这里。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "victoria",
+          "label": "所属地区",
+          "reverseLabel": "地域档案"
+        },
+        {
+          "target": "prts-operator-9402",
+          "label": "出身干员",
+          "reverseLabel": "故乡"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E5%A4%9A%E4%BC%A6%E9%83%A1",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-1c15ad288dce8fc2",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "群山环绕的炎国城市，嗜辣是当地饮食的一项特色。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "群山环绕的炎国城市，嗜辣是当地饮食的一项特色。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "yan",
+          "label": "所属地区",
+          "reverseLabel": "地域档案"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E5%B0%9A%E8%9C%80",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-7fb813feebbe9e35",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "炎国的一座城市，城外可见灰齐山；这里也是干员乌有的出生地。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "炎国的一座城市，城外可见灰齐山；这里也是干员乌有的出生地。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "yan",
+          "label": "所属地区",
+          "reverseLabel": "地域档案"
+        },
+        {
+          "target": "prts-operator-26174",
+          "label": "出身干员",
+          "reverseLabel": "故乡"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E5%8B%BE%E5%90%B4%E5%9F%8E",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-6dcf39214ab629d2",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "炎国的边塞城市。大炎军队曾依托这里抵抗邪魔的进犯。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "炎国的边塞城市。大炎军队曾依托这里抵抗邪魔的进犯。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "yan",
+          "label": "所属地区",
+          "reverseLabel": "地域档案"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E7%8E%89%E9%97%A8",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-fad678729074dbf8",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "玻利瓦尔境内辽阔的平原区域，该国的名称也取自这片平原。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "玻利瓦尔境内辽阔的平原区域，该国的名称也取自这片平原。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "bolivar",
+          "label": "所属地区",
+          "reverseLabel": "地域档案"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E7%8E%BB%E5%88%A9%E7%93%A6%E5%B0%94%E5%B9%B3%E5%8E%9F",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-15eb9a0da4dcf33c",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "前往卡西米尔北部时会经过的小村落。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "前往卡西米尔北部时会经过的小村落。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "kazimierz",
+          "label": "通往该地区",
+          "reverseLabel": "沿途村落"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E6%BB%B4%E6%B0%B4%E6%9D%91",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-e0fd525484ce714a",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "一片被大陆围合的海域，汐斯塔市位于其中。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "一片被大陆围合的海域，汐斯塔市位于其中。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "siesta",
+          "label": "海域中的城市",
+          "reverseLabel": "周边海域"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E5%86%85%E6%B5%B7",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-252b6323bb8bd3be",
+      "sourceTitle": "泰拉大典:百科/地理",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "雷姆必拓的城市之一，也是干员安赛尔的故乡。",
+      "sections": [
+        {
+          "title": "地理提要",
+          "body": "雷姆必拓的城市之一，也是干员安赛尔的故乡。",
+          "spoiler": false,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "rim-billiton",
+          "label": "所属地区",
+          "reverseLabel": "地域档案"
+        },
+        {
+          "target": "prts-operator-1714",
+          "label": "出身干员",
+          "reverseLabel": "故乡"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读缓存地理百科固定修订后逐条原创改写；原文仅短条目，保留其信息边界，不推测坐标或扩写未记载历史",
+        "sourcePageId": 21541,
+        "sourceRevisionId": 222143,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%99%BE%E7%A7%91%2F%E5%9C%B0%E7%90%86?oldid=222143#%E9%93%81%E8%85%95%E5%9F%8E",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-26113",
+      "sourceTitle": "泰拉大典:组织/黑钢",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "黑钢国际是总部位于哥伦比亚的跨国安全承包商，提供人员护卫、防务顾问及灾后安保服务。",
+      "sections": [
+        {
+          "title": "业务与人员",
+          "body": "黑钢的服务从雇佣保镖延伸至防务合约，也覆盖灾后后勤和工程抢险。武装雇员需接受培训与定期考核，回到巴伦基地述职；新兵中心负责把缺乏作战经验的新人训练成正式人员。",
+          "spoiler": false,
+          "sourceKind": "community"
+        },
+        {
+          "title": "部门与基地",
+          "body": "行政总部以外，主要业务分为武装人力派遣、装备与应用技术、矿石病与生化威胁处置。B.P.R.S.承担感染源和危险物质处置等任务。巴伦基地由矿业平台和退役军舰改造，兼具行政、补给及训练功能。",
+          "spoiler": false,
+          "sourceKind": "community"
+        },
+        {
+          "title": "发展与合作",
+          "body": "组织由哥伦比亚退伍军人为主的佣兵团发展而来，巴伦矿场事件后逐步扩大国际业务，并于1086年正式注册。雇员感染矿石病导致部分合约流失；黑钢安排芙兰卡前往罗德岛治疗，随后与罗德岛建立合作。",
+          "spoiler": true,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "columbia",
+          "label": "总部地区",
+          "reverseLabel": "组织专题"
+        },
+        {
+          "target": "rhodes-island",
+          "label": "医疗与业务合作",
+          "reverseLabel": "合作组织",
+          "spoiler": true
+        },
+        {
+          "target": "prts-operator-1719",
+          "label": "相关干员",
+          "reverseLabel": "所属组织专题"
+        },
+        {
+          "target": "prts-operator-1758",
+          "label": "相关干员",
+          "reverseLabel": "所属组织专题"
+        },
+        {
+          "target": "prts-operator-1744",
+          "label": "相关干员",
+          "reverseLabel": "所属组织专题"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读本地固定修订的相关情报后原创归纳；不采用页面考据区的现实原型推测",
+        "sourcePageId": 26113,
+        "sourceRevisionId": 367619,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%BB%84%E7%BB%87%2F%E9%BB%91%E9%92%A2?oldid=367619",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-26985",
+      "sourceTitle": "泰拉大典:组织/龙门近卫局",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "龙门近卫局承担龙门的警备与安全职能，通过分级管理、选拔和训练维持城市常规防卫力量。",
+      "sections": [
+        {
+          "title": "职能与组织",
+          "body": "近卫局负责城市安全，应对外敌、天灾及相关治安问题。其运行依靠严格的层级和考核体系。特别督察组承担高风险任务，为减少伤亡和长期压力，通常限制成员在该岗位的任期。",
+          "spoiler": false,
+          "sourceKind": "community"
+        },
+        {
+          "title": "与罗德岛的合作",
+          "body": "切尔诺伯格—龙门事件期间，近卫局与罗德岛联合应对整合运动。双方曾护送米莎，并在近卫局总部被占领后合作夺回大楼；随后围绕贫民区清理与感染者的处置出现严重分歧，合作最终中止。",
+          "spoiler": true,
+          "sourceKind": "community"
+        },
+        {
+          "title": "事件后的变化",
+          "body": "陈在冲突中违抗命令离开龙门，事件结束后转往罗德岛。魏彦吾把更多事务交给诗怀雅，以培养她承担近卫局的领导工作。本节描述的是来源修订所对应的主线阶段。",
+          "spoiler": true,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "lungmen",
+          "label": "所属城市",
+          "reverseLabel": "组织专题"
+        },
+        {
+          "target": "rhodes-island",
+          "label": "主线中的合作方",
+          "reverseLabel": "龙门事件关联组织",
+          "spoiler": true
+        },
+        {
+          "target": "operator-chen",
+          "label": "相关干员",
+          "reverseLabel": "任职组织专题",
+          "spoiler": true
+        },
+        {
+          "target": "operator-hoshiguma",
+          "label": "相关干员",
+          "reverseLabel": "所属组织专题"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读本地固定修订的相关情报后原创归纳；不采用页面考据区的现实原型推测",
+        "sourcePageId": 26985,
+        "sourceRevisionId": 170094,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%BB%84%E7%BB%87%2F%E9%BE%99%E9%97%A8%E8%BF%91%E5%8D%AB%E5%B1%80?oldid=170094",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-world-81350",
+      "sourceTitle": "泰拉大典:组织/罗德岛",
+      "kind": "world",
+      "summaryStatus": "curated",
+      "summary": "罗德岛是一家以矿石病研究与医疗服务为核心的制药组织，也通过外勤行动和各地办事处改善感染者的生活条件。",
+      "sections": [
+        {
+          "title": "业务与准则",
+          "body": "罗德岛研发矿石病药物、开展临床研究，并向患者和灾区提供医疗援助。外勤任务与保全派驻为医疗和商业活动提供支持；招募面向不同地区、经历与感染状况的人，成员共同关心感染者的处境。",
+          "spoiler": false,
+          "sourceKind": "community"
+        },
+        {
+          "title": "部门协作",
+          "body": "医疗部负责救治与药物研究，工程部维护舰载设施并开发设备；采购和后勤承担供应、生活与行政保障，人事部负责招募、评估与干员权益相关事务。外勤部开展训练与任务，各地办事处提供物资、情报和人员联络。",
+          "spoiler": false,
+          "sourceKind": "community"
+        },
+        {
+          "title": "本舰与日常",
+          "body": "作为综合医疗平台的罗德岛本舰，将上层甲板用于航行、行动指挥和情报工作，中层集中住宿、医疗与仓储，下层容纳动力和工程设施。天灾探针、预警基站及源石开采设备支持长期航行；工牌权限和舱室标识帮助人员在复杂的舰内安全活动。",
+          "spoiler": false,
+          "sourceKind": "community"
+        },
+        {
+          "title": "组织沿革",
+          "body": "1094年巴别塔瓦解后，留下的人员把研究设施和资源转用于不局限于萨卡兹的医疗事业，罗德岛制药由此成立。阿米娅承担最高执行职责，组织随后参与切尔诺伯格—龙门事件、卡西米尔感染者医疗服务及伦蒂尼姆行动。",
+          "spoiler": true,
+          "sourceKind": "community"
+        },
+        {
+          "title": "后期驻地变迁",
+          "body": "来源记录至1101年：本舰源石灾异发生后，罗德岛把功能模块逐步迁入新的移动地块。由五座小型地块组合而成的新驻地，于当年8月14日投入运营。该阶段涉及主线后期，不能与前期本舰状态混为一谈。",
+          "spoiler": true,
+          "sourceKind": "community"
+        }
+      ],
+      "relationships": [
+        {
+          "target": "rhodes-island",
+          "label": "精选组织档案",
+          "reverseLabel": "完整组织专题"
+        },
+        {
+          "target": "babel",
+          "label": "前身组织",
+          "reverseLabel": "组织沿革专题",
+          "spoiler": true
+        },
+        {
+          "target": "oripathy",
+          "label": "主要研究领域",
+          "reverseLabel": "医疗组织专题"
+        },
+        {
+          "target": "infected",
+          "label": "医疗与行动服务对象",
+          "reverseLabel": "医疗组织专题"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "通读本地固定修订的相关情报后原创归纳；不采用页面考据区的现实原型推测",
+        "sourcePageId": 81350,
+        "sourceRevisionId": 387393,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E7%BB%84%E7%BB%87%2F%E7%BD%97%E5%BE%B7%E5%B2%9B?oldid=387393",
+        "reviewedAt": "2026-10-01"
+      }
+    }
+  ]
+}

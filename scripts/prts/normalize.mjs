@@ -19,6 +19,11 @@ import {
 } from "./narrative-sources.mjs";
 import { gameplayFields } from "./gameplay.mjs";
 import { taskMapRules } from "./support.mjs";
+import {
+  applyAuthoredRelationships,
+  applyReviewedAmendments,
+  linkPotentialTokens,
+} from "./amendments.mjs";
 
 const dictionary = {
   operator: "干员",
@@ -86,7 +91,7 @@ function publicTemplates(templates) {
       return { name, params };
     });
 }
-function loadLegacy() {
+export function loadLegacy() {
   const cache = new Map();
   function load(filename) {
     if (cache.has(filename)) return cache.get(filename);
@@ -248,7 +253,7 @@ function textValues(value) {
     return Object.values(value).flatMap(textValues);
   return [];
 }
-function buildRecord(page, raw, tables, legacyMap) {
+export function buildRecord(page, raw, tables, legacyMap) {
   const text = rawContent(raw),
     templates = parseTemplates(text);
   // Main-namespace helper pages contain demonstration values, including jokes.
@@ -966,6 +971,11 @@ function buildRecord(page, raw, tables, legacyMap) {
     record.name = legacy.name;
     record.en = legacy.en;
     record.aliases = [...new Set([...record.aliases, ...legacy.aliases])];
+    record.facts = [
+      ...new Map(
+        [...record.facts, ...legacy.facts].map((fact) => [fact.label, fact]),
+      ).values(),
+    ];
     record.sections = legacy.sections.map((section) => ({
       ...section,
       sourceKind: "curated",
@@ -1404,12 +1414,15 @@ export async function build(discovery, progress = console.log) {
     record.summaryStatus = "source";
   }
   const editorialApplied = [],
-    editorialUnmatched = [];
-  for (const file of (await readdir(ROOT)).filter(
-    (file) =>
-      /^editorial(?:-[a-z0-9-]+)?\.json$/.test(file) &&
-      !file.includes("pending"),
-  )) {
+    editorialUnmatched = [],
+    authoredRelationships = [];
+  for (const file of (await readdir(ROOT))
+    .filter(
+      (file) =>
+        /^editorial(?:-[a-z0-9-]+)?\.json$/.test(file) &&
+        !file.includes("pending"),
+    )
+    .sort()) {
     const editorial = await json(path.join(ROOT, file));
     for (const authored of editorial.entries ?? []) {
       const record = records.find((r) =>
@@ -1422,6 +1435,19 @@ export async function build(discovery, progress = console.log) {
           file,
           id: authored.id,
           sourceTitle: authored.sourceTitle,
+        });
+        continue;
+      }
+      if (authored.relationships?.length)
+        authoredRelationships.push({
+          id: record.id,
+          relationships: authored.relationships,
+        });
+      if (!authored.summary && !authored.sections?.length) {
+        editorialApplied.push({
+          id: record.id,
+          file,
+          relationships: authored.relationships?.length ?? 0,
         });
         continue;
       }
@@ -1614,6 +1640,16 @@ export async function build(discovery, progress = console.log) {
           });
       }
   }
+  const tokenRelationships = linkPotentialTokens(unique);
+  const structuredAmendments = applyReviewedAmendments(
+    unique,
+    await json(path.join(ROOT, "structured-amendments.json")),
+    rawById,
+  );
+  const authoredRelationshipCount = applyAuthoredRelationships(
+    unique,
+    authoredRelationships,
+  );
   for (const record of unique)
     record.relationships = [
       ...new Map(
@@ -1860,6 +1896,9 @@ export async function build(discovery, progress = console.log) {
     embedded,
     editorialApplied,
     editorialUnmatched,
+    tokenRelationships,
+    structuredAmendments,
+    authoredRelationshipCount,
     exclusions: [...discovery.report.exclusions, ...implementationSources],
     sources: discovery.report.sources,
     gameplaySupport: {

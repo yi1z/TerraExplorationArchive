@@ -166,6 +166,29 @@ export async function publishOnline({
   records.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   if (new Set(records.map((record) => record.id)).size !== records.length)
     throw new Error("Duplicate catalogue IDs");
+  // Publication requires the complete local metadata set, including explicit
+  // empty arrays for known missing art. Never replace a published tree with
+  // empty artwork merely because the maintainer did not install its inputs.
+  const artworkMetadata = new Map();
+  for (const record of records) {
+    if (!/^[A-Za-z0-9][A-Za-z0-9_-]*$/.test(record.id))
+      throw new Error("Unsafe artwork entry ID");
+    let metadata;
+    try {
+      metadata = await readJson(
+        path.join(root, "public/assets/library/entries", `${record.id}.json`),
+      );
+    } catch {
+      throw new Error(
+        `Artwork metadata missing or invalid for ${record.id}; install the complete resource library before publication`,
+      );
+    }
+    if (!Array.isArray(metadata.artworks))
+      throw new Error(
+        `Artwork metadata must contain an artworks array: ${record.id}`,
+      );
+    artworkMetadata.set(record.id, metadata);
+  }
   const report = {
     snapshotId: manifest.snapshotId,
     records: records.length,
@@ -237,16 +260,9 @@ export async function publishOnline({
     if (error.code !== "ENOENT") throw error;
   }
   for (const record of records) {
-    let metadata;
-    try {
-      metadata = await readJson(
-        path.join(root, "public/assets/library/entries", `${record.id}.json`),
-      );
-    } catch (error) {
-      if (error.code !== "ENOENT") throw error;
-    }
-    const artworks = (metadata?.artworks ?? [])
-      .map((art) => {
+    const artworks = artworkMetadata
+      .get(record.id)
+      .artworks.map((art) => {
         const published = publicArtwork({
           ...art,
           ...(typeof artworkOverrides[art.id]?.title === "string"

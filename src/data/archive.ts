@@ -76,13 +76,14 @@ interface CountryInput {
   spoiler?: string;
   sourcePath?: string;
   facts?: WorldEntry["facts"];
+  sections?: WorldEntry["sections"];
   sourceNote?: string;
 }
 function country(r: CountryInput): WorldEntry {
   const sourceId = wiki("source-" + r.id, r.name, r.sourcePath);
   if (r.sourceNote) {
     sources[sourceId].note = r.sourceNote;
-    sources[sourceId].checkedAt = "2026-09-30";
+    sources[sourceId].checkedAt = "2026-10-01";
   }
   return {
     ...r,
@@ -98,6 +99,7 @@ function country(r: CountryInput): WorldEntry {
     sections: [
       { title: "大地与城市", body: r.terrain },
       { title: "人文观察", body: r.culture },
+      ...(r.sections ?? []),
       ...(r.spoiler
         ? [{ title: "历史追记", body: r.spoiler, spoiler: true }]
         : []),
@@ -159,9 +161,38 @@ const countries: WorldEntry[] = [
       { label: "行政分区", value: "九个选帝侯区，又称大区" },
       { label: "法定货币", value: "杜卡特" },
       { label: "基础教育", value: "源石技艺是义务教育的一部分" },
+      { label: "政体", value: "选举君主制；各选帝侯区保有政府、法律与军队" },
+      { label: "根本宪章", value: "《金律乐章》" },
+    ],
+    sections: [
+      {
+        title: "皇权与地方",
+        body: "皇帝由选帝侯推选，拥有宪章以外法律的最终阐释权，但权力受到诸侯牵制。帝国宫廷负责辅助决策、传达旨意和护卫皇帝；各区则同时运行贵族封臣与文官两套体系。城镇议事厅由宪兵长官和居民代表参与，重要决策仍受高塔贵族制约。",
+      },
+      {
+        title: "军事与法术",
+        body: "各级贵族依照法定规模保有私兵，战时随自身所属的封臣关系接受指挥。术师在军队中地位突出，军事法术适应性测试中的优秀者会接受专门训练，组成选帝侯的金律法卫。帝国宫廷的禁卫直接听命于皇帝；双子女皇麾下的“女皇之声”同时担任御前乐师、谕使和护卫。",
+      },
+      {
+        title: "法律与贵族",
+        body: "《金律乐章》既是可以演奏的乐章，也是帝国的根本宪章，规定皇权、中央与地方的关系及共同的世俗准则。原典之外，九大区各自保存一份抄本，并在共同基础上制定地方性法律。知识、领地与政治权力集中于高塔贵族，层层分封形成相互负责的等级关系。",
+      },
+      {
+        title: "经济与产业",
+        body: "河谷农业借助源石技艺发展，艺术教育、乐器与施术用品制造构成特色产业。近代工业吸收邻国技术，许多产品兼顾机械操作与法术操作两种方式。战争和旧政权统治留下长期影响，经济重建也受到资源和技艺集中于贵族手中的制约。",
+      },
+      {
+        title: "学府与专业机构",
+        body: "威廉大学开展源石技艺及自然环境相关研究，舒曼艺术学院教授包括油画在内的艺术课程。莱塔尼亚法术协会负责法术道具生产的品质认证与监制。这些学府和行业机构呈现出教育、艺术与源石技艺彼此交织的社会结构。",
+      },
+      {
+        title: "女皇庆典后的变化",
+        body: "1100年女皇庆典期间，巫王残党引发危机，金律被毁，巫王高塔重新出现。双子女皇联手应对巫王后，赫琳玛特留在荒域建立阻挡邪魔的新塔，帝国对外宣称她“失声”。教育机构也经历更替：恩瓦德路德维格大学关停，新利奥波德大学于庆典后重建，次年开设政治与历史课程。",
+        spoiler: true,
+      },
     ],
     sourceNote:
-      "依据缓存页面 21739、修订 337057 的地理、行政分区、货币与教育段落改写；九大区段落引《大地巡旅》132 页。来源为 PRTS 社区考据，未将文中推测或后续剧情写入基础摘要。",
+      "通读缓存页面 21739、修订 337057 后，依据地理、政治、军事、法律、经济、教育与机构段落原创归纳；九大区和金律法卫段落分别引《大地巡旅》132、134页。来源为 PRTS 社区考据，未采用现实原型推测；后期剧情仅在剧透章节出现。",
     related: ["wolumonde", "arts", "siracusa", "originium"],
     spoiler:
       "巫王时代的遗产持续影响着后来的莱塔尼亚。双子女皇的统治与新旧秩序的冲突，是相关故事的重要背景。",

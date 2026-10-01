@@ -38,6 +38,9 @@
 .search-page .terminal-search {
   padding-bottom: 24px;
 }
+.search-page .search-categories {
+  scrollbar-color: #526e78 #111b21;
+}
 .search-page .search-result-layout {
   grid-template-columns: minmax(0, 1fr) minmax(210px, 22%);
   gap: 36px;
@@ -170,6 +173,14 @@
   }
   .database-app:has(.return-search) .return-atlas {
     top: 152px;
+  }
+}
+@media (max-width: 600px) {
+  .search-page .terminal-results {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .search-page .result-art {
+    height: 180px;
   }
 }
 @media (max-width: 380px) {

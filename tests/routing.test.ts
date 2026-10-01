@@ -405,6 +405,33 @@ describe("database and atlas navigation", () => {
     expect(s().focusSequence).toBe(focus + 2);
   });
 
+  it("preserves atlas layers through archive back/forward and search navigation", () => {
+    s().openAtlas("yan");
+    s().toggleLayer("relations");
+    s().toggleLayer("cities");
+    const layers = { ...s().layers };
+    s().openEntry("operator-amiya");
+    expect(window.location.hash).not.toContain("layers=");
+    travel(-1);
+    expect(s()).toMatchObject({ view: "atlas", layers });
+    travel(1);
+    expect(s()).toMatchObject({ view: "archive", layers });
+    s().openSearch("operator");
+    s().openEntry("operator-amiya");
+    travel(-1);
+    expect(s()).toMatchObject({ view: "search", layers });
+    s().returnToAtlas();
+    expect(s()).toMatchObject({ view: "atlas", selected: "yan", layers });
+    expect(readRoute(window.location.hash).layers).toEqual(layers);
+    // Explicit atlas URLs continue to restore their own layer selection.
+    s().navigate("#/atlas?entry=yan&layers=cities");
+    expect(s().layers).toEqual({
+      countries: false,
+      cities: true,
+      relations: false,
+    });
+  });
+
   it("stops an active tour when a dossier opens and validates unknown input", () => {
     s().startTour();
     s().openEntry("enemy-originium-slug");

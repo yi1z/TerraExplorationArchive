@@ -39,6 +39,8 @@ const editorials = [
   "editorial-stories-b.json",
   "editorial-world-a.json",
   "editorial-world-b.json",
+  "editorial-world-c.json",
+  "editorial-supplement.json",
 ];
 const fixedFiles = [
   ...rootFiles,
@@ -48,6 +50,7 @@ const fixedFiles = [
   "public/data/prts/coverage.json",
   ...editorials.map((name) => `data/prts/${name}`),
   "data/prts/embedded-identities.json",
+  "data/prts/structured-amendments.json",
   "data/prts-assets/source-overrides.json",
   "data/prts-assets/source-error-history.json",
   "resources/library-assets.json",
@@ -159,6 +162,7 @@ async function inspectPath(relative, required = true) {
     "/data/prts/*",
     ...editorials.map((file) => `!/data/prts/${file}`),
     "!/data/prts/embedded-identities.json",
+    "!/data/prts/structured-amendments.json",
     "!/data/prts-assets/",
     "/data/prts-assets/*",
     "!/data/prts-assets/source-overrides.json",
