@@ -42,7 +42,7 @@
 
 | 图片组     | 数量与位置                                               | 内容                                                                                                |
 | ---------- | -------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| 原地图资料 | 37 个 PNG，`public/assets/game/`，7,469,345 字节         | 25 张国家、势力和城市徽记；12 张地区景观                                                            |
+| 原地图资料 | 38 个 PNG，`public/assets/game/`，8,556,308 字节         | 25 张国家、势力和城市徽记；13 张地区景观                                                            |
 | 新档案资料 | 122 个 PNG，`public/assets/catalogue/`，67,579,026 字节  | 24 位干员的初始／精英化立绘与头像；16 种敌人主图和其中 10 种的独立头像；24 件道具图标               |
 | 扩展资料库 | `public/assets/library/`，实际数量见对应 `manifest.json` | 干员立绘与时装、敌人及 NPC 图像、道具、模组、家具、场景与关卡静态美术；按条目关联并记录来源与校验和 |
 
@@ -54,7 +54,7 @@
 
 图片文件不做绘画修改。CSS 仅负责尺寸、裁切、色调、透明度及整合运动黑底混合显示。悬挂旗标是本站将徽记放置于旗形底板的展示设计，**不是官方设定国旗**。未确认的徽记不以随机图形伪装；城市复用国家景观时使用原资产名称标注归属。
 
-`scripts/import-game-assets.mjs` 维护原地图文件；`scripts/import-catalogue-assets.mjs` 维护新增精选清单，通过 MediaWiki `imageinfo` 获取真实文件 URL，仅从 `media.prts.wiki` 下载 PNG，验证文件签名并记录哈希。新增导入器支持重复运行、指定 ID、刷新及 `--verify` 离线完整性检查。导入不需要凭据，正常浏览没有远端图片、字体或资料请求；只有主动点击来源链接才离开本地站点。维护方式与清单范围见 [CATALOGUE_SOURCES.md](CATALOGUE_SOURCES.md)。
+`scripts/import-game-assets.mjs` 维护原地图文件；`scripts/import-catalogue-assets.mjs` 维护新增精选清单，通过 MediaWiki `imageinfo` 获取真实文件 URL，仅从 `media.prts.wiki` 下载 PNG，验证文件签名并记录哈希。新增导入器支持重复运行、指定 ID、刷新及 `--verify` 离线完整性检查。导入不需要凭据，默认在线模式会请求固定版本资料与图片来源；本地字体不请求远端。离线模式在资源安装完成后无需外部请求。维护方式与清单范围见 [CATALOGUE_SOURCES.md](CATALOGUE_SOURCES.md)。
 
 ## 软件依赖
 
@@ -76,3 +76,11 @@
 stats-gl 的安装包及其上游 README 声明 MIT，但未附独立许可文本；清单如实保留该声明与作者 Renaud Rohlinger。stats-gl、MediaPipe 与 Draco 是 Drei 安装树中的未调用辅助依赖，本站未导入或初始化它们的对应功能，没有摄像头、视觉识别或模型解码服务。锁文件存在不代表这些工具被调用。
 
 更新依赖时运行 `npm run licenses` 并核对补充文本的版本及归属，避免静态清单与实际分发版本脱节。
+
+## 游戏界面音效
+
+四个未剪辑的WAV样本位于 `public/assets/audio/`，共672,420字节；来源为 [Aceship/Arknight-voices 固定提交](https://github.com/Aceship/Arknight-voices/tree/d0cb4935a4d78fcd634d910248c4681ad26b1f41/battle/b_ui)。逐文件URL、SHA-256、格式和时长见 [音效来源清单](../public/assets/audio/sources.json)。这些是明日方舟战斗UI样本，本站将其用于确认、进入、返回和换页；并非声称原游戏档案按钮采用相同映射。
+
+声音版权仍归鹰角网络及关联权利人，公开素材仓库不构成对游戏音频的新授权。默认静音，用户手势开启或试听后才加载声音；可调音量，切到后台或关闭时停止播放。
+
+新增莱塔尼亚景观为PRTS《泰拉大典:地理/莱塔尼亚》信息框引用的 Avg_44_i01.png，标注为“莱塔尼亚首都·崔林特尔梅”，原图哈希已核对。

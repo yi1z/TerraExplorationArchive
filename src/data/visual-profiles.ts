@@ -7,6 +7,8 @@ export type VisualTheme =
   | "halo"
   | "babel"
   | "radiant"
+  | "blacksteel"
+  | "leithanien"
   | "ink";
 
 export interface VisualProfile {
@@ -19,6 +21,39 @@ export interface VisualProfile {
 }
 
 export const visualProfiles: readonly VisualProfile[] = [
+  {
+    theme: "blacksteel",
+    label: "黑钢行动记录",
+    accent: "#dbb960",
+    secondary: "#a7afa0",
+    entries: [
+      { names: ["涤火杰西卡"], ids: ["prts-operator-58745"] },
+      { names: ["黑钢国际", "泰拉大典:组织/黑钢国际"], ids: [] },
+    ],
+    references: [
+      { title: "涤火杰西卡与初始立绘", url: "https://prts.wiki/w/涤火杰西卡" },
+      { title: "黑钢国际", url: "https://prts.wiki/w/泰拉大典:组织/黑钢国际" },
+    ],
+  },
+  {
+    theme: "leithanien",
+    label: "高塔与乐章",
+    accent: "#d3b878",
+    secondary: "#b09ccf",
+    entries: [
+      { names: ["莱塔尼亚", "泰拉大典:地理/莱塔尼亚"], ids: ["leithanien"] },
+    ],
+    references: [
+      {
+        title: "莱塔尼亚地理与文化",
+        url: "https://prts.wiki/w/泰拉大典:地理/莱塔尼亚",
+      },
+      {
+        title: "崔林特尔梅景观",
+        url: "https://prts.wiki/w/文件:Avg_44_i01.png",
+      },
+    ],
+  },
   {
     theme: "originium",
     label: "源石共振",

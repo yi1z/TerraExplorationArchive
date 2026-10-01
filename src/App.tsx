@@ -34,7 +34,12 @@ import { gameAssets } from "./data/assets";
 import { useArchiveStore } from "./lib/state";
 import { useReducedMotion } from "./lib/useMotion";
 import { usePointerEffects } from "./lib/usePointerEffects";
-import { closeAudio, tone } from "./lib/audio";
+import {
+  closeAudio,
+  tone,
+  configureUiSound,
+  previewUiSound,
+} from "./lib/audio";
 import { useLibrary } from "./lib/library";
 import ArchiveTerminal from "./components/ArchiveTerminal";
 import ArchiveSearch, { catalogueCategories } from "./components/ArchiveSearch";
@@ -132,6 +137,7 @@ export default function App() {
   }, [hidden]);
   useEffect(() => {
     const key = (event: KeyboardEvent) => {
+      if (event.defaultPrevented) return;
       const editable =
         event.target instanceof HTMLElement &&
         (event.target.matches("input,textarea,select") ||
@@ -169,9 +175,12 @@ export default function App() {
     return () => document.removeEventListener("visibilitychange", update);
   }, []);
   useEffect(() => {
-    if (!store.preferences.sound) closeAudio();
-    return () => closeAudio();
-  }, [store.preferences.sound]);
+    configureUiSound({
+      enabled: store.preferences.sound,
+      volume: store.preferences.soundVolume,
+    });
+  }, [store.preferences.sound, store.preferences.soundVolume]);
+  useEffect(() => () => closeAudio(), []);
   useEffect(() => {
     if (!store.notice) return;
     const timer = setTimeout(
@@ -393,7 +402,7 @@ export default function App() {
                 {
                   key: "sound",
                   name: "界面提示音",
-                  description: "操作时播放轻微提示音，默认关闭。",
+                  description: "使用明日方舟战斗界面采样，默认关闭。",
                   icon: AudioLines,
                 },
               ] as const
@@ -414,6 +423,33 @@ export default function App() {
                 </label>
               );
             })}
+            <div className="sound-controls">
+              <label htmlFor="sound-volume">
+                提示音量{" "}
+                <output>
+                  {Math.round(store.preferences.soundVolume * 100)}%
+                </output>
+              </label>
+              <input
+                id="sound-volume"
+                type="range"
+                min="0"
+                max="1"
+                step="0.05"
+                value={store.preferences.soundVolume}
+                onChange={(event) =>
+                  store.setSoundVolume(Number(event.target.value))
+                }
+              />
+              <button
+                onClick={() =>
+                  previewUiSound("confirm", store.preferences.soundVolume)
+                }
+              >
+                <AudioLines size={16} /> 试听音效
+              </button>
+              <small>试听仅播放一次；开关关闭时，其他操作保持静音。</small>
+            </div>
             <button
               className="reset-history"
               onClick={() => store.resetProgress()}
@@ -465,7 +501,7 @@ export default function App() {
               提供；游戏图像、原文与商标属于鹰角网络及关联权利人。逐条出处可在档案内查看。
             </p>
             <p>
-              地图为导航示意，不代表精确疆域、实际海拔或城市实时位置。资料来自本地版本快照，来源版本及核验状态可在档案内查看。
+              地图为导航示意，不代表精确疆域、实际海拔或城市实时位置。资料来自固定版本快照，来源版本及核验状态可在档案内查看。
             </p>
             {library.manifest && (
               <div className="library-snapshot-note">
@@ -525,7 +561,7 @@ export default function App() {
       )}
       <div className="terminal-connection interface-part" aria-hidden="true">
         <Radio size={13} />
-        <span>LOCAL / CONNECTED</span>
+        <span>TERRA / CONNECTED</span>
         {store.preferences.sound ? (
           <AudioLines size={13} />
         ) : (

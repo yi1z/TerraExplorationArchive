@@ -1,3 +1,4 @@
+import { curatedAssetUrl } from "../lib/media";
 import manifest from "./catalogue-assets.json";
 
 export type CatalogueAssetKind =
@@ -36,4 +37,4 @@ export function catalogueAssetFor(
 }
 
 export const catalogueAssetUrl = (asset: CatalogueAsset): string =>
-  import.meta.env.BASE_URL + asset.path;
+  curatedAssetUrl(asset.path)!;

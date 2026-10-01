@@ -1,4 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+} from "react";
 import {
   ArrowDown,
   ArrowLeft,
@@ -18,6 +24,9 @@ import { useArchiveStore } from "../lib/state";
 import LibraryArtwork, { useLibraryArtwork } from "./LibraryArtwork";
 import LibraryDossier, { recordLabel } from "./LibraryDossier";
 import VisualScene from "./VisualScene";
+import { useDossier } from "../lib/useDossier";
+import { visualProfileFor } from "../data/visual-profiles";
+import { DossierVisibilityContext } from "./DossierFrame";
 
 export default function LibraryTerminal({
   id,
@@ -34,16 +43,15 @@ export default function LibraryTerminal({
   const { artworks } = useLibraryArtwork(id);
   const record = entry ?? summary;
   const heading = useRef<HTMLHeadingElement>(null);
-  const [reading, setReading] = useState(false);
-  const [tab, setTab] = useState("overview");
+  const dossier = useDossier(id, hidden);
+  const profile = record ? visualProfileFor(record) : undefined;
   const [variantId, setVariantId] = useState<string>();
   useEffect(() => {
-    setReading(false);
     setVariantId(undefined);
   }, [id]);
   useEffect(() => {
-    heading.current?.focus({ preventScroll: true });
-  }, [record?.id]);
+    if (!store.dossierOpen) heading.current?.focus({ preventScroll: true });
+  }, [record?.id, store.dossierOpen]);
   const siblings = useMemo(
     () =>
       library.summaries.filter(
@@ -69,11 +77,7 @@ export default function LibraryTerminal({
         ].id,
       );
   };
-  const openDossier = (nextTab = "overview") => {
-    setTab(nextTab);
-    setReading(true);
-    store.openEntry(id);
-  };
+  const openDossier = dossier.enter;
   if (!record)
     return (
       <main className="library-entry-state" id="terminal-main" tabIndex={-1}>
@@ -89,7 +93,7 @@ export default function LibraryTerminal({
           {error ||
             (status === "missing"
               ? "这条链接不在当前资料快照中。"
-              : "正在从本地资料库读取记录。")}
+              : "正在读取资料快照。")}
         </p>
         {(status === "error" || status === "missing") && (
           <div>
@@ -132,18 +136,28 @@ export default function LibraryTerminal({
     variantId ??
     (record.kind === "furniture-theme"
       ? mainArt.find((art) => art.role === "preview")?.id
-      : undefined) ??
+      : mainArt.find((art) => art.role === "landscape")?.id) ??
     mainArt[0]?.id;
   return (
     <main
+      ref={dossier.stage}
       id="terminal-main"
       tabIndex={-1}
-      className={`archive-terminal library-terminal scene-${record.kind} ${hidden ? "interface-hidden" : ""}`}
+      className={`archive-terminal library-terminal scene-${record.kind} dossier-theme-${profile?.theme ?? "default"} ${hidden ? "interface-hidden" : ""}`}
+      data-dossier-phase={dossier.phase}
+      style={
+        profile
+          ? ({
+              "--dossier-accent": profile.accent,
+              "--dossier-secondary": profile.secondary,
+            } as CSSProperties)
+          : undefined
+      }
       aria-label={`${record.name}档案主舞台`}
     >
       <VisualScene
         entry={record}
-        reading={reading}
+        reading={dossier.reading}
         reducedMotion={store.preferences.reducedMotion}
       />
       <div className="stage-grid" aria-hidden="true" />
@@ -155,7 +169,7 @@ export default function LibraryTerminal({
       </div>
       <div
         className="stage-artwork"
-        data-reactive="tilt"
+        data-reactive={dossier.reading ? undefined : "tilt"}
         key={`${id}-${variantId || "main"}`}
       >
         <div className="artwork-shadow">
@@ -184,7 +198,7 @@ export default function LibraryTerminal({
           <span className="signal-dot" />
           <span>{record.kind.toUpperCase()} ARCHIVE</span>
           <i />
-          <span>PRTS / LOCAL RECORD</span>
+          <span>PRTS / VERSIONED RECORD</span>
         </div>
         <div className="hero-category">
           {kindName}
@@ -221,6 +235,7 @@ export default function LibraryTerminal({
         <div className="hero-actions">
           <button
             className="terminal-primary"
+            data-dossier-trigger
             disabled={!entry}
             onClick={() => openDossier()}
           >
@@ -246,7 +261,7 @@ export default function LibraryTerminal({
           </button>
         )}
         <div className="hero-caption">
-          <span>PRTS / 本地资料</span>
+          <span>PRTS / 资料快照</span>
           <span>档案 · 美术 · 关联记录</span>
         </div>
       </section>
@@ -337,7 +352,8 @@ export default function LibraryTerminal({
       <div className="stage-footer interface-part">
         <span>
           <i />
-          LOCAL ARCHIVE / {library.manifest?.generatedAt.slice(0, 10) ?? "PRTS"}
+          VERSIONED ARCHIVE /{" "}
+          {library.manifest?.generatedAt.slice(0, 10) ?? "PRTS"}
         </span>
         <span>非官方资料库 · 逐条来源可在档案内查看</span>
       </div>
@@ -350,13 +366,15 @@ export default function LibraryTerminal({
           返回地图探索
         </button>
       )}
-      {reading && entry && (
-        <LibraryDossier
-          key={`dossier-${id}`}
-          entry={entry}
-          initialTab={tab}
-          onClose={() => setReading(false)}
-        />
+      {dossier.visible && entry && (
+        <DossierVisibilityContext.Provider value={hidden}>
+          <LibraryDossier
+            key={`dossier-${id}`}
+            entry={entry}
+            closing={dossier.phase === "returning"}
+            onClose={dossier.close}
+          />
+        </DossierVisibilityContext.Provider>
       )}
     </main>
   );

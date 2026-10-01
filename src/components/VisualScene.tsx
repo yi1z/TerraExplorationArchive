@@ -5,6 +5,53 @@ import type { VisualEntry, VisualTheme } from "../data/visual-profiles";
 import "../visual-scenes.css";
 
 function SceneGeometry({ theme }: { theme: VisualTheme }) {
+  if (theme === "blacksteel")
+    return (
+      <>
+        <g className="visual-blacksteel-frame">
+          <path
+            d="M410 170h90m-90 0v90m670-90h-90m90 0v90M410 610h90m-90 0v-90m670 90h-90m90 0v-90"
+            strokeWidth="3"
+          />
+          <path
+            d="M500 155h465M500 625h465M435 275v240M1055 275v240"
+            strokeDasharray="5 12"
+          />
+          <path d="m620 205 145-55 145 55v216l-145 134-145-134Z" />
+          <path d="M690 335h150m-75-75v150M640 580h260" />
+          <circle cx="765" cy="335" r="80" strokeDasharray="50 10" />
+        </g>
+        <g className="visual-hairline">
+          <path d="M430 670h540M480 687h420M500 112h320" />
+          {Array.from({ length: 9 }, (_, i) => (
+            <path key={i} d={`M${460 + i * 55} 660v20`} />
+          ))}
+        </g>
+      </>
+    );
+  if (theme === "leithanien")
+    return (
+      <>
+        <g className="visual-spires">
+          <path d="M590 645V310l48-38v-76l28-78 28 78v76l48 38v335M790 645V260l46-31V157l28-96 28 96v72l46 31v385M520 645h490" />
+          <path
+            d="M620 645V340h92v305M820 645V290h88v355M666 118v-43M864 61V28"
+            className="visual-hairline"
+          />
+        </g>
+        <g className="visual-staves">
+          {[0, 1, 2, 3, 4].map((i) => (
+            <path
+              key={i}
+              d={`M370 ${425 + i * 15}Q750 ${310 + i * 15} 1120 ${405 + i * 15}`}
+            />
+          ))}
+          <path d="M512 449v-96m408 79V315" />
+          <ellipse cx="503" cy="449" rx="10" ry="6" />
+          <ellipse cx="911" cy="432" rx="10" ry="6" />
+        </g>
+      </>
+    );
   if (theme === "originium")
     return (
       <>

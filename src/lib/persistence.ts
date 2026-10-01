@@ -1,4 +1,5 @@
 import type { Preferences } from "../data/types";
+import { normalizeSoundVolume } from "./ui-sound-settings";
 
 export const LEGACY_STORAGE_KEY = "terra-exploration.preferences.v1";
 export const SETTINGS_STORAGE_KEY = "terra-exploration.settings.v2";
@@ -8,12 +9,21 @@ interface ReadingRecord {
   favorite: boolean;
   lastVisited?: number;
 }
-type Settings = Pick<Preferences, "spoilers" | "reducedMotion" | "sound">;
+type Settings = Pick<
+  Preferences,
+  "spoilers" | "reducedMotion" | "sound" | "soundVolume"
+>;
 const settingsFor = ({
   spoilers,
   reducedMotion,
   sound,
-}: Preferences): Settings => ({ spoilers, reducedMotion, sound });
+  soundVolume,
+}: Preferences): Settings => ({
+  spoilers,
+  reducedMotion,
+  sound,
+  soundVolume: normalizeSoundVolume(soundVolume),
+});
 let database: IDBDatabase | null = null;
 let hydration: Promise<Preferences> | null = null;
 let lastPreferences: Preferences | null = null;
@@ -95,11 +105,17 @@ export function mergeHydratedPreferences(
         ? current.reducedMotion
         : saved.reducedMotion,
     sound: current.sound !== before.sound ? current.sound : saved.sound,
+    soundVolume: normalizeSoundVolume(
+      current.soundVolume !== before.soundVolume
+        ? current.soundVolume
+        : saved.soundVolume,
+    ),
   };
 }
 export function hydratePersistentPreferences(
   legacy: Preferences,
 ): Promise<Preferences> {
+  legacy = { ...legacy, soundVolume: normalizeSoundVolume(legacy.soundVolume) };
   if (hydration) return hydration;
   if (typeof indexedDB === "undefined") return Promise.resolve(legacy);
   hydration = (async () => {
@@ -147,6 +163,9 @@ export function hydratePersistentPreferences(
     const restored: Preferences = {
       ...legacy,
       ...settings,
+      soundVolume: normalizeSoundVolume(
+        settings?.soundVolume ?? legacy.soundVolume,
+      ),
       version: 1,
       favorites: [...records.values()]
         .filter((row) => row.favorite)
@@ -179,6 +198,10 @@ function saveLocalFallback(preferences: Preferences): boolean {
 
 /** Uses small per-entry IDB writes after migration, with a full local fallback on failure. */
 export function persistPreferences(preferences: Preferences): boolean {
+  preferences = {
+    ...preferences,
+    soundVolume: normalizeSoundVolume(preferences.soundVolume),
+  };
   latestPreferences = preferences;
   if (!database || !lastPreferences) return saveLocalFallback(preferences);
   const previous = lastPreferences;

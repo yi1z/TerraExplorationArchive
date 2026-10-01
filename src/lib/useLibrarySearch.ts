@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { curatedSearchDocuments, libraryUrl, useLibrary } from "./library";
+import { curatedSearchDocuments, useLibrary } from "./library";
+import { libraryKindNames, type LibraryKind } from "../data/library-types";
 import { LibrarySearchIndex } from "./library-search-core";
 import type {
   LibrarySearchQuery,
@@ -83,13 +84,16 @@ export function useLibrarySearch(request: LibrarySearchQuery) {
           type: "init",
           summaries: library.summaries,
           documents: curatedSearchDocuments,
-          searchUrls: (library.manifest?.searchShards ?? []).map((shard) => {
-            const url = new URL(libraryUrl(shard.path), window.location.href);
-            url.searchParams.set(
-              "snapshot",
-              library.manifest?.generatedAt ?? "",
-            );
-            return url.href;
+          searchShards: (library.source === "curated-fallback"
+            ? []
+            : (library.manifest?.searchShards ?? [])
+          ).map((shard) => {
+            const kind = shard.path.match(
+              /\/search\/([a-z-]+)-\d+\.json$/,
+            )?.[1] as LibraryKind;
+            if (!Object.hasOwn(libraryKindNames, kind))
+              throw new Error("全文索引类别不正确");
+            return { path: shard.path, kind };
           }),
         });
       } catch {

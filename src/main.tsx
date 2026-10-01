@@ -12,6 +12,7 @@ import "./motion.css";
 import "./floating.css";
 import "./terminal.css";
 import "./library.css";
+import "./dossier.css";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

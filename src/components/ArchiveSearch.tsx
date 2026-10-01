@@ -287,138 +287,149 @@ export default function ArchiveSearch({
       {(library.status === "loading" || library.status === "error") && (
         <div className="library-search-notice" role="status">
           {library.status === "loading"
-            ? "正在接入全量资料目录，当前显示本地精选。"
-            : "全量目录暂不可用，当前显示本地精选。"}
+            ? "正在接入全量资料目录…"
+            : "全量目录暂未刷新。"}
+          {library.source === "curated-fallback"
+            ? "当前显示随界面保留的精选资料。"
+            : "当前保留上次成功载入的目录。"}
           {library.status === "error" && (
             <button onClick={() => void library.retry()}>重试载入</button>
           )}
         </div>
       )}
       <div className="search-result-layout">
-        <div className="search-result-scroll" ref={scroll} aria-busy={loading}>
-          <div className="result-caption" role="status" aria-live="polite">
-            <span>
-              {loading
-                ? "正在检索…"
-                : `${String(result?.total ?? 0).padStart(2, "0")} RECORDS FOUND`}
-            </span>
-            <span>{result?.fullText ? "全文检索" : "目录检索"}</span>
-          </div>
-          {error ? (
-            <div className="terminal-empty">
-              <Search size={34} />
-              <h3>检索暂未完成</h3>
-              <p>{error}</p>
-              <button onClick={retry}>重试检索</button>
+        <div className="search-results-column">
+          <div
+            className="search-result-scroll"
+            ref={scroll}
+            aria-busy={loading}
+          >
+            <div className="result-caption" role="status" aria-live="polite">
+              <span>
+                {loading
+                  ? "正在检索…"
+                  : `${String(result?.total ?? 0).padStart(2, "0")} RECORDS FOUND`}
+              </span>
+              <span>{result?.fullText ? "全文检索" : "目录检索"}</span>
             </div>
-          ) : (
-            <>
-              <div className="terminal-results">
-                {results.map((entry, index) => (
-                  <button
-                    key={entry.id}
-                    className={`terminal-result ${entry.id === preview ? "previewing" : ""}`}
-                    onMouseEnter={() => setPreview(entry.id)}
-                    onFocus={() => setPreview(entry.id)}
-                    onClick={() => open(entry.id)}
-                    aria-label={`打开档案${entry.name}`}
-                  >
-                    <div className={`result-art type-${entry.kind}`}>
-                      <ResultArtwork entry={entry} thumbnail />
-                      {favorites.has(entry.id) && (
-                        <Bookmark size={12} fill="currentColor" />
-                      )}
-                    </div>
-                    <span className="result-index">
-                      {String(page * PAGE_SIZE + index + 1).padStart(3, "0")}
-                    </span>
-                    <strong>{entry.name}</strong>
-                    <small>
-                      {facetLabel(entry.facet ?? summaryFacetValues(entry)[0])}
-                    </small>
-                    <ArrowUpRight size={14} />
-                  </button>
-                ))}
+            {error ? (
+              <div className="terminal-empty">
+                <Search size={34} />
+                <h3>检索暂未完成</h3>
+                <p>{error}</p>
+                <button onClick={retry}>重试检索</button>
               </div>
-              {loading && !results.length && (
-                <div className="terminal-empty">
-                  <LoaderCircle size={30} />
-                  <p>正在检索资料，请稍候。</p>
-                </div>
-              )}
-              {!loading && !results.length && (
-                <div className="terminal-empty">
-                  <Search size={34} />
-                  <h3>未发现匹配档案</h3>
-                  <p>尝试其他名字，或清除筛选继续探索。</p>
-                  <button
-                    onClick={() => {
-                      store.setQuery("");
-                      store.setKind("all");
-                      setFacet("all");
-                      setScope("all");
-                    }}
-                  >
-                    重置检索
-                  </button>
-                </div>
-              )}
-              {pages > 1 && (
-                <nav className="search-pagination" aria-label="检索结果分页">
-                  <button
-                    disabled={page === 0 || loading}
-                    onClick={() => setPage((value) => value - 1)}
-                    aria-label="上一页"
-                  >
-                    <ArrowLeft size={16} />
-                    上一页
-                  </button>
-                  <span>
-                    {page + 1} / {pages}
-                  </span>
-                  <form
-                    className="page-jump"
-                    onSubmit={(event) => {
-                      event.preventDefault();
-                      if (loading) return;
-                      const next = requestedPage(pageInput, pages);
-                      if (next === null) {
-                        setPageError("请输入整数页码");
-                        return;
-                      }
-                      setPageError("");
-                      setPageInput(String(next + 1));
-                      setPage(next);
-                    }}
-                  >
-                    <label>
-                      跳至
-                      <input
-                        aria-label="跳转页码"
-                        inputMode="numeric"
-                        value={pageInput}
-                        disabled={loading}
-                        maxLength={9}
-                        onChange={(event) => setPageInput(event.target.value)}
-                        aria-invalid={!!pageError}
-                      />
-                    </label>
-                    <button type="submit" disabled={loading}>
-                      跳转
+            ) : (
+              <>
+                <div className="terminal-results">
+                  {results.map((entry, index) => (
+                    <button
+                      key={entry.id}
+                      className={`terminal-result ${entry.id === preview ? "previewing" : ""}`}
+                      onMouseEnter={() => setPreview(entry.id)}
+                      onFocus={() => setPreview(entry.id)}
+                      onClick={() => open(entry.id)}
+                      aria-label={`打开档案${entry.name}`}
+                    >
+                      <div className={`result-art type-${entry.kind}`}>
+                        <ResultArtwork entry={entry} thumbnail />
+                        {favorites.has(entry.id) && (
+                          <Bookmark size={12} fill="currentColor" />
+                        )}
+                      </div>
+                      <span className="result-index">
+                        {String(page * PAGE_SIZE + index + 1).padStart(3, "0")}
+                      </span>
+                      <strong>{entry.name}</strong>
+                      <small>
+                        {facetLabel(
+                          entry.facet ?? summaryFacetValues(entry)[0],
+                        )}
+                      </small>
+                      <ArrowUpRight size={14} />
                     </button>
-                    {pageError && <small role="status">{pageError}</small>}
-                  </form>
-                  <button
-                    disabled={page >= pages - 1 || loading}
-                    onClick={() => setPage((value) => value + 1)}
-                    aria-label="下一页"
-                  >
-                    下一页
-                    <ArrowRight size={16} />
-                  </button>
-                </nav>
-              )}
-            </>
+                  ))}
+                </div>
+                {loading && !results.length && (
+                  <div className="terminal-empty">
+                    <LoaderCircle size={30} />
+                    <p>正在检索资料，请稍候。</p>
+                  </div>
+                )}
+                {!loading && !results.length && (
+                  <div className="terminal-empty">
+                    <Search size={34} />
+                    <h3>未发现匹配档案</h3>
+                    <p>尝试其他名字，或清除筛选继续探索。</p>
+                    <button
+                      onClick={() => {
+                        store.setQuery("");
+                        store.setKind("all");
+                        setFacet("all");
+                        setScope("all");
+                      }}
+                    >
+                      重置检索
+                    </button>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+          {!error && pages > 1 && (
+            <nav className="search-pagination" aria-label="检索结果分页">
+              <button
+                disabled={page === 0 || loading}
+                onClick={() => setPage((value) => value - 1)}
+                aria-label="上一页"
+              >
+                <ArrowLeft size={16} />
+                上一页
+              </button>
+              <span>
+                {page + 1} / {pages}
+              </span>
+              <form
+                className="page-jump"
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  if (loading) return;
+                  const next = requestedPage(pageInput, pages);
+                  if (next === null) {
+                    setPageError("请输入整数页码");
+                    return;
+                  }
+                  setPageError("");
+                  setPageInput(String(next + 1));
+                  setPage(next);
+                }}
+              >
+                <label>
+                  跳至
+                  <input
+                    aria-label="跳转页码"
+                    inputMode="numeric"
+                    value={pageInput}
+                    disabled={loading}
+                    maxLength={9}
+                    onChange={(event) => setPageInput(event.target.value)}
+                    aria-invalid={!!pageError}
+                  />
+                </label>
+                <button type="submit" disabled={loading}>
+                  跳转
+                </button>
+                {pageError && <small role="status">{pageError}</small>}
+              </form>
+              <button
+                disabled={page >= pages - 1 || loading}
+                onClick={() => setPage((value) => value + 1)}
+                aria-label="下一页"
+              >
+                下一页
+                <ArrowRight size={16} />
+              </button>
+            </nav>
           )}
         </div>
         {hovered && (

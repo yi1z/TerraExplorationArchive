@@ -1,4 +1,4 @@
-import { useId, useState } from "react";
+import { useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -11,9 +11,10 @@ import type { LibraryDetail } from "../data/library-types";
 import { libraryKindNames } from "../data/library-types";
 import { getLibrarySummary, useLibraryEntry } from "../lib/library";
 import { useArchiveStore } from "../lib/state";
-import Dialog from "./Dialog";
+import DossierFrame from "./DossierFrame";
+import { sectionForRecord, type DossierSection } from "../lib/dossier";
 import LibraryArtwork, {
-  localAssetPath,
+  artworkUrl,
   useLibraryArtwork,
 } from "./LibraryArtwork";
 
@@ -35,6 +36,7 @@ const labels: Record<string, string> = {
   block: "阻挡数",
   atkspd: "攻击速度",
   time: "再部署时间变化",
+  re_deploy: "再部署时间变化（秒）",
   lv: "解锁等级",
   type: "类型",
   traitadd: "特性追加",
@@ -150,6 +152,8 @@ export function readableValue(value: unknown): string {
   if (value === null || value === undefined) return "—";
   if (typeof value === "boolean") return value ? "是" : "否";
   if (typeof value !== "string") return String(value);
+  // Potential records store this attribute name as a value, not an object key.
+  if (value === "re_deploy") return labels.re_deploy;
   return value
     .replace(/<br\s*\/?>/gi, "\n")
     .replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, "$2")
@@ -660,17 +664,14 @@ export function LibraryGallery({ id, name }: { id: string; name: string }) {
     return (
       <div className="library-empty">
         <Images size={32} />
-        <p>此记录暂无已收录的本地视觉资料。</p>
+        <p>此记录暂无已收录的视觉资料。</p>
         {status === "error" && <button onClick={retry}>重新载入</button>}
       </div>
     );
   return (
     <div className="library-gallery">
       <figure>
-        <img
-          src={localAssetPath(art.full || art.path)}
-          alt={`${name} · ${art.title}`}
-        />
+        <img src={artworkUrl(art, "full")} alt={`${name} · ${art.title}`} />
         <figcaption>
           {art.title}
           <a
@@ -689,13 +690,7 @@ export function LibraryGallery({ id, name }: { id: string; name: string }) {
             aria-pressed={art.id === image.id}
             onClick={() => setSelected(image.id)}
           >
-            <img
-              src={localAssetPath(
-                image.thumbnail || image.preview || image.path,
-              )}
-              alt=""
-              loading="lazy"
-            />
+            <img src={artworkUrl(image, "thumbnail")} alt="" loading="lazy" />
             <span>{image.title}</span>
           </button>
         ))}
@@ -733,7 +728,7 @@ function LibrarySource({ entry }: { entry: LibraryDetail }) {
           rel="noreferrer"
         >
           <span>
-            <strong>本地资料对应的来源版本</strong>
+            <strong>资料快照对应的来源版本</strong>
             <small>
               {entry.source.timestamp?.slice(0, 10)} · #
               {entry.source.revisionId}
@@ -837,7 +832,7 @@ export function LibrarySupplement({
   if (status === "loading" || status === "idle")
     return (
       <p className="library-loading" role="status">
-        正在读取本地资料分片…
+        正在读取资料分片…
       </p>
     );
   if (!entry)
@@ -875,15 +870,15 @@ export function LibrarySupplement({
 export default function LibraryDossier({
   entry,
   onClose,
-  initialTab = "overview",
+  closing = false,
 }: {
   entry: LibraryDetail;
   onClose: () => void;
-  initialTab?: string;
+  closing?: boolean;
 }) {
-  const [tab, setTab] = useState(initialTab);
-  const panelId = useId();
-  const tabs = [
+  const section = useArchiveStore((state) => state.dossierSection);
+  const tab = sectionForRecord(section, false);
+  const tabs: [DossierSection, string][] = [
     ["overview", "档案概览"],
     ["data", "详细资料"],
     ["gallery", "视觉资料"],
@@ -891,65 +886,21 @@ export default function LibraryDossier({
     ["sources", "资料出处"],
   ];
   return (
-    <Dialog
-      title={`${entry.name} · ${libraryKindNames[entry.kind]}`}
-      wide
+    <DossierFrame
+      name={entry.name}
+      kind={libraryKindNames[entry.kind]}
+      tabs={tabs}
+      section={tab}
       onClose={onClose}
+      closing={closing}
     >
-      <div
-        className="dossier-tabs"
-        role="tablist"
-        aria-label="档案章节"
-        onKeyDown={(event) => {
-          const current = tabs.findIndex(([id]) => id === tab);
-          const next =
-            event.key === "ArrowRight"
-              ? (current + 1) % tabs.length
-              : event.key === "ArrowLeft"
-                ? (current + tabs.length - 1) % tabs.length
-                : event.key === "Home"
-                  ? 0
-                  : event.key === "End"
-                    ? tabs.length - 1
-                    : -1;
-          if (next >= 0) {
-            event.preventDefault();
-            setTab(tabs[next][0]);
-            (event.currentTarget.children[next] as HTMLElement).focus();
-          }
-        }}
-      >
-        {tabs.map(([id, title]) => (
-          <button
-            key={id}
-            role="tab"
-            id={`${panelId}-${id}`}
-            aria-controls={panelId}
-            aria-selected={tab === id}
-            tabIndex={tab === id ? 0 : -1}
-            onClick={() => setTab(id)}
-          >
-            {title}
-          </button>
-        ))}
-      </div>
-      <div
-        className="dossier-content library-dossier-content"
-        role="tabpanel"
-        id={panelId}
-        aria-labelledby={`${panelId}-${tab}`}
-        key={tab}
-      >
-        {tab === "overview" && <LibraryOverview entry={entry} />}
-        {tab === "data" && <LibraryTechnicalData entry={entry} />}
-        {tab === "gallery" && (
-          <LibraryGallery id={entry.id} name={entry.name} />
-        )}
-        {tab === "relations" && (
-          <LibraryRelations entry={entry} onNavigate={onClose} />
-        )}
-        {tab === "sources" && <LibrarySource entry={entry} />}
-      </div>
-    </Dialog>
+      {tab === "overview" && <LibraryOverview entry={entry} />}
+      {tab === "data" && <LibraryTechnicalData entry={entry} />}
+      {tab === "gallery" && <LibraryGallery id={entry.id} name={entry.name} />}
+      {tab === "relations" && (
+        <LibraryRelations entry={entry} onNavigate={onClose} />
+      )}
+      {tab === "sources" && <LibrarySource entry={entry} />}
+    </DossierFrame>
   );
 }

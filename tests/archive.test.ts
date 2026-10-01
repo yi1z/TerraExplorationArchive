@@ -183,6 +183,8 @@ describe("untrusted persisted state and URL input", () => {
   it("restores a shareable selection and explicit layers", () => {
     expect(readRoute("#/atlas?entry=lungmen&layers=cities,relations")).toEqual({
       view: "atlas",
+      dossierOpen: false,
+      dossierSection: "overview",
       selected: "lungmen",
       layers: { countries: false, cities: true, relations: true },
       kind: "all",

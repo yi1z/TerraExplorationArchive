@@ -23,6 +23,11 @@ import {
   SETTINGS_STORAGE_KEY,
 } from "./persistence";
 import { permittedFacetFields } from "./library-search-core";
+import { readDossierSection, type DossierSection } from "./dossier";
+import {
+  DEFAULT_SOUND_VOLUME,
+  normalizeSoundVolume,
+} from "./ui-sound-settings";
 export type ArchiveKindFilter = LibraryFilter;
 const archiveKinds = new Set<string>(["all", ...Object.keys(libraryKindNames)]);
 function isCatalogueEntry(id: string) {
@@ -79,6 +84,7 @@ export const defaultPreferences: Preferences = {
   spoilers: false,
   reducedMotion: false,
   sound: false,
+  soundVolume: DEFAULT_SOUND_VOLUME,
 };
 export const defaultLayers: Layers = {
   countries: true,
@@ -109,6 +115,7 @@ export function readPreferences(raw: string | null): Preferences {
       spoilers: value.spoilers === true,
       reducedMotion: value.reducedMotion === true,
       sound: value.sound === true,
+      soundVolume: normalizeSoundVolume(value.soundVolume),
     };
   } catch {
     return { ...defaultPreferences };
@@ -133,6 +140,11 @@ export function readRoute(hash: string) {
   const releaseFilter: LibraryReleaseFilter =
     status === "preview" || status === "all" ? status : "available";
   const searchQuery = (params.get("q") ?? "").slice(0, 160);
+  const dossierOpen =
+    view === "archive" && !!selected && params.get("view") === "dossier";
+  const dossierSection = dossierOpen
+    ? readDossierSection(params.get("section"))
+    : "overview";
   const specified = params.get("layers");
   const layers =
     specified === null
@@ -151,6 +163,8 @@ export function readRoute(hash: string) {
     facet,
     releaseFilter,
     query: searchQuery,
+    dossierOpen,
+    dossierSection,
     invalid: !!requested && !selected,
   };
 }
@@ -173,6 +187,8 @@ function preferencesAtStart() {
       if (settings)
         for (const key of ["spoilers", "reducedMotion", "sound"] as const)
           if (typeof settings[key] === "boolean") p[key] = settings[key];
+      if (settings && typeof settings.soundVolume === "number")
+        p.soundVolume = normalizeSoundVolume(settings.soundVolume);
       savedMotion = typeof settings?.reducedMotion === "boolean";
     } catch {
       /* The v1 backup remains usable. */
@@ -196,11 +212,15 @@ function routeAtStart() {
     : readRoute(window.location.hash);
 }
 const initial = routeAtStart();
+// A persisted history marker alone cannot prove the previous entry after reload.
+const dossierHistorySession = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
 let progressResetSequence = 0;
 type CameraCommand = "reset" | "in" | "out" | "north";
 interface Store {
   view: AppView;
   selected: string | null;
+  dossierOpen: boolean;
+  dossierSection: DossierSection;
   atlasSelected: string | null;
   previewEntry: string;
   setPreviewEntry: (id: string) => void;
@@ -228,6 +248,9 @@ interface Store {
   hydratePreferences: () => Promise<void>;
   select: (id: string, keepTour?: boolean) => void;
   openEntry: (id: string) => void;
+  openDossier: (id: string, section?: DossierSection) => void;
+  closeDossier: () => void;
+  setDossierSection: (section: DossierSection) => void;
   openAtlas: (id?: string) => void;
   returnToAtlas: () => void;
   close: () => void;
@@ -238,6 +261,7 @@ interface Store {
   setReleaseFilter: (value: LibraryReleaseFilter) => void;
   toggleLayer: (key: keyof Layers) => void;
   togglePreference: (key: "spoilers" | "reducedMotion" | "sound") => void;
+  setSoundVolume: (volume: number) => void;
   favorite: (id: string) => void;
   navigate: (hash: string) => void;
   camera: (command: CameraCommand) => void;
@@ -265,12 +289,19 @@ function syncUrl(
     | "facet"
     | "releaseFilter"
     | "query"
+    | "dossierOpen"
+    | "dossierSection"
   >,
   replace = false,
+  historyState: unknown = null,
 ) {
   if (typeof window === "undefined") return;
   const params = new URLSearchParams();
   if (state.selected) params.set("entry", state.selected);
+  if (state.view === "archive" && state.selected && state.dossierOpen) {
+    params.set("view", "dossier");
+    params.set("section", state.dossierSection);
+  }
   if (state.view === "archive" || state.view === "favorites") {
     if (state.kind !== "all") params.set("kind", state.kind);
     if (state.facet !== "all") params.set("filter", state.facet);
@@ -288,13 +319,15 @@ function syncUrl(
     );
   const hash = "#/" + state.view + (params.size ? "?" + params.toString() : "");
   if (window.location.hash !== hash) {
-    if (replace) window.history.replaceState(null, "", hash);
-    else window.history.pushState(null, "", hash);
+    if (replace) window.history.replaceState(historyState, "", hash);
+    else window.history.pushState(historyState, "", hash);
   }
 }
 export const useArchiveStore = create<Store>((set, get) => ({
   view: initial.view,
   selected: initial.selected,
+  dossierOpen: initial.dossierOpen,
+  dossierSection: initial.dossierSection,
   atlasSelected: initial.view === "atlas" ? initial.selected : null,
   previewEntry: initial.selected ?? "ursus",
   setPreviewEntry: (id) => {
@@ -319,6 +352,8 @@ export const useArchiveStore = create<Store>((set, get) => ({
   replayIntro: () => {
     set({
       view: "atlas",
+      dossierOpen: false,
+      dossierSection: "overview",
       selected: null,
       atlasSelected: null,
       activeEvent: null,
@@ -381,6 +416,8 @@ export const useArchiveStore = create<Store>((set, get) => ({
       previewEntry: id,
       view: "atlas",
       focusSequence: current.focusSequence + 1,
+      dossierOpen: false,
+      dossierSection: "overview",
       preferences,
       storageAvailable: save(preferences),
       ...(!keepTour
@@ -404,6 +441,8 @@ export const useArchiveStore = create<Store>((set, get) => ({
     set({
       view: "archive",
       selected: id,
+      dossierOpen: false,
+      dossierSection: "overview",
       atlasSelected:
         current.view === "atlas" ? current.selected : current.atlasSelected,
       previewEntry: id,
@@ -417,6 +456,47 @@ export const useArchiveStore = create<Store>((set, get) => ({
     });
     syncUrl(get());
   },
+  openDossier: (id, section = "overview") => {
+    const resolved = resolveLibraryId(id);
+    if (!resolved) return;
+    if (get().selected !== resolved || get().view !== "archive")
+      get().openEntry(resolved);
+    const alreadyOpen = get().dossierOpen;
+    set({ dossierOpen: true, dossierSection: readDossierSection(section) });
+    const marker = typeof window !== "undefined" ? window.history.state : null;
+    syncUrl(
+      get(),
+      alreadyOpen,
+      alreadyOpen
+        ? marker
+        : {
+            terraDossierEntry: resolved,
+            terraDossierSession: dossierHistorySession,
+          },
+    );
+  },
+  closeDossier: () => {
+    const current = get();
+    if (!current.dossierOpen) return;
+    set({ dossierOpen: false, dossierSection: "overview" });
+    if (
+      typeof window !== "undefined" &&
+      window.history.state?.terraDossierEntry === current.selected &&
+      window.history.state?.terraDossierSession === dossierHistorySession &&
+      typeof window.history.back === "function"
+    )
+      window.history.back();
+    else syncUrl(get(), true);
+  },
+  setDossierSection: (section) => {
+    if (!get().dossierOpen) return;
+    set({ dossierSection: readDossierSection(section) });
+    syncUrl(
+      get(),
+      true,
+      typeof window !== "undefined" ? window.history.state : null,
+    );
+  },
   openAtlas: (id) => {
     if (id !== undefined) {
       if (!entryById[id] || isCatalogueEntry(id)) return;
@@ -425,6 +505,8 @@ export const useArchiveStore = create<Store>((set, get) => ({
     }
     set({
       view: "atlas",
+      dossierOpen: false,
+      dossierSection: "overview",
       selected: null,
       atlasSelected: null,
       previewEntry: isCatalogueEntry(get().previewEntry)
@@ -444,6 +526,8 @@ export const useArchiveStore = create<Store>((set, get) => ({
     const selected = current.atlasSelected;
     set({
       view: "atlas",
+      dossierOpen: false,
+      dossierSection: "overview",
       selected,
       previewEntry: selected ?? "ursus",
       introPlaying: false,
@@ -456,6 +540,8 @@ export const useArchiveStore = create<Store>((set, get) => ({
   },
   close: () => {
     set({
+      dossierOpen: false,
+      dossierSection: "overview",
       introPlaying: false,
       selected: null,
       ...(get().view === "atlas" ? { atlasSelected: null } : {}),
@@ -470,6 +556,8 @@ export const useArchiveStore = create<Store>((set, get) => ({
     const current = get();
     set({
       view,
+      dossierOpen: false,
+      dossierSection: "overview",
       atlasSelected:
         view === "atlas"
           ? null
@@ -530,6 +618,13 @@ export const useArchiveStore = create<Store>((set, get) => ({
         : {}),
     });
   },
+  setSoundVolume: (volume) => {
+    const preferences = {
+      ...get().preferences,
+      soundVolume: normalizeSoundVolume(volume),
+    };
+    set({ preferences, storageAvailable: save(preferences) });
+  },
   favorite: (id) => {
     const resolved = resolveLibraryId(id);
     if (!resolved) return;
@@ -556,6 +651,8 @@ export const useArchiveStore = create<Store>((set, get) => ({
     set({
       view: r.view,
       selected: r.selected,
+      dossierOpen: r.dossierOpen,
+      dossierSection: r.dossierSection,
       layers: r.layers,
       kind: catalogueView ? r.kind : current.kind,
       facet: catalogueView ? r.facet : current.facet,

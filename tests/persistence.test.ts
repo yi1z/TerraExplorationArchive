@@ -12,11 +12,50 @@ const preferences = (overrides: Partial<Preferences> = {}): Preferences => ({
   spoilers: false,
   reducedMotion: false,
   sound: false,
+  soundVolume: 0.35,
   ...overrides,
 });
 afterEach(() => vi.unstubAllGlobals());
 
 describe("reading record migration", () => {
+  it("restores volume while retaining changes made before hydration finishes", () => {
+    const before = preferences();
+    expect(
+      mergeHydratedPreferences(
+        before,
+        before,
+        preferences({ soundVolume: 0.8 }),
+      ).soundVolume,
+    ).toBe(0.8);
+    expect(
+      mergeHydratedPreferences(
+        before,
+        preferences({ soundVolume: 0.2 }),
+        preferences({ soundVolume: 0.8 }),
+      ).soundVolume,
+    ).toBe(0.2);
+    expect(
+      mergeHydratedPreferences(
+        before,
+        before,
+        preferences({ soundVolume: undefined }),
+      ).soundVolume,
+    ).toBe(0.35);
+  });
+  it("migrates old volume and saves the normalized local fallback", async () => {
+    vi.stubGlobal("indexedDB", undefined);
+    expect(
+      (
+        await hydratePersistentPreferences(
+          preferences({ soundVolume: undefined }),
+        )
+      ).soundVolume,
+    ).toBe(0.35);
+    const setItem = vi.fn();
+    vi.stubGlobal("localStorage", { setItem });
+    persistPreferences(preferences({ soundVolume: 2 }));
+    expect(JSON.parse(setItem.mock.calls[0][1]).soundVolume).toBe(1);
+  });
   it("restores stored records while preserving interactions made during hydration", () => {
     const before = preferences({ favorites: ["yan"], visited: ["yan"] });
     const current = preferences({

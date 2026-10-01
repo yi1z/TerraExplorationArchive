@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "collection": "Arknights battle UI sounds adapted for website interaction",
+  "sourceRepository": "https://github.com/Aceship/Arknight-voices",
+  "sourceCommit": "d0cb4935a4d78fcd634d910248c4681ad26b1f41",
+  "mirrorCredit": "Aceship/Arknight-voices community repository",
+  "originalWork": "Arknights / 明日方舟",
+  "rightsNotice": "Game audio belongs to its respective rights holders. Repository hosting is not represented as an open-content licence.",
+  "usageNote": "These battle UI samples are mapped to confirm, enter, back and page actions for this site. They are not presented as the original menu button sounds.",
+  "verification": {
+    "method": "Original WAV container, PCM format, duration, amplitude and SHA-256 inspection; browser decoding and playback covered separately.",
+    "subjectiveListening": "Not performed: this agent cannot receive audio playback."
+  },
+  "files": [
+    {
+      "file": "b_ui_getcast.wav",
+      "role": "confirm",
+      "bytes": 71792,
+      "sha256": "8307c0ac7e1248b251f3121fefd3782d134d3474857206d25e3e63d700ccd8c5",
+      "durationSeconds": 0.406734693877551,
+      "format": {
+        "codec": 1,
+        "channels": 2,
+        "sampleRate": 44100,
+        "byteRate": 176400,
+        "bitsPerSample": 16
+      },
+      "peakAmplitude": 0.160400390625,
+      "rmsAmplitude": 0.006900754967047821,
+      "sourceUrl": "https://github.com/Aceship/Arknight-voices/blob/d0cb4935a4d78fcd634d910248c4681ad26b1f41/battle/b_ui/b_ui_getcast.wav",
+      "downloadUrl": "https://raw.githubusercontent.com/Aceship/Arknight-voices/d0cb4935a4d78fcd634d910248c4681ad26b1f41/battle/b_ui/b_ui_getcast.wav",
+      "modified": false
+    },
+    {
+      "file": "b_ui_mark.wav",
+      "role": "enter",
+      "bytes": 137196,
+      "sha256": "5fb019f3b0a51ac77d2646147166309de38a9632a70055fd85fa43c2f4c82eb8",
+      "durationSeconds": 0.7775056689342403,
+      "format": {
+        "codec": 1,
+        "channels": 2,
+        "sampleRate": 44100,
+        "byteRate": 176400,
+        "bitsPerSample": 16
+      },
+      "peakAmplitude": 0.76617431640625,
+      "rmsAmplitude": 0.14118759017839502,
+      "sourceUrl": "https://github.com/Aceship/Arknight-voices/blob/d0cb4935a4d78fcd634d910248c4681ad26b1f41/battle/b_ui/b_ui_mark.wav",
+      "downloadUrl": "https://raw.githubusercontent.com/Aceship/Arknight-voices/d0cb4935a4d78fcd634d910248c4681ad26b1f41/battle/b_ui/b_ui_mark.wav",
+      "modified": false
+    },
+    {
+      "file": "b_ui_whoosh.wav",
+      "role": "back",
+      "bytes": 221912,
+      "sha256": "56e699d2220c4580dfe1d5143d8593540dd8ce6a25c428cfef2df4ecac75ed35",
+      "durationSeconds": 1.2577551020408164,
+      "format": {
+        "codec": 1,
+        "channels": 2,
+        "sampleRate": 44100,
+        "byteRate": 176400,
+        "bitsPerSample": 16
+      },
+      "peakAmplitude": 0.547576904296875,
+      "rmsAmplitude": 0.0784435195513214,
+      "sourceUrl": "https://github.com/Aceship/Arknight-voices/blob/d0cb4935a4d78fcd634d910248c4681ad26b1f41/battle/b_ui/b_ui_whoosh.wav",
+      "downloadUrl": "https://raw.githubusercontent.com/Aceship/Arknight-voices/d0cb4935a4d78fcd634d910248c4681ad26b1f41/battle/b_ui/b_ui_whoosh.wav",
+      "modified": false
+    },
+    {
+      "file": "b_ui_whoosh1.wav",
+      "role": "page",
+      "bytes": 241520,
+      "sha256": "3044b43a1d2d62fca9f0cc182afaf0620e5d64e4939c2fc8982b2b67a15f39bd",
+      "durationSeconds": 1.3689115646258503,
+      "format": {
+        "codec": 1,
+        "channels": 2,
+        "sampleRate": 44100,
+        "byteRate": 176400,
+        "bitsPerSample": 16
+      },
+      "peakAmplitude": 0.64306640625,
+      "rmsAmplitude": 0.12265268753230592,
+      "sourceUrl": "https://github.com/Aceship/Arknight-voices/blob/d0cb4935a4d78fcd634d910248c4681ad26b1f41/battle/b_ui/b_ui_whoosh1.wav",
+      "downloadUrl": "https://raw.githubusercontent.com/Aceship/Arknight-voices/d0cb4935a4d78fcd634d910248c4681ad26b1f41/battle/b_ui/b_ui_whoosh1.wav",
+      "modified": false
+    }
+  ]
+}

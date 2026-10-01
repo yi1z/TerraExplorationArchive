@@ -11,9 +11,10 @@ import {
 import { dirname, resolve } from "node:path";
 import { serveGeneratedLibrary } from "./scripts/serve-library.ts";
 
-function currentPublicSnapshot() {
+export function currentPublicSnapshot() {
   let publicDir = "";
   let outDir = "";
+  let offline = false;
   return {
     name: "current-public-snapshot",
     apply: "build" as const,
@@ -21,11 +22,27 @@ function currentPublicSnapshot() {
       root: string;
       publicDir: string;
       build: { outDir: string };
+      env: Record<string, unknown>;
     }) {
       publicDir = config.publicDir;
       outDir = resolve(config.root, config.build.outDir);
+      offline = config.env.VITE_RESOURCE_MODE === "offline";
     },
     async writeBundle() {
+      if (!offline) {
+        // Online readers fetch the pinned snapshot and art as needed. Keeping
+        // this list explicit also avoids publishing private/new public caches.
+        for (const path of [
+          "favicon.svg",
+          "third-party-notices.txt",
+          "assets/audio",
+        ]) {
+          const destination = resolve(outDir, path);
+          await mkdir(dirname(destination), { recursive: true });
+          await cp(resolve(publicDir, path), destination, { recursive: true });
+        }
+        return;
+      }
       // Keep source snapshots recoverable; publish only the active data graph.
       const dataDir = resolve(publicDir, "data/prts");
       const manifestText = await readFile(

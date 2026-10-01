@@ -1,19 +1,15 @@
 import { useEffect, useState } from "react";
 import { Crosshair } from "lucide-react";
+import {
+  loadArtworkMetadata,
+  loadCardArtworkMetadata,
+  type ResourceArtwork,
+} from "../lib/resource-provider";
+import type { LibraryKind } from "../data/library-types";
+import { artworkUrl, curatedAssetUrl } from "../lib/media";
+export { localAssetPath, artworkUrl } from "../lib/media";
 
-export interface LibraryArt {
-  id: string;
-  title: string;
-  role: string;
-  path: string;
-  thumbnail?: string;
-  preview?: string;
-  full?: string;
-  width?: number;
-  height?: number;
-  sourceUrl?: string;
-  filePage?: string;
-}
+export type LibraryArt = ResourceArtwork;
 type ArtworkState = {
   artworks: LibraryArt[];
   status: "loading" | "ready" | "missing" | "error";
@@ -21,97 +17,61 @@ type ArtworkState = {
 };
 const cache = new Map<string, ArtworkState>();
 const pending = new Map<string, Promise<ArtworkState>>();
+const listeners = new Map<string, Set<(result: ArtworkState) => void>>();
 const empty: ArtworkState = { artworks: [], status: "loading" };
 
-export function localAssetPath(path?: string) {
-  if (!path || /[\\\u0000-\u001f]/.test(path)) return undefined;
-  let decoded: string;
-  try {
-    decoded = decodeURIComponent(path);
-  } catch {
-    return undefined;
-  }
-  if (
-    /[\\%?#\u0000-\u001f]/.test(decoded) ||
-    /^(?:[a-z]+:|\/\/)/i.test(decoded) ||
-    decoded.split("/").some((segment) => segment === "..")
-  )
-    return undefined;
-  const relative = decoded.replace(/^(?:\.\/|\/|public\/)+/, "");
-  if (!relative.startsWith("assets/")) return undefined;
-  return (
-    import.meta.env.BASE_URL +
-    relative.split("/").map(encodeURIComponent).join("/")
-  );
-}
-
-async function getArt(id: string): Promise<ArtworkState> {
-  if (cache.has(id)) return cache.get(id)!;
-  if (pending.has(id)) return pending.get(id)!;
+async function getArt(id: string, kind?: LibraryKind): Promise<ArtworkState> {
+  const key = kind ? `${id}:card` : id;
+  if (cache.has(key)) return cache.get(key)!;
+  if (pending.has(key)) return pending.get(key)!;
   const request = (async (): Promise<ArtworkState> => {
-    const controller = new AbortController();
-    let timer: ReturnType<typeof setTimeout> | undefined;
     try {
-      return await Promise.race<ArtworkState>([
-        (async (): Promise<ArtworkState> => {
-          const response = await fetch(
-            `${import.meta.env.BASE_URL}assets/library/entries/${encodeURIComponent(id)}.json`,
-            { signal: controller.signal },
-          );
-          if (response.status === 404)
-            return { artworks: [], status: "missing" };
-          if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          if (!response.headers.get("content-type")?.includes("json"))
-            return { artworks: [], status: "missing" };
-          const data = await response.json();
-          const artworks = (
-            Array.isArray(data.artworks) ? data.artworks : []
-          ).filter(
-            (art: LibraryArt) =>
-              art && typeof art.path === "string" && localAssetPath(art.path),
-          );
-          return { artworks, status: artworks.length ? "ready" : "missing" };
-        })(),
-        new Promise<never>((_, reject) => {
-          timer = setTimeout(() => {
-            controller.abort();
-            reject(new Error("图片资料请求超时"));
-          }, 20_000);
-        }),
-      ]);
+      const data = kind
+        ? await loadCardArtworkMetadata(id, kind)
+        : await loadArtworkMetadata(id);
+      const artworks = data.artworks.filter((art) => !!artworkUrl(art));
+      return { artworks, status: artworks.length ? "ready" : "missing" };
     } catch {
       return { artworks: [], status: "error", error: "图片资料暂时未能载入" };
-    } finally {
-      clearTimeout(timer);
     }
   })();
-  pending.set(id, request);
+  pending.set(key, request);
   const result = await request;
-  pending.delete(id);
-  cache.set(id, result);
+  pending.delete(key);
+  cache.set(key, result);
+  listeners.get(key)?.forEach((listener) => listener(result));
   if (cache.size > 256) cache.delete(cache.keys().next().value!);
   return result;
 }
 
-export function useLibraryArtwork(id: string) {
+export function useLibraryArtwork(id: string, kind?: LibraryKind) {
+  const key = kind ? `${id}:card` : id;
   const [attempt, setAttempt] = useState(0);
   const [state, setState] = useState<{ id: string; result: ArtworkState }>({
-    id,
-    result: cache.get(id) ?? empty,
+    id: key,
+    result: cache.get(key) ?? empty,
   });
   useEffect(() => {
     let active = true;
-    getArt(id).then((result) => {
-      if (active) setState({ id, result });
+    const listener = (result: ArtworkState) => {
+      if (active) setState({ id: key, result });
+    };
+    const subscribers = listeners.get(key) ?? new Set();
+    subscribers.add(listener);
+    listeners.set(key, subscribers);
+    getArt(id, kind).then((result) => {
+      if (active) setState({ id: key, result });
     });
     return () => {
       active = false;
+      subscribers.delete(listener);
+      if (!subscribers.size) listeners.delete(key);
     };
-  }, [id, attempt]);
+  }, [id, key, kind, attempt]);
   return {
-    ...(state.id === id ? state.result : (cache.get(id) ?? empty)),
+    ...(state.id === key ? state.result : (cache.get(key) ?? empty)),
     retry: () => {
-      cache.delete(id);
+      cache.delete(key);
       setAttempt((value) => value + 1);
     },
   };
@@ -127,6 +87,7 @@ export default function LibraryArtwork({
   entry: {
     id: string;
     name: string;
+    kind?: LibraryKind;
     artwork?: {
       thumbnail?: string;
       preview?: string;
@@ -139,15 +100,24 @@ export default function LibraryArtwork({
   variantId?: string;
   className?: string;
 }) {
-  const { artworks, status } = useLibraryArtwork(entry.id);
+  const { artworks, status, retry } = useLibraryArtwork(
+    entry.id,
+    thumbnail ? entry.kind : undefined,
+  );
   const art =
     artworks.find((image) => image.id === variantId) ??
-    artworks.find((image) => /portrait|立绘|初始|main/.test(image.role)) ??
+    artworks.find((image) =>
+      /portrait|landscape|立绘|初始|main/.test(image.role),
+    ) ??
     artworks[0];
-  const path = thumbnail
-    ? (art?.preview ?? art?.thumbnail ?? entry.artwork?.thumbnail ?? art?.path)
-    : (art?.path ?? entry.artwork?.full ?? entry.artwork?.preview);
-  const url = localAssetPath(path);
+  const fallbackPath = thumbnail
+    ? (entry.artwork?.preview ??
+      entry.artwork?.thumbnail ??
+      entry.artwork?.full)
+    : (entry.artwork?.full ?? entry.artwork?.preview);
+  const url =
+    artworkUrl(art, thumbnail ? "preview" : "full") ??
+    (fallbackPath ? curatedAssetUrl(fallbackPath) : undefined);
   const [failed, setFailed] = useState<string | null>(null);
   return url && failed !== url ? (
     <img
@@ -184,6 +154,16 @@ export default function LibraryArtwork({
           ? "CONNECTING VISUAL RECORD"
           : "TERRA FIELD RECORD"}
       </small>
+      {!decorative && status !== "loading" && (
+        <button
+          onClick={() => {
+            setFailed(null);
+            retry();
+          }}
+        >
+          重试图像
+        </button>
+      )}
     </div>
   );
 }

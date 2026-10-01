@@ -17,6 +17,7 @@ let handle: (event: { data: unknown }) => Promise<void>;
 let post: ReturnType<typeof vi.fn>;
 beforeEach(async () => {
   vi.resetModules();
+  vi.stubEnv("VITE_RESOURCE_MODE", "offline");
   vi.stubGlobal(
     "addEventListener",
     (_type: string, callback: typeof handle) => {
@@ -27,24 +28,30 @@ beforeEach(async () => {
   vi.stubGlobal("postMessage", post);
   await import("../src/lib/library-search.worker");
 });
-afterEach(() => vi.unstubAllGlobals());
+afterEach(() => {
+  vi.unstubAllGlobals();
+  vi.unstubAllEnvs();
+});
 const init = (urls: string[]) =>
   handle({
     data: {
       type: "init",
       summaries: [entry],
       documents: [],
-      searchUrls: urls,
+      searchShards: urls.map((url) => ({
+        path: `data/prts/search${url}.json`,
+        kind: "world",
+      })),
     },
   });
-const search = (id: number) =>
+const search = (id: number, kind = "all", query = "独特正文") =>
   handle({
     data: {
       type: "search",
       requestId: id,
       request: {
-        query: "独特正文",
-        kind: "all",
+        query,
+        kind,
         facet: "all",
         spoilers: true,
         scope: "all",
@@ -60,6 +67,49 @@ const shard = () =>
   );
 
 describe("full text worker lifecycle", () => {
+  it("does not download full text for an empty query and scopes downloads to the selected kind", async () => {
+    const fetch = vi.fn(async (_url: string) => shard());
+    vi.stubGlobal("fetch", fetch);
+    await handle({
+      data: {
+        type: "init",
+        summaries: [entry],
+        documents: [],
+        searchShards: [
+          { path: "data/prts/search/world-000.json", kind: "world" },
+          { path: "data/prts/search/country-000.json", kind: "country" },
+          { path: "data/prts/search/operator-000.json", kind: "operator" },
+        ],
+      },
+    });
+    await search(1, "all", "");
+    expect(fetch).not.toHaveBeenCalled();
+    await search(2, "world");
+    expect(fetch.mock.calls.map((call) => String(call[0]))).toEqual([
+      "/data/prts/search/world-000.json",
+      "/data/prts/search/country-000.json",
+    ]);
+    expect(post.mock.calls.at(-1)?.[0].result.fullText).toBe(true);
+    await search(3, "operator");
+    expect(fetch).toHaveBeenCalledTimes(3);
+  });
+
+  it("cancels an obsolete category download without leaking an error into a later empty query", async () => {
+    let signal: AbortSignal | undefined;
+    vi.stubGlobal("fetch", (_url: string, options: RequestInit) => {
+      signal = options.signal as AbortSignal;
+      return new Promise(() => {});
+    });
+    await init(["/pending"]);
+    const pending = search(1);
+    await search(2, "operator", "");
+    await pending;
+    expect(signal?.aborted).toBe(true);
+    expect(post.mock.calls.filter(([message]) => message.error)).toHaveLength(
+      0,
+    );
+    expect(post.mock.calls.at(-1)?.[0].requestId).toBe(2);
+  });
   it("acknowledges startup, limits parallel downloads, and returns only the latest query", async () => {
     const releases: Array<(response: Response) => void> = [];
     const fetch = vi.fn(

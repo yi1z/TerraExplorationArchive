@@ -10,8 +10,17 @@ import {
   type LibrarySummary,
 } from "../data/library-types";
 import type { ArchiveEntry } from "../data/types";
+import { applyLibraryDetailOverrides } from "../data/library-overrides";
 import { libraryFacetGroups } from "./library-search-core";
-import { fetchJsonWithTimeout } from "./fetch-json";
+import {
+  decodeCompactCatalogue,
+  fetchResourceJson,
+  loadOnlineDescriptor,
+  RESOURCE_MODE,
+  resourceInfo,
+  resourceUrl,
+  type ResourceOptions,
+} from "./resource-provider";
 
 export function matchesLibraryKind(
   entry: { kind: LibraryKind },
@@ -120,12 +129,14 @@ interface LibrarySnapshot {
   manifest: LibraryManifest | null;
   summaries: LibrarySummary[];
   error: string | null;
+  source: "online" | "offline" | "curated-fallback";
 }
 let snapshot: LibrarySnapshot = {
   status: "idle",
   manifest: null,
   summaries: fallbackSummaries,
   error: null,
+  source: "curated-fallback",
 };
 let byId = new Map(fallbackSummaries.map((entry) => [entry.id, entry]));
 const listeners = new Set<() => void>();
@@ -179,14 +190,14 @@ export function libraryUrl(path: string) {
     path.split("/").includes("..")
   )
     throw new Error("资料路径不合法");
-  return import.meta.env.BASE_URL + path;
+  return resourceUrl(path);
 }
-async function fetchJson(path: string, version?: string): Promise<unknown> {
-  return fetchJsonWithTimeout(
-    libraryUrl(path) +
-      (version ? `?snapshot=${encodeURIComponent(version)}` : ""),
-    { cache: "no-cache" },
-  );
+async function fetchJson(
+  path: string,
+  options?: ResourceOptions,
+): Promise<unknown> {
+  libraryUrl(path);
+  return fetchResourceJson(path, options);
 }
 function recordsFrom(value: unknown): unknown[] {
   if (
@@ -244,6 +255,12 @@ function loadManifest(force = false): Promise<LibraryManifest> {
       !Array.isArray(manifest.detailShards)
     )
       throw new Error("资料版本暂不支持");
+    if (
+      RESOURCE_MODE === "online" &&
+      manifest.snapshotId !== resourceInfo.snapshotId
+    )
+      throw new Error("在线资料与固定版本不一致");
+    manifest.detailShards.forEach((shard) => libraryUrl(shard.path));
     detailPaths = new Map(
       manifest.detailShards.flatMap((shard) =>
         shard.ids.map((id) => [id, shard.path] as const),
@@ -263,10 +280,26 @@ export function loadLibrary(force = false): Promise<void> {
   if (snapshot.status === "ready" && !force) return Promise.resolve();
   publish({ status: "loading", error: null });
   loading = (async () => {
-    const manifest = await loadManifest(force);
-    const shards = await mapConcurrent(manifest.indexShards, 6, async (shard) =>
-      recordsFrom(await fetchJson(shard.path, manifest.generatedAt)),
-    );
+    const [manifest, descriptor] = await Promise.all([
+      loadManifest(force),
+      RESOURCE_MODE === "online" ? loadOnlineDescriptor() : null,
+    ]);
+    const shards = descriptor
+      ? await mapConcurrent(descriptor.catalogShards, 6, async (shard) => {
+          const records = decodeCompactCatalogue(
+            await fetchResourceJson(shard.path),
+            descriptor.detailPaths,
+          );
+          if (
+            records.length !== shard.count ||
+            records.some((record) => record.kind !== shard.kind)
+          )
+            throw new Error("在线目录条数或类别不一致");
+          return records;
+        })
+      : await mapConcurrent(manifest.indexShards, 6, async (shard) =>
+          recordsFrom(await fetchJson(shard.path)),
+        );
     const summaries = new Map(
       fallbackSummaries.map((entry) => [entry.id, entry]),
     );
@@ -285,6 +318,7 @@ export function loadLibrary(force = false): Promise<void> {
       manifest,
       summaries: [...summaries.values()],
       error: null,
+      source: RESOURCE_MODE,
     });
   })()
     .catch((error) => {
@@ -303,7 +337,9 @@ const detailCache = new Map<string, Map<string, LibraryDetail>>();
 const detailPending = new Map<string, Promise<Map<string, LibraryDetail>>>();
 async function loadDetailShard(
   path: string,
+  options: ResourceOptions = {},
 ): Promise<Map<string, LibraryDetail>> {
+  options.signal?.throwIfAborted();
   const version = snapshot.manifest?.generatedAt;
   const key = `${version ?? "local"}:${path}`;
   const cached = detailCache.get(key);
@@ -312,47 +348,53 @@ async function loadDetailShard(
     detailCache.set(key, cached);
     return cached;
   }
-  const pending = detailPending.get(key);
+  const pending = options.signal ? undefined : detailPending.get(key);
   if (pending) return pending;
   const request = (async () => {
-    const records = recordsFrom(await fetchJson(path, version));
+    const records = recordsFrom(await fetchJson(path, options));
     const index = new Map<string, LibraryDetail>();
     for (const value of records) {
       if (!isSummary(value)) throw new Error("档案格式不正确");
       const record = value as LibraryDetail;
       if (!Array.isArray(record.sections) || !Array.isArray(record.facts))
         throw new Error("档案正文格式不正确");
-      index.set(record.id, {
-        ...record,
-        relationships: record.relationships ?? [],
-        fields: record.fields ?? {},
-        templates: record.templates ?? [],
-        artworkRefs: record.artworkRefs ?? [],
-      });
+      index.set(
+        record.id,
+        applyLibraryDetailOverrides({
+          ...record,
+          relationships: record.relationships ?? [],
+          fields: record.fields ?? {},
+          templates: record.templates ?? [],
+          artworkRefs: record.artworkRefs ?? [],
+        }),
+      );
     }
     detailCache.set(key, index);
     while (detailCache.size > 6)
       detailCache.delete(detailCache.keys().next().value!);
     return index;
   })().finally(() => {
-    detailPending.delete(key);
+    if (!options.signal) detailPending.delete(key);
   });
-  detailPending.set(key, request);
+  if (!options.signal) detailPending.set(key, request);
   return request;
 }
 export async function loadLibraryEntry(
   id: string,
+  options: ResourceOptions = {},
 ): Promise<LibraryDetail | null> {
+  options.signal?.throwIfAborted();
   // The manifest already maps IDs to detail shards. A deep link need not wait
   // for every search-directory shard to arrive before its dossier is readable.
   void loadLibrary().catch(() => {});
   const manifest = await loadManifest();
+  options.signal?.throwIfAborted();
   const canonical = manifest.legacyAliases?.[id] ?? id;
   const summary = getLibrarySummary(canonical);
   const path = detailPaths.get(canonical) ?? summary?.detailShard;
   if (!path)
     return entryById[canonical] ? curatedDetail(entryById[canonical]) : null;
-  const records = await loadDetailShard(path);
+  const records = await loadDetailShard(path, options);
   const record = records.get(canonical);
   if (!record) throw new Error("索引与档案分片不一致，请重试更新资料");
   return record;
@@ -380,8 +422,9 @@ export function useLibraryEntry(id: string | null | undefined) {
   useEffect(() => {
     if (!id) return;
     let active = true;
+    const controller = new AbortController();
     setResult({ id, entry: null, status: "loading", error: null });
-    void loadLibraryEntry(id)
+    void loadLibraryEntry(id, { signal: controller.signal })
       .then((entry) => {
         if (active)
           setResult({
@@ -402,6 +445,7 @@ export function useLibraryEntry(id: string | null | undefined) {
       });
     return () => {
       active = false;
+      controller.abort();
     };
   }, [
     id,

@@ -47,8 +47,14 @@ const response = (value: unknown, status = 200) =>
   });
 
 describe("library shard loading", () => {
-  beforeEach(() => vi.resetModules());
-  afterEach(() => vi.unstubAllGlobals());
+  beforeEach(() => {
+    vi.resetModules();
+    vi.stubEnv("VITE_RESOURCE_MODE", "offline");
+  });
+  afterEach(() => {
+    vi.unstubAllGlobals();
+    vi.unstubAllEnvs();
+  });
   it("loads only catalogue shards initially and deduplicates concurrent detail requests", async () => {
     const fetch = vi.fn(async (url: string) =>
       url.endsWith("manifest.json")
@@ -66,7 +72,9 @@ describe("library shard loading", () => {
     expect(fetch.mock.calls.some(([url]) => url.includes("/details/"))).toBe(
       false,
     );
-    const loaded = await Promise.all(ids.map(library.loadLibraryEntry));
+    const loaded = await Promise.all(
+      ids.map((id) => library.loadLibraryEntry(id)),
+    );
     expect(loaded.map((entry) => entry?.id)).toEqual(ids);
     expect(fetch).toHaveBeenCalledTimes(3);
     expect(

@@ -5,8 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
+    "dev:offline": "node scripts/run-offline.mjs dev",
     "build": "tsc -b && vite build",
+    "build:offline": "node scripts/run-offline.mjs build",
     "preview": "vite preview --host 127.0.0.1",
+    "preview:offline": "node scripts/run-offline.mjs preview",
     "typecheck": "tsc -b --pretty false",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -19,6 +22,8 @@
     "prts:assets": "node scripts/prts-assets.mjs sync",
     "prts:verify-assets": "node scripts/prts-assets.mjs verify",
     "prts:verify": "node scripts/prts/verify.mjs",
+    "prts:online": "node scripts/publish-online.mjs --output=resources/online",
+    "prts:thumbnails": "node scripts/fetch-online-thumbnails.mjs",
     "assets:pack": "node scripts/assets/cli.mjs pack",
     "assets:download": "node scripts/assets/cli.mjs download",
     "assets:verify": "node scripts/assets/cli.mjs verify"

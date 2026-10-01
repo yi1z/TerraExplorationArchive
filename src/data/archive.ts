@@ -75,8 +75,15 @@ interface CountryInput {
   related: string[];
   spoiler?: string;
   sourcePath?: string;
+  facts?: WorldEntry["facts"];
+  sourceNote?: string;
 }
 function country(r: CountryInput): WorldEntry {
+  const sourceId = wiki("source-" + r.id, r.name, r.sourcePath);
+  if (r.sourceNote) {
+    sources[sourceId].note = r.sourceNote;
+    sources[sourceId].checkedAt = "2026-09-30";
+  }
   return {
     ...r,
     kind: "country",
@@ -86,6 +93,7 @@ function country(r: CountryInput): WorldEntry {
       { label: "档案分区", value: zoneNames[r.zone] },
       { label: "文明特征", value: r.form },
       { label: "地理印象", value: r.tags[0] },
+      ...(r.facts ?? []),
     ],
     sections: [
       { title: "大地与城市", body: r.terrain },
@@ -94,7 +102,7 @@ function country(r: CountryInput): WorldEntry {
         ? [{ title: "历史追记", body: r.spoiler, spoiler: true }]
         : []),
     ],
-    sources: [wiki("source-" + r.id, r.name, r.sourcePath), "geography"],
+    sources: [sourceId, "geography"],
   };
 }
 const countries: WorldEntry[] = [
@@ -141,11 +149,19 @@ const countries: WorldEntry[] = [
     form: "帝国 · 术法传统",
     tags: ["法术学府", "高塔与林地", "音乐"],
     summary:
-      "源石技艺深入社会生活的国度。高塔、学院与音乐传统构成了莱塔尼亚鲜明的文化印象。",
+      "位于泰拉中部、以崔林特尔梅为首都的帝国。九个大区共同构成其疆域，源石技艺与音乐贯穿教育和日常生活，高塔承载着贵族与学府的传统。",
     terrain:
-      "诸多领地和聚落分布于其疆域。沃伦姆德等城市的故事，让宏大的国家图景落到了粮食、交通与生活的尺度。",
+      "山区之间分布着河谷与平原，北部冬灵山脉附近气候寒冷。国家由九个选帝侯区组成，各区设有自己的政府。首都崔林特尔梅与北方城镇沃伦姆德，呈现出不同规模的城市生活。",
     culture:
-      "音乐与施术之间的联系贯穿这里的艺术和技术。对知识的追求，也无法完全消除社会中的阶层差异。",
+      "各区设有不同层级的教育机构，其中许多由贵族高塔发展而来。源石技艺进入义务教育，艺术课程也占有重要位置；更高层级的教育往往需要更高费用，家庭条件仍会影响求学机会。音乐与施术相连，是理解当地文化的入口。",
+    facts: [
+      { label: "首都", value: "崔林特尔梅（Zwillingstürme）" },
+      { label: "行政分区", value: "九个选帝侯区，又称大区" },
+      { label: "法定货币", value: "杜卡特" },
+      { label: "基础教育", value: "源石技艺是义务教育的一部分" },
+    ],
+    sourceNote:
+      "依据缓存页面 21739、修订 337057 的地理、行政分区、货币与教育段落改写；九大区段落引《大地巡旅》132 页。来源为 PRTS 社区考据，未将文中推测或后续剧情写入基础摘要。",
     related: ["wolumonde", "arts", "siracusa", "originium"],
     spoiler:
       "巫王时代的遗产持续影响着后来的莱塔尼亚。双子女皇的统治与新旧秩序的冲突，是相关故事的重要背景。",

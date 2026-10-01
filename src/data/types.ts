@@ -142,5 +142,6 @@ export interface Preferences {
   spoilers: boolean;
   reducedMotion: boolean;
   sound: boolean;
+  soundVolume: number;
 }
 export type AppView = "atlas" | "archive" | "favorites" | "about";

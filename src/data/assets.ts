@@ -1,3 +1,4 @@
+import { curatedAssetUrl } from "../lib/media";
 import manifest from "./game-assets.json";
 import { entryById } from "./archive";
 export const gameAssets = manifest;
@@ -15,5 +16,4 @@ export function assetFor(
   const region = entryById[id]?.regionId;
   return region ? assets.get(region + ":" + kind) : undefined;
 }
-export const assetUrl = (asset: GameAsset) =>
-  import.meta.env.BASE_URL + asset.path;
+export const assetUrl = (asset: GameAsset) => curatedAssetUrl(asset.path)!;
