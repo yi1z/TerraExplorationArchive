@@ -25,6 +25,11 @@ import {
 import { permittedFacetFields } from "./library-search-core";
 import { readDossierSection, type DossierSection } from "./dossier";
 import {
+  readSearchPage,
+  readSearchScope,
+  type SearchScope,
+} from "./search-state";
+import {
   DEFAULT_SOUND_VOLUME,
   normalizeSoundVolume,
 } from "./ui-sound-settings";
@@ -126,12 +131,21 @@ export function readRoute(hash: string) {
     .slice(0, 2048)
     .replace(/^#\/?/, "")
     .split("?");
-  let view: AppView = ["atlas", "archive", "favorites", "about"].includes(path)
+  let view: AppView = [
+    "home",
+    "search",
+    "atlas",
+    "archive",
+    "favorites",
+    "about",
+  ].includes(path)
     ? (path as AppView)
-    : "archive";
+    : "home";
   const params = new URLSearchParams(query);
   const requested = params.get("entry");
   const selected = requested ? resolveLibraryId(requested) : null;
+  if (view === "favorites" || (view === "archive" && !selected))
+    view = "search";
   if (view === "atlas" && selected && isCatalogueEntry(selected))
     view = "archive";
   const kind = readKind(params.get("kind"));
@@ -163,6 +177,11 @@ export function readRoute(hash: string) {
     facet,
     releaseFilter,
     query: searchQuery,
+    searchScope:
+      path === "favorites"
+        ? ("favorites" as const)
+        : readSearchScope(params.get("scope")),
+    searchPage: readSearchPage(params.get("page")),
     dossierOpen,
     dossierSection,
     invalid: !!requested && !selected,
@@ -230,6 +249,13 @@ interface Store {
   kind: ArchiveKindFilter;
   facet: string;
   releaseFilter: LibraryReleaseFilter;
+  searchScope: SearchScope;
+  searchPage: number;
+  searchFocusSequence: number;
+  openSearch: (kind?: string, scope?: SearchScope) => void;
+  returnToSearch: () => void;
+  setSearchScope: (scope: SearchScope) => void;
+  setSearchPage: (page: number, replace?: boolean) => void;
   focusSequence: number;
   introSequence: number;
   introPlaying: boolean;
@@ -291,25 +317,37 @@ function syncUrl(
     | "query"
     | "dossierOpen"
     | "dossierSection"
+    | "searchScope"
+    | "searchPage"
   >,
   replace = false,
   historyState: unknown = null,
 ) {
   if (typeof window === "undefined") return;
   const params = new URLSearchParams();
-  if (state.selected) params.set("entry", state.selected);
+  if (state.selected && (state.view === "archive" || state.view === "atlas"))
+    params.set("entry", state.selected);
   if (state.view === "archive" && state.selected && state.dossierOpen) {
     params.set("view", "dossier");
     params.set("section", state.dossierSection);
   }
-  if (state.view === "archive" || state.view === "favorites") {
+  if (
+    state.view === "archive" ||
+    state.view === "search" ||
+    state.view === "favorites"
+  ) {
     if (state.kind !== "all") params.set("kind", state.kind);
     if (state.facet !== "all") params.set("filter", state.facet);
     if (state.releaseFilter !== "available")
       params.set("status", state.releaseFilter);
     if (state.query) params.set("q", state.query);
+    if (state.searchScope !== "all") params.set("scope", state.searchScope);
+    if (state.searchPage > 0) params.set("page", String(state.searchPage + 1));
   }
-  if (JSON.stringify(state.layers) !== JSON.stringify(defaultLayers))
+  if (
+    state.view === "atlas" &&
+    JSON.stringify(state.layers) !== JSON.stringify(defaultLayers)
+  )
     params.set(
       "layers",
       Object.entries(state.layers)
@@ -340,6 +378,64 @@ export const useArchiveStore = create<Store>((set, get) => ({
   kind: initial.kind,
   facet: initial.facet,
   releaseFilter: initial.releaseFilter,
+  searchScope: initial.searchScope,
+  searchPage: initial.searchPage,
+  searchFocusSequence: 0,
+  openSearch: (kind, scope) => {
+    const current = get();
+    set({
+      view: "search",
+      selected: null,
+      dossierOpen: false,
+      dossierSection: "overview",
+      tourPlaying: false,
+      tourIndex: -1,
+      introPlaying: false,
+      activeEvent: null,
+      compareOpen: false,
+      atlasSelected:
+        current.view === "atlas" ? current.selected : current.atlasSelected,
+      ...(kind !== undefined
+        ? {
+            kind: readKind(kind),
+            facet: "all",
+            query: "",
+            searchPage: 0,
+            searchScope: scope ?? "all",
+          }
+        : scope !== undefined
+          ? { searchScope: scope, searchPage: 0 }
+          : {}),
+      searchFocusSequence: current.searchFocusSequence + 1,
+    });
+    syncUrl(get());
+  },
+  returnToSearch: () => {
+    set({
+      view: "search",
+      selected: null,
+      dossierOpen: false,
+      dossierSection: "overview",
+      introPlaying: false,
+      tourPlaying: false,
+      tourIndex: -1,
+      activeEvent: null,
+      compareOpen: false,
+    });
+    syncUrl(get());
+  },
+  setSearchScope: (scope) => {
+    set({ searchScope: readSearchScope(scope), searchPage: 0 });
+    if (get().view === "search") syncUrl(get());
+  },
+  setSearchPage: (page, replace = false) => {
+    set({
+      searchPage: Number.isSafeInteger(page)
+        ? Math.max(0, Math.min(999999998, page))
+        : 0,
+    });
+    if (get().view === "search") syncUrl(get(), replace);
+  },
   focusSequence: 0,
   introSequence: 0,
   introPlaying:
@@ -553,6 +649,14 @@ export const useArchiveStore = create<Store>((set, get) => ({
     syncUrl(get());
   },
   setView: (view) => {
+    if (view === "favorites") {
+      get().openSearch(undefined, "favorites");
+      return;
+    }
+    if (view === "search" || view === "archive") {
+      get().openSearch();
+      return;
+    }
     const current = get();
     set({
       view,
@@ -573,8 +677,8 @@ export const useArchiveStore = create<Store>((set, get) => ({
     syncUrl(get());
   },
   setQuery: (query) => {
-    set({ query: query.slice(0, 160) });
-    if (get().view === "archive" || get().view === "favorites")
+    set({ query: query.slice(0, 160), searchPage: 0 });
+    if (get().view === "archive" || get().view === "search")
       syncUrl(get(), true);
   },
   setKind: (kind) => {
@@ -582,20 +686,22 @@ export const useArchiveStore = create<Store>((set, get) => ({
     set({
       kind: nextKind,
       facet: nextKind === get().kind ? get().facet : "all",
+      searchPage: 0,
     });
-    if (get().view === "archive" || get().view === "favorites") syncUrl(get());
+    if (get().view === "archive" || get().view === "search") syncUrl(get());
   },
   setFacet: (facet) => {
-    set({ facet: readFacet(facet, get().kind) });
-    if (get().view === "archive" || get().view === "favorites") syncUrl(get());
+    set({ facet: readFacet(facet, get().kind), searchPage: 0 });
+    if (get().view === "archive" || get().view === "search") syncUrl(get());
   },
   setReleaseFilter: (releaseFilter) => {
     set({
+      searchPage: 0,
       releaseFilter: ["preview", "all"].includes(releaseFilter)
         ? releaseFilter
         : "available",
     });
-    if (get().view === "archive" || get().view === "favorites") syncUrl(get());
+    if (get().view === "archive" || get().view === "search") syncUrl(get());
   },
   toggleLayer: (key) => {
     set({ layers: { ...get().layers, [key]: !get().layers[key] } });
@@ -647,7 +753,7 @@ export const useArchiveStore = create<Store>((set, get) => ({
   navigate: (hash) => {
     const r = readRoute(hash);
     const current = get();
-    const catalogueView = r.view === "archive" || r.view === "favorites";
+    const catalogueView = r.view === "archive" || r.view === "search";
     set({
       view: r.view,
       selected: r.selected,
@@ -658,6 +764,8 @@ export const useArchiveStore = create<Store>((set, get) => ({
       facet: catalogueView ? r.facet : current.facet,
       releaseFilter: catalogueView ? r.releaseFilter : current.releaseFilter,
       query: catalogueView ? r.query : current.query,
+      searchScope: catalogueView ? r.searchScope : current.searchScope,
+      searchPage: catalogueView ? r.searchPage : current.searchPage,
       atlasSelected: r.view === "atlas" ? r.selected : current.atlasSelected,
       ...(r.selected ? { previewEntry: r.selected } : {}),
       introPlaying: false,
@@ -670,6 +778,12 @@ export const useArchiveStore = create<Store>((set, get) => ({
       compareOpen: false,
       notice: r.invalid ? "档案不存在，已显示总览。" : null,
     });
+    if (r.view === "home" || r.view === "search")
+      syncUrl(
+        get(),
+        true,
+        typeof window !== "undefined" ? window.history.state : null,
+      );
   },
   camera: (cameraCommand) =>
     set({

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "file": "rhodes-bridge.webp",
+      "bytes": 61506,
+      "sha256": "19d9aa543d1797490a80f21c801547296304ceec9af803037753869a0f11cdc7",
+      "sourceUrl": "https://media.prts.wiki/e/ef/Avg_bg_bg_bridge.png",
+      "filePage": "https://prts.wiki/w/%E6%96%87%E4%BB%B6:Avg_bg_bg_bridge.png",
+      "sourceSha256": "2656dae5cfac02927ca4250b1f4896f3abf51ef2dc6a742e54afa942a72f5c08",
+      "sourceTimestamp": "2021-08-03T12:59:04Z",
+      "derived": "Existing 1024px WebP variant; source pixels unchanged",
+      "rights": "明日方舟 / 鹰角网络及关联权利人；PRTS Wiki 托管。游戏美术非开放许可。"
+    },
+    {
+      "file": "rhodes-emblem.png",
+      "bytes": 39608,
+      "sha256": "d732dc7a3888cacc55433e2813b309a610b30719ab740662668266273300cfb3",
+      "sourceUrl": "https://media.prts.wiki/4/41/Logo_%E7%BD%97%E5%BE%B7%E5%B2%9B.png",
+      "filePage": "https://prts.wiki/w/%E6%96%87%E4%BB%B6:Logo_%E7%BD%97%E5%BE%B7%E5%B2%9B.png",
+      "sourceSha256": "d732dc7a3888cacc55433e2813b309a610b30719ab740662668266273300cfb3",
+      "sourceTimestamp": "2021-01-20T05:16:37Z",
+      "derived": "Copy of curated emblem",
+      "rights": "明日方舟 / 鹰角网络及关联权利人；PRTS Wiki 托管。游戏美术非开放许可。"
+    }
+  ]
+}

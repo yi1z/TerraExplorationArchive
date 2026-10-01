@@ -36,6 +36,7 @@ export function currentPublicSnapshot() {
           "favicon.svg",
           "third-party-notices.txt",
           "assets/audio",
+          "assets/home",
         ]) {
           const destination = resolve(outDir, path);
           await mkdir(dirname(destination), { recursive: true });

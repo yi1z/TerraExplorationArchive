@@ -14,6 +14,7 @@ export function useLibrarySearch(request: LibrarySearchQuery) {
   const sequence = useRef(0);
   const initialized = useRef(false);
   const workerFailure = useRef<string | null>(null);
+  const resultCatalogue = useRef<typeof library.summaries | null>(null);
   const requestTimer = useRef<ReturnType<typeof setTimeout> | undefined>(
     undefined,
   );
@@ -68,6 +69,7 @@ export function useLibrarySearch(request: LibrarySearchQuery) {
           }
           if (event.data.requestId !== sequence.current) return;
           clearTimeout(requestTimer.current);
+          resultCatalogue.current = library.summaries;
           setState({
             result: event.data.result ?? null,
             loading: false,
@@ -184,7 +186,8 @@ export function useLibrarySearch(request: LibrarySearchQuery) {
             workerFailure.current = error;
             setState({ result: null, loading: false, error });
           }
-        } else if (fallback.current)
+        } else if (fallback.current) {
+          resultCatalogue.current = library.summaries;
           setState({
             result: {
               ...fallback.current.search(parameters),
@@ -193,6 +196,7 @@ export function useLibrarySearch(request: LibrarySearchQuery) {
             loading: false,
             error: null,
           });
+        }
       },
       query ? 90 : 0,
     );
@@ -214,5 +218,10 @@ export function useLibrarySearch(request: LibrarySearchQuery) {
     ready,
     library.manifest?.searchShards?.length,
   ]);
-  return { ...state, library, retry: () => setRetry((value) => value + 1) };
+  return {
+    ...state,
+    library,
+    catalogueCurrent: resultCatalogue.current === library.summaries,
+    retry: () => setRetry((value) => value + 1),
+  };
 }

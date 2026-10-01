@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -29,13 +29,16 @@ import {
   libraryFacetGroups,
   matchesReleaseStatus,
 } from "../lib/library-search-core";
-import Dialog from "./Dialog";
 import EntryArtwork from "./EntryArtwork";
 import LibraryArtwork from "./LibraryArtwork";
 import { catalogueAssetFor } from "../data/catalogue-assets";
 import { requestedPage } from "../lib/pagination";
+import {
+  getSearchPosition,
+  rememberSearchPosition,
+  searchStateKey,
+} from "../lib/search-state";
 
-export type SearchScope = "all" | "favorites" | "recent";
 const english: Record<(typeof libraryKinds)[number], string> = {
   operator: "OPERATORS",
   enemy: "HOSTILES",
@@ -90,11 +93,9 @@ function ResultArtwork({
   );
 }
 export default function ArchiveSearch({
-  onClose,
-  initialScope = "all",
+  hidden = false,
 }: {
-  onClose: () => void;
-  initialScope?: SearchScope;
+  hidden?: boolean;
 }) {
   const query = useArchiveStore((state) => state.query);
   const kind = useArchiveStore((state) => state.kind);
@@ -103,24 +104,28 @@ export default function ArchiveSearch({
   const preferences = useArchiveStore((state) => state.preferences);
   const setFacet = useArchiveStore((state) => state.setFacet);
   const input = useRef<HTMLInputElement>(null);
-  const scroll = useRef<HTMLDivElement>(null);
-  const [scope, setScope] = useState<SearchScope>(initialScope);
+  const pageRoot = useRef<HTMLElement>(null);
+  const scope = useArchiveStore((state) => state.searchScope);
+  const page = useArchiveStore((state) => state.searchPage);
+  const focusSequence = useArchiveStore((state) => state.searchFocusSequence);
+  const setScope = useArchiveStore((state) => state.setSearchScope);
+  const setPage = useArchiveStore((state) => state.setSearchPage);
   const [preview, setPreview] = useState<string | null>(null);
-  const [page, setPage] = useState(0);
-  const [pageInput, setPageInput] = useState("1");
+  const [pageInput, setPageInput] = useState(String(page + 1));
   const [pageError, setPageError] = useState("");
-  const { result, loading, error, library, retry } = useLibrarySearch({
-    query,
-    kind,
-    facet,
-    releaseFilter,
-    spoilers: preferences.spoilers,
-    scope,
-    favorites: preferences.favorites,
-    visited: preferences.visited,
-    offset: page * PAGE_SIZE,
-    limit: PAGE_SIZE,
-  });
+  const { result, loading, error, library, retry, catalogueCurrent } =
+    useLibrarySearch({
+      query,
+      kind,
+      facet,
+      releaseFilter,
+      spoilers: preferences.spoilers,
+      scope,
+      favorites: preferences.favorites,
+      visited: preferences.visited,
+      offset: page * PAGE_SIZE,
+      limit: PAGE_SIZE,
+    });
   const counts = useMemo(
     () =>
       Object.fromEntries(
@@ -157,30 +162,109 @@ export default function ArchiveSearch({
   );
   const pages = Math.max(1, Math.ceil((result?.total ?? 0) / PAGE_SIZE));
   const store = useArchiveStore.getState();
+  const positionKey = searchStateKey({
+    query,
+    kind,
+    facet,
+    releaseFilter,
+    searchScope: scope,
+    searchPage: page,
+  });
+  const restore = useRef(true);
+  const leaving = useRef(false);
+  const previousFocus = useRef(focusSequence);
+  const focusedId = useRef<string | null>(
+    getSearchPosition(positionKey).focusedId,
+  );
   useEffect(() => {
-    input.current?.focus();
-  }, []);
-  useEffect(() => {
-    setPage(0);
+    if (previousFocus.current !== focusSequence) input.current?.focus();
+    else if (!getSearchPosition(positionKey).focusedId)
+      input.current?.focus({ preventScroll: true });
+    previousFocus.current = focusSequence;
+  }, [focusSequence]);
+  useLayoutEffect(() => {
+    restore.current = true;
+    focusedId.current = getSearchPosition(positionKey).focusedId;
     setPreview(null);
-  }, [query, kind, facet, scope, releaseFilter]);
+    const savePosition = () => {
+      if (!restore.current && !leaving.current)
+        rememberSearchPosition(positionKey, {
+          scrollTop: window.scrollY,
+          focusedId: focusedId.current,
+        });
+    };
+    window.addEventListener("scroll", savePosition, { passive: true });
+    return () => {
+      savePosition();
+      window.removeEventListener("scroll", savePosition);
+    };
+  }, [positionKey]);
   useEffect(() => {
-    scroll.current?.scrollTo({ top: 0 });
-    setPreview(null);
-  }, [page]);
+    if (
+      loading ||
+      !catalogueCurrent ||
+      (library.status !== "ready" && library.status !== "error") ||
+      !result ||
+      result.offset !== page * PAGE_SIZE ||
+      !restore.current
+    )
+      return;
+    const saved = getSearchPosition(positionKey);
+    const frame = requestAnimationFrame(() => {
+      window.scrollTo({ top: saved.scrollTop, behavior: "instant" });
+      if (saved.focusedId) {
+        const card = [
+          ...(pageRoot.current?.querySelectorAll<HTMLButtonElement>(
+            "[data-entry-id]",
+          ) ?? []),
+        ].find((element) => element.dataset.entryId === saved.focusedId);
+        (card ?? input.current)?.focus({ preventScroll: true });
+      }
+      restore.current = false;
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [result, loading, catalogueCurrent, library.status]);
   useEffect(() => {
     setPageInput(String(page + 1));
     setPageError("");
   }, [page]);
   useEffect(() => {
-    if (!loading && page >= pages) setPage(pages - 1);
-  }, [loading, page, pages]);
+    if (
+      !loading &&
+      catalogueCurrent &&
+      (library.status === "ready" || library.status === "error") &&
+      result &&
+      result.offset === page * PAGE_SIZE &&
+      page >= pages
+    )
+      setPage(pages - 1, true);
+  }, [loading, page, pages, catalogueCurrent, library.status]);
   const open = (id: string) => {
+    leaving.current = true;
+    rememberSearchPosition(positionKey, {
+      scrollTop: window.scrollY,
+      focusedId: id,
+    });
     store.openEntry(id);
-    onClose();
   };
   return (
-    <Dialog title="检索泰拉档案" wide onClose={onClose}>
+    <main
+      id="search-main"
+      className="search-page interface-part"
+      ref={pageRoot}
+      tabIndex={-1}
+      inert={hidden}
+      aria-hidden={hidden || undefined}
+    >
+      <header className="search-page-heading">
+        <div>
+          <span className="terminal-kicker">TERRA / ARCHIVE RETRIEVAL</span>
+          <h1>
+            检索泰拉档案<span>ARCHIVES</span>
+          </h1>
+        </div>
+        <p>从一个名字出发，沿着记录之间的联系认识泰拉。</p>
+      </header>
       <div className="terminal-search">
         <Search size={22} />
         <input
@@ -196,7 +280,7 @@ export default function ArchiveSearch({
             <X size={18} />
           </button>
         )}
-        <kbd>ESC</kbd>
+        <kbd>/</kbd>
       </div>
       <div className="search-categories">
         <button
@@ -299,11 +383,7 @@ export default function ArchiveSearch({
       )}
       <div className="search-result-layout">
         <div className="search-results-column">
-          <div
-            className="search-result-scroll"
-            ref={scroll}
-            aria-busy={loading}
-          >
+          <div className="search-result-scroll" aria-busy={loading}>
             <div className="result-caption" role="status" aria-live="polite">
               <span>
                 {loading
@@ -325,9 +405,13 @@ export default function ArchiveSearch({
                   {results.map((entry, index) => (
                     <button
                       key={entry.id}
+                      data-entry-id={entry.id}
                       className={`terminal-result ${entry.id === preview ? "previewing" : ""}`}
                       onMouseEnter={() => setPreview(entry.id)}
-                      onFocus={() => setPreview(entry.id)}
+                      onFocus={() => {
+                        setPreview(entry.id);
+                        focusedId.current = entry.id;
+                      }}
                       onClick={() => open(entry.id)}
                       aria-label={`打开档案${entry.name}`}
                     >
@@ -363,10 +447,7 @@ export default function ArchiveSearch({
                     <p>尝试其他名字，或清除筛选继续探索。</p>
                     <button
                       onClick={() => {
-                        store.setQuery("");
-                        store.setKind("all");
-                        setFacet("all");
-                        setScope("all");
+                        store.openSearch("all");
                       }}
                     >
                       重置检索
@@ -380,7 +461,7 @@ export default function ArchiveSearch({
             <nav className="search-pagination" aria-label="检索结果分页">
               <button
                 disabled={page === 0 || loading}
-                onClick={() => setPage((value) => value - 1)}
+                onClick={() => setPage(page - 1)}
                 aria-label="上一页"
               >
                 <ArrowLeft size={16} />
@@ -423,7 +504,7 @@ export default function ArchiveSearch({
               </form>
               <button
                 disabled={page >= pages - 1 || loading}
-                onClick={() => setPage((value) => value + 1)}
+                onClick={() => setPage(page + 1)}
                 aria-label="下一页"
               >
                 下一页
@@ -465,6 +546,6 @@ export default function ArchiveSearch({
             : "方向由你决定，故事从这里继续。"}
         </span>
       </div>
-    </Dialog>
+    </main>
   );
 }

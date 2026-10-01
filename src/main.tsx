@@ -13,6 +13,7 @@ import "./floating.css";
 import "./terminal.css";
 import "./library.css";
 import "./dossier.css";
+import "./search.css";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />

@@ -21,6 +21,7 @@ const curatedAssets = [
   "public/assets/catalogue",
   "public/assets/game",
   "public/assets/audio",
+  "public/assets/home",
 ];
 const editorials = [
   "editorial.json",

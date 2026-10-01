@@ -11,7 +11,7 @@ import { join } from "node:path";
 import { expect, it } from "vitest";
 import { currentPublicSnapshot } from "../vite.config";
 
-it("ships only UI audio online and only the current snapshot when explicitly offline", async () => {
+it("ships only UI audio and homepage art online and only the current snapshot offline", async () => {
   const root = await mkdtemp(join(tmpdir(), "terra-build-public-"));
   const publicDir = join(root, "public");
   const manifest = {
@@ -24,6 +24,7 @@ it("ships only UI audio online and only the current snapshot when explicitly off
     "favicon.svg": "icon",
     "third-party-notices.txt": "credits",
     "assets/audio/confirm.ogg": "sound",
+    "assets/home/rhodes-bridge.webp": "homepage",
     "assets/catalogue/operator.png": "curated",
     "assets/game/region.png": "region",
     "assets/library/images/portrait.webp": "bulk",
@@ -56,7 +57,16 @@ it("ships only UI audio online and only the current snapshot when explicitly off
       "favicon.svg",
       "third-party-notices.txt",
     ]);
-    expect(await readdir(join(root, "online/assets"))).toEqual(["audio"]);
+    expect((await readdir(join(root, "online/assets"))).sort()).toEqual([
+      "audio",
+      "home",
+    ]);
+    expect(
+      await readFile(
+        join(root, "online/assets/home/rhodes-bridge.webp"),
+        "utf8",
+      ),
+    ).toBe("homepage");
     expect(
       await readFile(join(root, "online/assets/audio/confirm.ogg"), "utf8"),
     ).toBe("sound");

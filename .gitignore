@@ -32,6 +32,8 @@
 !/public/assets/game/**
 !/public/assets/audio/
 !/public/assets/audio/**
+!/public/assets/home/
+!/public/assets/home/**
 !/public/data/
 /public/data/*
 !/public/data/prts/

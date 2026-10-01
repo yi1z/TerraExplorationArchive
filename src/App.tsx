@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import {
   ArrowUpRight,
+  ArrowLeft,
   AudioLines,
   Bookmark,
   Check,
@@ -43,7 +44,8 @@ import {
 import { useLibrary } from "./lib/library";
 import ArchiveTerminal from "./components/ArchiveTerminal";
 import ArchiveSearch, { catalogueCategories } from "./components/ArchiveSearch";
-import type { SearchScope } from "./components/ArchiveSearch";
+import type { SearchScope } from "./lib/search-state";
+import HomePage from "./components/HomePage";
 import Dialog from "./components/Dialog";
 import LibraryCoverage from "./components/LibraryCoverage";
 const AtlasWorkspace = lazy(() => import("./AtlasWorkspace"));
@@ -66,18 +68,11 @@ const categoryIcons = [
 
 export default function App() {
   const store = useArchiveStore();
-  const library = useLibrary();
   const ref = useRef<HTMLDivElement>(null);
   const launcher = useRef<HTMLDivElement>(null);
-  const [searchOpen, setSearchOpen] = useState(
-    () =>
-      store.view === "archive" &&
-      !store.selected &&
-      (store.kind !== "all" || !!store.query || store.facet !== "all"),
-  );
-  const [scope, setScope] = useState<SearchScope>("all");
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const library = useLibrary(store.view !== "home" || aboutOpen);
   const [categoriesOpen, setCategoriesOpen] = useState(false);
   const [pinned, setPinned] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -93,14 +88,8 @@ export default function App() {
   useEffect(() => {
     void useArchiveStore.getState().hydratePreferences();
   }, []);
-  const openSearch = (kind?: string, nextScope: SearchScope = "all") => {
-    if (kind) {
-      store.setKind(kind);
-      store.setQuery("");
-      store.setFacet("all");
-    }
-    setScope(nextScope);
-    setSearchOpen(true);
+  const openSearch = (kind?: string, nextScope?: SearchScope) => {
+    store.openSearch(kind, nextScope);
     setCategoriesOpen(false);
     setHidden(false);
     tone(store.preferences.sound);
@@ -110,21 +99,20 @@ export default function App() {
       useArchiveStore.getState().navigate(window.location.hash);
     window.addEventListener("hashchange", onRoute);
     window.addEventListener("popstate", onRoute);
+    onRoute();
     return () => {
       window.removeEventListener("hashchange", onRoute);
       window.removeEventListener("popstate", onRoute);
     };
   }, []);
   useEffect(() => {
-    if (store.view === "favorites") {
-      setScope("favorites");
-      setSearchOpen(true);
-    }
     if (store.view === "about") setAboutOpen(true);
   }, [store.view]);
   useEffect(() => {
     setHidden(false);
     setCategoriesOpen(false);
+    if (store.view !== "search")
+      window.scrollTo({ top: 0, behavior: "instant" });
   }, [store.selected, store.view]);
   useEffect(() => {
     if (hidden) {
@@ -147,8 +135,7 @@ export default function App() {
         (event.key.toLowerCase() === "k" && (event.ctrlKey || event.metaKey))
       ) {
         event.preventDefault();
-        setScope("all");
-        setSearchOpen(true);
+        useArchiveStore.getState().openSearch();
         setHidden(false);
       }
       if (
@@ -190,14 +177,9 @@ export default function App() {
     return () => clearTimeout(timer);
   }, [store.notice]);
   useEffect(() => () => clearTimeout(closeTimer.current), []);
-  const closeSearch = () => {
-    setSearchOpen(false);
-    if (useArchiveStore.getState().view === "favorites")
-      store.setView("archive");
-  };
   const closeAbout = () => {
     setAboutOpen(false);
-    if (store.view === "about") store.setView("archive");
+    if (store.view === "about") store.setView("home");
   };
   const leaveLauncher = () => {
     clearTimeout(closeTimer.current);
@@ -210,7 +192,7 @@ export default function App() {
   return (
     <div
       ref={ref}
-      className={`database-app ${atlas ? "theme-atlas" : "theme-terminal"} ${reduced ? "reduce-motion" : ""} ${pageHidden ? "motion-paused" : ""} ${hidden ? "ui-hidden" : ""}`}
+      className={`database-app view-${store.view} ${atlas ? "theme-atlas" : "theme-terminal"} ${reduced ? "reduce-motion" : ""} ${pageHidden ? "motion-paused" : ""} ${hidden ? "ui-hidden" : ""}`}
     >
       <a
         className="skip-link"
@@ -218,7 +200,15 @@ export default function App() {
         onClick={(e) => {
           e.preventDefault();
           document
-            .getElementById(atlas ? "main-content" : "terminal-main")
+            .getElementById(
+              atlas
+                ? "main-content"
+                : store.view === "home"
+                  ? "home-main"
+                  : store.view === "search"
+                    ? "search-main"
+                    : "terminal-main",
+            )
             ?.focus();
         }}
       >
@@ -228,7 +218,7 @@ export default function App() {
         <button
           className="terminal-brand"
           aria-label="泰拉档案首页"
-          onClick={() => store.setView("archive")}
+          onClick={() => store.setView("home")}
         >
           <span className="brand-glyph">
             <i />
@@ -280,7 +270,11 @@ export default function App() {
           </button>
         </div>
       </header>
-      {atlas ? (
+      {store.view === "home" || store.view === "about" ? (
+        <HomePage />
+      ) : store.view === "search" ? (
+        <ArchiveSearch hidden={hidden} />
+      ) : atlas ? (
         <div className="atlas-shell">
           <Suspense
             fallback={
@@ -306,69 +300,82 @@ export default function App() {
       ) : (
         <ArchiveTerminal onSearch={openSearch} hidden={hidden} />
       )}
-      <div
-        ref={launcher}
-        className={`archive-launcher interface-part ${categoriesOpen ? "expanded" : ""}`}
-        onMouseEnter={() => clearTimeout(closeTimer.current)}
-        onMouseLeave={leaveLauncher}
-        onBlur={leaveLauncher}
-      >
-        {categoriesOpen && (
-          <div className="category-popover">
-            <div className="category-popover-head">
-              <span>选择一条探索路径</span>
-              <button aria-pressed={pinned} onClick={() => setPinned(!pinned)}>
-                {pinned ? "取消固定" : "固定展开"}
+      {store.view === "archive" && !store.dossierOpen && (
+        <button
+          className="return-search interface-part"
+          onClick={() => store.returnToSearch()}
+        >
+          <ArrowLeft size={14} /> 返回检索
+        </button>
+      )}
+      {store.view !== "home" && store.view !== "search" && (
+        <div
+          ref={launcher}
+          className={`archive-launcher interface-part ${categoriesOpen ? "expanded" : ""}`}
+          onMouseEnter={() => clearTimeout(closeTimer.current)}
+          onMouseLeave={leaveLauncher}
+          onBlur={leaveLauncher}
+        >
+          {categoriesOpen && (
+            <div className="category-popover">
+              <div className="category-popover-head">
+                <span>选择一条探索路径</span>
+                <button
+                  aria-pressed={pinned}
+                  onClick={() => setPinned(!pinned)}
+                >
+                  {pinned ? "取消固定" : "固定展开"}
+                </button>
+              </div>
+              <div className="category-portals">
+                {catalogueCategories.map((category, i) => {
+                  const Icon = categoryIcons[i] ?? Layers;
+                  return (
+                    <button
+                      key={category.id}
+                      onClick={() => openSearch(category.id)}
+                    >
+                      <span className="portal-number">{category.number}</span>
+                      <Icon size={26} strokeWidth={1.3} />
+                      <strong>{category.name}</strong>
+                      <small>{category.en}</small>
+                      <ArrowUpRight size={14} />
+                    </button>
+                  );
+                })}
+              </div>
+              <button
+                className="category-about"
+                onClick={() => {
+                  setAboutOpen(true);
+                  setCategoriesOpen(false);
+                }}
+              >
+                <Info size={13} />
+                资料来源与项目说明
+                <ArrowUpRight size={12} />
               </button>
             </div>
-            <div className="category-portals">
-              {catalogueCategories.map((category, i) => {
-                const Icon = categoryIcons[i] ?? Layers;
-                return (
-                  <button
-                    key={category.id}
-                    onClick={() => openSearch(category.id)}
-                  >
-                    <span className="portal-number">{category.number}</span>
-                    <Icon size={26} strokeWidth={1.3} />
-                    <strong>{category.name}</strong>
-                    <small>{category.en}</small>
-                    <ArrowUpRight size={14} />
-                  </button>
-                );
-              })}
-            </div>
-            <button
-              className="category-about"
-              onClick={() => {
-                setAboutOpen(true);
-                setCategoriesOpen(false);
-              }}
-            >
-              <Info size={13} />
-              资料来源与项目说明
-              <ArrowUpRight size={12} />
-            </button>
-          </div>
-        )}
-        <button
-          className="archive-beacon"
-          aria-expanded={categoriesOpen}
-          onClick={() => setCategoriesOpen(!categoriesOpen)}
-        >
-          <span className="beacon-symbol">
-            {categoriesOpen ? (
-              <X size={21} />
-            ) : (
-              <Hexagon size={23} strokeWidth={1.4} />
-            )}
-          </span>
-          <span>
-            档案目录<small>ACCESS THE ARCHIVES</small>
-          </span>
-          <ChevronUp size={14} className={categoriesOpen ? "turned" : ""} />
-        </button>
-      </div>
+          )}
+          <button
+            className="archive-beacon"
+            aria-expanded={categoriesOpen}
+            onClick={() => setCategoriesOpen(!categoriesOpen)}
+          >
+            <span className="beacon-symbol">
+              {categoriesOpen ? (
+                <X size={21} />
+              ) : (
+                <Hexagon size={23} strokeWidth={1.4} />
+              )}
+            </span>
+            <span>
+              档案目录<small>ACCESS THE ARCHIVES</small>
+            </span>
+            <ChevronUp size={14} className={categoriesOpen ? "turned" : ""} />
+          </button>
+        </div>
+      )}
       {hidden && (
         <button
           ref={restoreButton}
@@ -378,9 +385,6 @@ export default function App() {
           <Eye size={17} />
           恢复界面 <kbd>ESC</kbd>
         </button>
-      )}
-      {searchOpen && (
-        <ArchiveSearch onClose={closeSearch} initialScope={scope} />
       )}
       {settingsOpen && (
         <Dialog title="阅读偏好" onClose={() => setSettingsOpen(false)}>
@@ -531,14 +535,14 @@ export default function App() {
                 明日方舟官网 <ArrowUpRight size={14} />
               </a>
               <a
-                href={`${import.meta.env.BASE_URL}assets/library/manifest.json`}
+                href="https://github.com/yi1z/TerraExplorationArchive/blob/main/resources/library-assets.json"
                 target="_blank"
                 rel="noreferrer"
               >
                 档案素材清单 <ArrowUpRight size={14} />
               </a>
               <a
-                href="third-party-notices.txt"
+                href={`${import.meta.env.BASE_URL}third-party-notices.txt`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -559,15 +563,17 @@ export default function App() {
           浏览器未允许保存；刷新后收藏与阅读偏好可能丢失。
         </div>
       )}
-      <div className="terminal-connection interface-part" aria-hidden="true">
-        <Radio size={13} />
-        <span>TERRA / CONNECTED</span>
-        {store.preferences.sound ? (
-          <AudioLines size={13} />
-        ) : (
-          <VolumeX size={13} />
-        )}
-      </div>
+      {store.view !== "home" && store.view !== "search" && (
+        <div className="terminal-connection interface-part" aria-hidden="true">
+          <Radio size={13} />
+          <span>TERRA / CONNECTED</span>
+          {store.preferences.sound ? (
+            <AudioLines size={13} />
+          ) : (
+            <VolumeX size={13} />
+          )}
+        </div>
+      )}
     </div>
   );
 }

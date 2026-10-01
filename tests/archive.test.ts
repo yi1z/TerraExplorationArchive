@@ -191,9 +191,14 @@ describe("untrusted persisted state and URL input", () => {
       facet: "all",
       releaseFilter: "available",
       query: "",
+      searchScope: "all",
+      searchPage: 0,
       invalid: false,
     });
-    expect(readRoute("#/favorites").view).toBe("favorites");
+    expect(readRoute("#/favorites")).toMatchObject({
+      view: "search",
+      searchScope: "favorites",
+    });
     expect(readRoute("#/atlas?layers=").layers).toEqual({
       countries: false,
       cities: false,
@@ -210,7 +215,7 @@ describe("untrusted persisted state and URL input", () => {
     },
   );
   it("ignores unknown views and layer tokens", () => {
-    expect(readRoute("#/bad").view).toBe("archive");
+    expect(readRoute("#/bad").view).toBe("home");
     expect(readRoute("#/atlas?layers=bad,cities").layers).toEqual({
       countries: false,
       cities: true,

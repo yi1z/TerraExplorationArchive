@@ -144,4 +144,5 @@ export interface Preferences {
   sound: boolean;
   soundVolume: number;
 }
-export type AppView = "atlas" | "archive" | "favorites" | "about";
+export type AppView =
+  "home" | "search" | "atlas" | "archive" | "favorites" | "about";

@@ -399,15 +399,16 @@ export async function loadLibraryEntry(
   if (!record) throw new Error("索引与档案分片不一致，请重试更新资料");
   return record;
 }
-export function useLibrary() {
+export function useLibrary(enabled = true) {
   const current = useSyncExternalStore(
     subscribeLibrary,
     getLibrarySnapshot,
     getLibrarySnapshot,
   );
   useEffect(() => {
-    if (current.status === "idle") void loadLibrary().catch(() => {});
-  }, [current.status]);
+    if (enabled && current.status === "idle")
+      void loadLibrary().catch(() => {});
+  }, [current.status, enabled]);
   return { ...current, retry: () => loadLibrary(true).catch(() => {}) };
 }
 export function useLibraryEntry(id: string | null | undefined) {

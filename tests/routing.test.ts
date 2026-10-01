@@ -16,11 +16,11 @@ const newIds = [
   "item-originite-prime",
 ];
 
-describe("archive-first links", () => {
-  it("opens the database for a missing or unknown route", () => {
+describe("home and archive links", () => {
+  it("opens the home page for a missing or unknown route", () => {
     for (const hash of ["", "#", "#/", "#/missing"])
       expect(readRoute(hash)).toMatchObject({
-        view: "archive",
+        view: "home",
         selected: null,
         kind: "all",
         facet: "all",
@@ -117,7 +117,12 @@ describe("archive-first links", () => {
     for (const view of ["archive", "favorites"])
       expect(
         readRoute(`#/${view}?kind=${kind}&filter=${encodeURIComponent(facet)}`),
-      ).toMatchObject({ view, kind, facet });
+      ).toMatchObject({
+        view: "search",
+        kind,
+        facet,
+        searchScope: view === "favorites" ? "favorites" : "all",
+      });
   });
 
   it.each([
@@ -267,7 +272,7 @@ describe("database and atlas navigation", () => {
     s().openEntry("operator-amiya");
     travel(-1);
     expect(s()).toMatchObject({
-      view: "archive",
+      view: "search",
       selected: null,
       kind: "operator",
       facet: "术师",
@@ -318,7 +323,8 @@ describe("database and atlas navigation", () => {
     expect(s().facet).toBe("术师");
     s().setView("favorites");
     expect(readRoute(window.location.hash)).toMatchObject({
-      view: "favorites",
+      view: "search",
+      searchScope: "favorites",
       kind: "operator",
       facet: "术师",
     });
@@ -412,5 +418,70 @@ describe("database and atlas navigation", () => {
     expect(s().selected).toBe("enemy-originium-slug");
     s().setKind("constructor");
     expect(s().kind).toBe("all");
+  });
+
+  it("opens standalone search, preserving context unless an explicit category is requested", () => {
+    s().openSearch("operator", "recent");
+    s().setFacet("术师");
+    s().setQuery("阿米娅");
+    s().setSearchPage(3);
+    const before = s().searchFocusSequence;
+    s().openEntry("operator-amiya");
+    s().returnToSearch();
+    expect(s()).toMatchObject({
+      view: "search",
+      selected: null,
+      query: "阿米娅",
+      kind: "operator",
+      facet: "术师",
+      searchScope: "recent",
+      searchPage: 3,
+      searchFocusSequence: before,
+    });
+    s().openSearch();
+    expect(s().searchFocusSequence).toBe(before + 1);
+    expect(s().searchPage).toBe(3);
+    s().openSearch("enemy");
+    expect(s()).toMatchObject({
+      kind: "enemy",
+      facet: "all",
+      query: "",
+      searchScope: "all",
+      searchPage: 0,
+    });
+  });
+
+  it("serializes one-based pages and restores them through history", () => {
+    s().openSearch("operator");
+    s().setSearchPage(4);
+    const searchHash = window.location.hash;
+    expect(searchHash).toBe("#/search?kind=operator&page=5");
+    s().openEntry("operator-amiya");
+    travel(-1);
+    expect(s()).toMatchObject({ view: "search", searchPage: 4 });
+    s().setSearchScope("favorites");
+    expect(s().searchPage).toBe(0);
+    expect(window.location.hash).toContain("scope=favorites");
+    s().setSearchPage(6);
+    const count = routes.length;
+    s().setSearchPage(1, true);
+    expect(routes).toHaveLength(count);
+    expect(window.location.hash).toContain("page=2");
+  });
+
+  it("normalizes old favorites and invalid search pages without adding history", () => {
+    s().navigate("#/favorites?kind=operator&page=1.5");
+    expect(s()).toMatchObject({
+      view: "search",
+      searchScope: "favorites",
+      searchPage: 0,
+    });
+    expect(window.location.hash).toBe("#/search?kind=operator&scope=favorites");
+    expect(routes).toHaveLength(1);
+    s().setView("home");
+    expect(window.location.hash).toBe("#/home");
+    s().openEntry("operator-amiya");
+    s().returnToSearch();
+    expect(s().view).toBe("search");
   });
 });
