@@ -44,6 +44,7 @@ const editorials = [
 ];
 const fixedFiles = [
   ...rootFiles,
+  ".github/workflows/pages.yml",
   "public/favicon.svg",
   "public/third-party-notices.txt",
   "public/data/prts/manifest.json",
@@ -127,6 +128,11 @@ async function inspectPath(relative, required = true) {
     "# These rules never delete local files. Audit forced additions separately.",
     "/*",
     ...rootFiles.map((file) => `!/${file}`),
+    "!/.github/",
+    "/.github/*",
+    "!/.github/workflows/",
+    "/.github/workflows/*",
+    "!/.github/workflows/pages.yml",
     ...sourceDirectories.flatMap((directory) => [
       `!/${directory}/`,
       `!/${directory}/**`,
