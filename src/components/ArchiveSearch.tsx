@@ -263,14 +263,14 @@ export default function ArchiveSearch({
             检索泰拉档案<span>ARCHIVES</span>
           </h1>
         </div>
-        <p>从一个名字出发，沿着记录之间的联系认识泰拉。</p>
+        {/* <p>从一个名字出发，沿着记录之间的联系认识泰拉。</p> */}
       </header>
       <div className="terminal-search">
         <Search size={22} />
         <input
           ref={input}
           aria-label="搜索档案"
-          placeholder="一个名字，一段故事。"
+          placeholder="在这片大地上搜索…"
           value={query}
           maxLength={160}
           onChange={(event) => store.setQuery(event.target.value)}

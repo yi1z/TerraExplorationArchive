@@ -360,7 +360,7 @@ export function DossierContent({
       {tab === "sources" && (
         <>
           <span className="terminal-kicker">SOURCE / PROVENANCE</span>
-          <h3 className="dossier-lead">每一份记录，都有来处。</h3>
+          <h3 className="dossier-lead">记录来源</h3>
           {entry.sources
             .map((id) => sources[id])
             .filter(Boolean)

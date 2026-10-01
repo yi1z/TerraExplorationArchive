@@ -707,7 +707,7 @@ function LibrarySource({ entry }: { entry: LibraryDetail }) {
   return (
     <>
       <span className="terminal-kicker">SOURCE / PROVENANCE</span>
-      <h3 className="dossier-lead">每一份记录，都有来处。</h3>
+      <h3 className="dossier-lead">记录来源</h3>
       <a
         className="source-record"
         href={entry.source.url}
