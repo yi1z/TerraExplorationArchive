@@ -516,5 +516,19 @@
     "downloadedAt": "2026-09-30",
     "bytes": 558103,
     "sha256": "b18f9bee7c07366b21b483466d54e37e72add74e15a4ab796babaa3098528462"
+  },
+  {
+    "id": "leithanien",
+    "kind": "landscape",
+    "name": "莱塔尼亚首都·崔林特尔梅",
+    "path": "assets/game/leithanien-landscape.png",
+    "url": "https://media.prts.wiki/c/c5/Avg_44_i01.png",
+    "page": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E5%85%B8%3A%E5%9C%B0%E7%90%86%2F%E8%8E%B1%E5%A1%94%E5%B0%BC%E4%BA%9A",
+    "filePage": "https://prts.wiki/w/%E6%96%87%E4%BB%B6:Avg_44_i01.png",
+    "credit": "明日方舟 / 鹰角网络及关联权利人；PRTS Wiki 托管",
+    "license": "游戏美术与商标版权保留；非开放许可",
+    "downloadedAt": "2026-10-01",
+    "bytes": 1086963,
+    "sha256": "71e278e60218326beb01562fd82228b16f58fee4a34effa89b6b1fa608f4591a"
   }
 ]

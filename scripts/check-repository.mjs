@@ -16,7 +16,12 @@ const rootFiles = [
   "vite.config.ts",
 ];
 const sourceDirectories = ["src", "scripts", "tests", "docs"];
-const curatedAssets = ["public/assets/catalogue", "public/assets/game"];
+const onlineDirectories = ["resources/online"];
+const curatedAssets = [
+  "public/assets/catalogue",
+  "public/assets/game",
+  "public/assets/audio",
+];
 const editorials = [
   "editorial.json",
   "editorial-gameplay.json",
@@ -45,6 +50,8 @@ const fixedFiles = [
   "data/prts-assets/source-overrides.json",
   "data/prts-assets/source-error-history.json",
   "resources/library-assets.json",
+  "resources/online-release.json",
+  "resources/online-art-overrides.json",
 ];
 const forbiddenNames =
   /(?:^|\/)(?:\.git|node_modules|dist|\.vite)(?:\/|$)|(?:^|\/)\.env(?:\.|$)|\.(?:pem|key|p12|pfx|log|part|tsbuildinfo|local)$|(?:credentials|service-account)[^/]*\.json$/i;
@@ -75,7 +82,11 @@ const references = [
 if (new Set(references).size !== references.length)
   throw new Error("Duplicate manifest references");
 const explicitFiles = new Set([...fixedFiles, ...references]);
-const directories = [...sourceDirectories, ...curatedAssets];
+const directories = [
+  ...sourceDirectories,
+  ...curatedAssets,
+  ...onlineDirectories,
+];
 const allowed = (relative) =>
   !forbiddenNames.test(relative) &&
   (explicitFiles.has(relative) ||
@@ -154,6 +165,10 @@ async function inspectPath(relative, required = true) {
     "!/resources/",
     "/resources/*",
     "!/resources/library-assets.json",
+    "!/resources/online-release.json",
+    "!/resources/online-art-overrides.json",
+    "!/resources/online/",
+    "!/resources/online/**",
     "",
     "# Sensitive or machine-generated files stay excluded even inside source roots.",
     "**/.git/",

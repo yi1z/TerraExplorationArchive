@@ -30,6 +30,8 @@
 !/public/assets/catalogue/**
 !/public/assets/game/
 !/public/assets/game/**
+!/public/assets/audio/
+!/public/assets/audio/**
 !/public/data/
 /public/data/*
 !/public/data/prts/
@@ -604,6 +606,10 @@
 !/resources/
 /resources/*
 !/resources/library-assets.json
+!/resources/online-release.json
+!/resources/online-art-overrides.json
+!/resources/online/
+!/resources/online/**
 
 # Sensitive or machine-generated files stay excluded even inside source roots.
 **/.git/

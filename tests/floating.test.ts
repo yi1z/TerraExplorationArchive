@@ -86,7 +86,7 @@ describe("game art provenance and ownership", () => {
     for (const e of entries.filter((e) => e.kind === "faction"))
       expect(assetFor(e.id, "emblem")?.id).toBe(e.id);
     expect(gameAssets.filter((a) => a.kind === "emblem")).toHaveLength(25);
-    expect(gameAssets.filter((a) => a.kind === "landscape")).toHaveLength(12);
+    expect(gameAssets.filter((a) => a.kind === "landscape")).toHaveLength(13);
     expect(assetFor("kazdel", "emblem")).toBeUndefined();
     expect(assetFor("durin", "emblem")).toBeUndefined();
     expect(assetFor("not-a-country", "emblem", true)).toBeUndefined();
