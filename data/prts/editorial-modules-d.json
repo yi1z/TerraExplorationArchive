@@ -1,0 +1,1585 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "prts-module-0fe15c9d5b58bb94",
+      "sourceTitle": "温蒂",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "温蒂把童年漂浮玩具改成仿生设备，借此回想伊比利亚故乡。新原型能在流沙中推进，却已无法进入它外形所仿照的水域。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 15336,
+        "sourceRevisionId": 420393,
+        "sourceUrl": "https://prts.wiki/w/%E6%B8%A9%E8%92%82",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-29c0be24966d23e0",
+      "sourceTitle": "夜半",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "夜半在狩猎后留下唯一幸存的眠兽幼崽，把它视为可以同行的伙伴，并连夜为它缝制小帽。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 37508,
+        "sourceRevisionId": 423774,
+        "sourceUrl": "https://prts.wiki/w/%E5%A4%9C%E5%8D%8A",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-f3865db258ae2989",
+      "sourceTitle": "黑键",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "黑键回到衰败的家族高塔，面对纠缠自己的旧日声音。他点燃壁炉中的枯枝，表明终结腐朽传承的决心。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 41752,
+        "sourceRevisionId": 424285,
+        "sourceUrl": "https://prts.wiki/w/%E9%BB%91%E9%94%AE",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-9e3b85f59eb76c7b",
+      "sourceTitle": "炎客",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "炎客一边修剪花木，一边回忆为友复仇的袭击者。留下的断刀使他谈起复仇、生存意志与活着的人应如何继续前行。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 9002,
+        "sourceRevisionId": 401375,
+        "sourceUrl": "https://prts.wiki/w/%E7%82%8E%E5%AE%A2",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-5344094255fec09a",
+      "sourceTitle": "夏栎",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "接连失去队员的作战报告逐渐变成求援信。夏栎发现任务与情报皆有虚假之处，最终拒绝回去复命，背负死者寻找赎罪之路。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 38412,
+        "sourceRevisionId": 392311,
+        "sourceUrl": "https://prts.wiki/w/%E5%A4%8F%E6%A0%8E",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-e27e8bc58488bd0b",
+      "sourceTitle": "伺夜",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "莱昂图索替前来求助的擦鞋匠安排解决纠纷的办法，又暂借自己的铳作为保护，让老人得以安心返回生活。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 47232,
+        "sourceRevisionId": 406211,
+        "sourceUrl": "https://prts.wiki/w/%E4%BC%BA%E5%A4%9C",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-47baf5e64b52d2dd",
+      "sourceTitle": "铅踝",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "少年曾向往随佣兵远行与北方的新生活；多年后的铅踝却选择留下，在沉默中等待那份勇气再次唤醒自己。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 46410,
+        "sourceRevisionId": 421754,
+        "sourceUrl": "https://prts.wiki/w/%E9%93%85%E8%B8%9D",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-50e6ad091f8649c0",
+      "sourceTitle": "仇白",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "仇白斩杀挟持幼童的劫匪后，认出其中一人曾在自己濒死时相救。她在旧水囊前放下斗笠与梅枝。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 51055,
+        "sourceRevisionId": 428219,
+        "sourceUrl": "https://prts.wiki/w/%E4%BB%87%E7%99%BD",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-9d3e8f3bf8695a07",
+      "sourceTitle": "银灰",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "幼年的银灰救下失去双亲的羽兽，为它治疗并练习飞行。临行前，他为伙伴系上黑巾，邀它一同走向雪境之外。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1778,
+        "sourceRevisionId": 422170,
+        "sourceUrl": "https://prts.wiki/w/%E9%93%B6%E7%81%B0",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-7f90c2c46a658301",
+      "sourceTitle": "雪雉",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "雪雉盘点存钱罐中的异国零钱、纪念币与代币；这些来源各异的小物件记录着她与干员们的往来，也提醒她留意优惠券期限。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 11547,
+        "sourceRevisionId": 420488,
+        "sourceUrl": "https://prts.wiki/w/%E9%9B%AA%E9%9B%89",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-fe520d9f1905a62a",
+      "sourceTitle": "青枳",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "青枳走过被火山灰掩埋的旧城，发现故乡已不再等同于童年的想象。她告别追逐旧梦的自己，望向新汐斯塔的灯火。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 57343,
+        "sourceRevisionId": 423772,
+        "sourceUrl": "https://prts.wiki/w/%E9%9D%92%E6%9E%B3",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-280be1b312ac554d",
+      "sourceTitle": "麒麟R夜刀",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "夜刀虽厌烦木桩训练，却向后辈说明反复磨练基本功的必要；一次尝试新方法失败的任务，最终仍靠熟悉的一刀结束。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 51408,
+        "sourceRevisionId": 429780,
+        "sourceUrl": "https://prts.wiki/w/%E9%BA%92%E9%BA%9FR%E5%A4%9C%E5%88%80",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-43de96b7566c6d10",
+      "sourceTitle": "狮蝎",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "一张张便条记录狮蝎求医、谋生与表达感谢的经历。到了罗德岛，她开始在聚会后留下自己的感受，期待下一次相聚。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1767,
+        "sourceRevisionId": 392261,
+        "sourceUrl": "https://prts.wiki/w/%E7%8B%AE%E8%9D%8E",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-01b24b9ffdde4d84",
+      "sourceTitle": "猎蜂",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "猎蜂在地下拳场挡住强敌，为同伴追回物品争取时间。直到离场后，大家才发现她因苦战把保护牙套都咬坏了。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1782,
+        "sourceRevisionId": 392172,
+        "sourceUrl": "https://prts.wiki/w/%E7%8C%8E%E8%9C%82",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-9300d0ac802e82de",
+      "sourceTitle": "耀骑士临光",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "童年的玛嘉烈在父亲陪伴下练习剑枪，却随后面对双亲离家的告别。她目送他们远去，回身紧紧抱住妹妹。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 34436,
+        "sourceRevisionId": 411460,
+        "sourceUrl": "https://prts.wiki/w/%E8%80%80%E9%AA%91%E5%A3%AB%E4%B8%B4%E5%85%89",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-77090283a695a700",
+      "sourceTitle": "锡兰",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "锡兰首次野外考察因救助工人而冒险接触源石风险。老师要求她重修课程，教她先理解危险与代价，再为自己的选择负责。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 7699,
+        "sourceRevisionId": 392307,
+        "sourceUrl": "https://prts.wiki/w/%E9%94%A1%E5%85%B0",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-a51f80628e141a09",
+      "sourceTitle": "守林人",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "一片夹在骑士小说中的树叶随书页经历焚毁，最终被塑封收进守林人的装备盒，成为她珍视的故乡痕迹。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1762,
+        "sourceRevisionId": 422390,
+        "sourceUrl": "https://prts.wiki/w/%E5%AE%88%E6%9E%97%E4%BA%BA",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-39d4db25a2341389",
+      "sourceTitle": "灵知",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "灵知与银灰在机密方案中讨论银心湖地下基地的选址与掩护。工程之外，两人也谈及谢拉格的未来和灵知自己的研究道路。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 36015,
+        "sourceRevisionId": 392182,
+        "sourceUrl": "https://prts.wiki/w/%E7%81%B5%E7%9F%A5",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-7f88edc154c8fbc6",
+      "sourceTitle": "历阵锐枪芬",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "芬曾因仓促变更战术遭遇模拟作战失败；多年历练后，她终于打开那份考验耐性的奖励，得到提醒自己看清职责的防风眼镜。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 66430,
+        "sourceRevisionId": 394094,
+        "sourceUrl": "https://prts.wiki/w/%E5%8E%86%E9%98%B5%E9%94%90%E6%9E%AA%E8%8A%AC",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-6edc1b27800ee811",
+      "sourceTitle": "苏苏洛",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "确诊后，苏苏洛在日记中梳理自己的感染经历与尚待验证的疑问，并意识到志愿者需要更专业的矿石病研究和医疗支持。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 7698,
+        "sourceRevisionId": 423765,
+        "sourceUrl": "https://prts.wiki/w/%E8%8B%8F%E8%8B%8F%E6%B4%9B",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-4d76cc2dcb3c6221",
+      "sourceTitle": "白面鸮",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "一组莱茵生命录音追溯以人为载体的源石解码试验。受试者承受陌生声音带来的痛苦，项目主管也植入芯片，试图重现结果。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1741,
+        "sourceRevisionId": 392030,
+        "sourceUrl": "https://prts.wiki/w/%E7%99%BD%E9%9D%A2%E9%B8%AE",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-b1847c8b189e3749",
+      "sourceTitle": "凯尔希",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "罗德岛制药公司的手续办妥后，凯尔希、可露希尔与年幼的阿米娅谈起新旅途，也等待博士归来。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 28780,
+        "sourceRevisionId": 411456,
+        "sourceUrl": "https://prts.wiki/w/%E5%87%AF%E5%B0%94%E5%B8%8C",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-d6d426da7f424c43",
+      "sourceTitle": "鸿雪",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "鸿雪尝试为杜林人写剧本，却仍围绕离开际崖城的朋友们忙碌。至简劝她重新采风、生活，把自己放回故事之中。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 43731,
+        "sourceRevisionId": 421715,
+        "sourceUrl": "https://prts.wiki/w/%E9%B8%BF%E9%9B%AA",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-65ee0cf26937faad",
+      "sourceTitle": "协律",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "协律把安抚情绪的音乐术式刻入花瓣，一头驮兽意外吞下花朵，让旋律随自己的声音与牧场中的兽群相遇。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 85184,
+        "sourceRevisionId": 417751,
+        "sourceUrl": "https://prts.wiki/w/%E5%8D%8F%E5%BE%8B",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-88e7c78c1701458a",
+      "sourceTitle": "松果",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "卡达追查食堂每天响起的神秘歌声，最终发现松果的麦克风误连了大厅音箱，让她独自工作时的歌唱传遍食堂。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 24491,
+        "sourceRevisionId": 409839,
+        "sourceUrl": "https://prts.wiki/w/%E6%9D%BE%E6%9E%9C",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-2e661a84ff3fc402",
+      "sourceTitle": "圣约送葬人",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "费德里科因代管摊位引发投诉而撰写说明。他想买下圣髑模型，提醒自己不必困于尚无答案的疑问，并设法安抚摊主。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 55366,
+        "sourceRevisionId": 424287,
+        "sourceUrl": "https://prts.wiki/w/%E5%9C%A3%E7%BA%A6%E9%80%81%E8%91%AC%E4%BA%BA",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-0803b77cdc49331a",
+      "sourceTitle": "耶拉",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "耶拉对风雪与危险的久远感知，与屋内向恩雅学习针线的日常交叠；编织使她重新感到与人相伴的温暖。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 36011,
+        "sourceRevisionId": 392342,
+        "sourceUrl": "https://prts.wiki/w/%E8%80%B6%E6%8B%89",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-8784602477fa7d46",
+      "sourceTitle": "骋风",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "冲突过后，骋风与众人收拾镖局，修补断裂的义字木牌。大家决定把它用作商标，在日常劳作中重新理解彼此的情义。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 77280,
+        "sourceRevisionId": 428053,
+        "sourceUrl": "https://prts.wiki/w/%E9%AA%8B%E9%A3%8E",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-6e5e626e63959c5e",
+      "sourceTitle": "异客",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "外勤部门为异客颁发特别认证，确认其在生息演算行动中采用改良策略的资格；这枚证章记录了这一作战许可。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 28123,
+        "sourceRevisionId": 424834,
+        "sourceUrl": "https://prts.wiki/w/%E5%BC%82%E5%AE%A2",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-87c83952a46e7803",
+      "sourceTitle": "隐德来希",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "隐德来希重访曾以蜡烛匠人身份生活的小城，完成最后一种蜡烛的复现。她向这段短暂人生告别，再走向下一次任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 75933,
+        "sourceRevisionId": 428045,
+        "sourceUrl": "https://prts.wiki/w/%E9%9A%90%E5%BE%B7%E6%9D%A5%E5%B8%8C",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-b4277778d76f08a4",
+      "sourceTitle": "塑心",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "阿尔图罗的卷宗被封存，公民权益得到恢复。她向教宗辞行，想携琴寻找曾错过的听众，开启新的旅程。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 60712,
+        "sourceRevisionId": 394749,
+        "sourceUrl": "https://prts.wiki/w/%E5%A1%91%E5%BF%83",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-c9085ed253c7a91f",
+      "sourceTitle": "砾",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "砾回忆从被买卖的童年到受人保护与教导的经历。临别时，老爷让她自由选择是否归来，使她第一次感到命运的善意。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1730,
+        "sourceRevisionId": 393105,
+        "sourceUrl": "https://prts.wiki/w/%E7%A0%BE",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-bff556d888b5136d",
+      "sourceTitle": "华法琳",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "医疗部公开说明血库的保密与管理制度；另一边，华法琳对博士的血液怀有强烈研究兴趣，却受到凯尔希的限制。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1755,
+        "sourceRevisionId": 411435,
+        "sourceUrl": "https://prts.wiki/w/%E5%8D%8E%E6%B3%95%E7%90%B3",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-e2d06ba0c7785305",
+      "sourceTitle": "极境",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "极境为发型意外求助的通讯，与一次紧急行动的记录交错。早该淘汰的寻呼器在基站全毁时保住了联络与救援。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 15332,
+        "sourceRevisionId": 421596,
+        "sourceUrl": "https://prts.wiki/w/%E6%9E%81%E5%A2%83",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-61347bf20a113726",
+      "sourceTitle": "W",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "W的行囊夹层保存着一块旧刀片。它曾被荒地上的少女用来挣脱致命袭击，留下她成为佣兵之前对生存的执念。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 15334,
+        "sourceRevisionId": 407049,
+        "sourceUrl": "https://prts.wiki/w/W",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-9a1e25748f272d78",
+      "sourceTitle": "幽灵鲨",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "幽灵鲨眼前的烛光幻象牵出被折磨与自我撕裂的记忆。熟悉的来访打断幻象，她才短暂沉入平静的梦。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1747,
+        "sourceRevisionId": 407066,
+        "sourceUrl": "https://prts.wiki/w/%E5%B9%BD%E7%81%B5%E9%B2%A8",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-2d2fa3d826c389ad",
+      "sourceTitle": "星熊",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "星熊长年尝试把旧铁块打磨成般若的把手，并从中体会自身的坚持。朋友送来的软带把手，让这份修行添上温柔的回应。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1776,
+        "sourceRevisionId": 392321,
+        "sourceUrl": "https://prts.wiki/w/%E6%98%9F%E7%86%8A",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-fe59f446e289db02",
+      "sourceTitle": "霍尔海雅",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "霍尔海雅对Friston-3及舰内秘密频频试探，引来管理记录；华法琳则申请研究她旧手术造成的损伤，获凯尔希同意。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 54441,
+        "sourceRevisionId": 406560,
+        "sourceUrl": "https://prts.wiki/w/%E9%9C%8D%E5%B0%94%E6%B5%B7%E9%9B%85",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-861e3bb6b7730c35",
+      "sourceTitle": "仇白",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "教剑的徐师傅落水身亡，水寨却只顾庆贺所得货物。仇白无法融入热闹，在雪晨把残酒与裹剑的白布投入江中。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 51055,
+        "sourceRevisionId": 428219,
+        "sourceUrl": "https://prts.wiki/w/%E4%BB%87%E7%99%BD",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-83de14f2d6c2c867",
+      "sourceTitle": "齐尔查克",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "酒液再次令杜林的机械失控，齐尔查克凭手艺将其拆解。以麦酒结算报酬后，他又被烈酒协会拉进了庆功宴。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 71416,
+        "sourceRevisionId": 403969,
+        "sourceUrl": "https://prts.wiki/w/%E9%BD%90%E5%B0%94%E6%9F%A5%E5%85%8B",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-783a225ac580bb43",
+      "sourceTitle": "黑键",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "一名失地乡绅凭骰子认出黑键，幻想依附贵族重获地位。黑键以戏谑的仪式打破他的期待，劝他作为平民堂堂正正地活下去。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 41752,
+        "sourceRevisionId": 424285,
+        "sourceUrl": "https://prts.wiki/w/%E9%BB%91%E9%94%AE",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-0ad309171aea0d36",
+      "sourceTitle": "缇缇",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "缇缇离开哥伦比亚返回故乡，在朋友的关怀与笑闹中重新安定下来。她决定先帮助朋友实现愿望，再寻找自己的方向。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 87039,
+        "sourceRevisionId": 420880,
+        "sourceUrl": "https://prts.wiki/w/%E7%BC%87%E7%BC%87",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-20f567f0a5b57e96",
+      "sourceTitle": "埃癸斯",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "埃癸斯为云兽添食时与校工相识，两人以新的约定回应彼此。她由此理解，承诺能让原本陌生的人与事物产生联系。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 95902,
+        "sourceRevisionId": 428467,
+        "sourceUrl": "https://prts.wiki/w/%E5%9F%83%E7%99%B8%E6%96%AF",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-f029ca4b72b6cea5",
+      "sourceTitle": "小满",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "一名学生在大荒城的实践日记，从不适应乡音与田野写到结识小满和朋友们；离开时，原本陌生的地方已让他依依不舍。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 63242,
+        "sourceRevisionId": 392314,
+        "sourceUrl": "https://prts.wiki/w/%E5%B0%8F%E6%BB%A1",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-faaea53708af2d56",
+      "sourceTitle": "温米",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "病重的感染者惦记温米熬的补汤，希望朋友隐瞒自己的离世。温米却早已察觉真相，后来悄悄到墓前探望。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 62736,
+        "sourceRevisionId": 423782,
+        "sourceUrl": "https://prts.wiki/w/%E6%B8%A9%E7%B1%B3",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-825391f8b25e47ba",
+      "sourceTitle": "三角初华",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "初华因好奇向星极学习占星。两人在交谈中发现，占卜之外，她们更在意的是如何理解和关心重要的人。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 82803,
+        "sourceRevisionId": 424782,
+        "sourceUrl": "https://prts.wiki/w/%E4%B8%89%E8%A7%92%E5%88%9D%E5%8D%8E",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-4f95ff8f4d6ba66b",
+      "sourceTitle": "远山",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "远山在救援中预感袭击并透支身体保护队伍。疲惫的梦里，她又回到曾带领族人离乡、坚持命运可以改变的抉择。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1718,
+        "sourceRevisionId": 392360,
+        "sourceUrl": "https://prts.wiki/w/%E8%BF%9C%E5%B1%B1",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-7cf595f8d1d5df4c",
+      "sourceTitle": "闪击",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "闪击随队护送战乱中的难民，抵达被视为禁忌的古代废墟。人们在此安顿，他则凝望遗迹，思索这片大地遗失的过去。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 27040,
+        "sourceRevisionId": 392245,
+        "sourceUrl": "https://prts.wiki/w/%E9%97%AA%E5%87%BB",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-a40b26c12ac0c258",
+      "sourceTitle": "野鬃",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "野鬃曾是家族寄予厚望的骑士，却在遭受重创与感染后与旧生活隔绝。成年时的金杯仍留在她再也无法进入的家中。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 34426,
+        "sourceRevisionId": 393100,
+        "sourceUrl": "https://prts.wiki/w/%E9%87%8E%E9%AC%83",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-1831fa8080b48324",
+      "sourceTitle": "燧石",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "燧石带着贴有花朵的单词卡返回阿卡胡拉。学会新的语言，使她终于能向外来者讲清故乡花朵的含义与雨林的生命力。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 19820,
+        "sourceRevisionId": 392280,
+        "sourceUrl": "https://prts.wiki/w/%E7%87%A7%E7%9F%B3",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-67fd6d59ef87d700",
+      "sourceTitle": "寒芒克洛丝",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "克洛丝用私藏的蛋糕安慰训练失误的后辈，又细心调整装置与训练方案。多年后，后辈在危机中作出正确判断，才看见她背后的准备。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 37510,
+        "sourceRevisionId": 399977,
+        "sourceUrl": "https://prts.wiki/w/%E5%AF%92%E8%8A%92%E5%85%8B%E6%B4%9B%E4%B8%9D",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-08967d4178117e92",
+      "sourceTitle": "雷蛇",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "雷蛇遭到针对战术与能力的伏击，联络也被切断。她以预先存储电流的试验型蓄光弹反击，突破绝缘装备构成的围困。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1758,
+        "sourceRevisionId": 392169,
+        "sourceUrl": "https://prts.wiki/w/%E9%9B%B7%E8%9B%87",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-2a6645e2985cba48",
+      "sourceTitle": "戴菲恩",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "戴菲恩追查劫掠者，发现有人利用孩子设局害人。她承诺联络罗德岛救助营地，却也要求头目为伤害无辜者承担后果。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 59949,
+        "sourceRevisionId": 392066,
+        "sourceUrl": "https://prts.wiki/w/%E6%88%B4%E8%8F%B2%E6%81%A9",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-85d1f83cec0b3cd3",
+      "sourceTitle": "莱伊",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "莱伊并不理解一份能力证明能够带来的机会，反而把纸折好补住沙地兽窝顶。照料伙伴的明日所需，仍是她最直接的牵挂。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 62739,
+        "sourceRevisionId": 424117,
+        "sourceUrl": "https://prts.wiki/w/%E8%8E%B1%E4%BC%8A",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-425f1c69b4438d2c",
+      "sourceTitle": "远牙",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "一位支持者写信祝贺远牙取得称号，反对报刊的污蔑，也鼓励她选择自己的骑士道路，表达无论去向如何都会支持的心意。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 33477,
+        "sourceRevisionId": 421103,
+        "sourceUrl": "https://prts.wiki/w/%E8%BF%9C%E7%89%99",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-eb0ef99cfcd34c5d",
+      "sourceTitle": "送葬人",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "见习生翻查送葬人的随身包，猜测光环装置的用途。教宗用身高标记的玩笑回应，回忆的却是费德里科一路长大的岁月。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 8999,
+        "sourceRevisionId": 392275,
+        "sourceUrl": "https://prts.wiki/w/%E9%80%81%E8%91%AC%E4%BA%BA",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-82405a4a1fb853e0",
+      "sourceTitle": "歌蕾蒂娅",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "童年的歌蕾蒂娅对着手镜审视自己；失去原有生活后，她仍坚持尊严与行动，只要尚有可能，就继续寻找同伴与归途。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 28777,
+        "sourceRevisionId": 428987,
+        "sourceUrl": "https://prts.wiki/w/%E6%AD%8C%E8%95%BE%E8%92%82%E5%A8%85",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-2180e7f9e7392459",
+      "sourceTitle": "维娜·维多利亚",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "面对贵族的献礼，维娜把国徽与尊贵的含义重新摆到众人面前。拳馆里的梨球任人敲打，象征应获得真实认同，而非因华贵受敬畏。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 72134,
+        "sourceRevisionId": 410942,
+        "sourceUrl": "https://prts.wiki/w/%E7%BB%B4%E5%A8%9C%C2%B7%E7%BB%B4%E5%A4%9A%E5%88%A9%E4%BA%9A",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-6e4035b327032159",
+      "sourceTitle": "铎铃",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "铎铃在地图背面为未来信使写满山路经验，尤其提醒做好矿石病防护。继任者迟迟未至，她仍年复一年走在送信路上。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 51053,
+        "sourceRevisionId": 392079,
+        "sourceUrl": "https://prts.wiki/w/%E9%93%8E%E9%93%83",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-dd20942e202e2f07",
+      "sourceTitle": "诺威尔",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "亲人的来访带来旧信、家庭合影与离世者的留言。诺威尔听到新生女孩沿用自己的名字，压抑已久的牵挂终于显露。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 75931,
+        "sourceRevisionId": 392642,
+        "sourceUrl": "https://prts.wiki/w/%E8%AF%BA%E5%A8%81%E5%B0%94",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-762a7c2dc7784593",
+      "sourceTitle": "真言",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "研究报告与维护日志记录真言施术装置的研制、损耗和保养。最后一次送修时，她正与通讯员一同执行外勤，已不急于取回装置。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 83997,
+        "sourceRevisionId": 429205,
+        "sourceUrl": "https://prts.wiki/w/%E7%9C%9F%E8%A8%80",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-22d215647cab2581",
+      "sourceTitle": "石英",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "石英坚持任务必须准时，并用工具校准钟表。面对准备引爆炸弹的目标，她凭对时间差的把握，将人带出了即将爆炸的酒吧。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 47225,
+        "sourceRevisionId": 423764,
+        "sourceUrl": "https://prts.wiki/w/%E7%9F%B3%E8%8B%B1",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-9932687edf471b97",
+      "sourceTitle": "安洁莉娜",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "一名被驱逐的感染者收到信使连夜送来的信。信使又带对方轻盈升空，在夜风与星光中暂时放下沉重的烦恼。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1773,
+        "sourceRevisionId": 411504,
+        "sourceUrl": "https://prts.wiki/w/%E5%AE%89%E6%B4%81%E8%8E%89%E5%A8%9C",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-14536a029c271265",
+      "sourceTitle": "薄绿",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "薄绿买来多种工具训练注意力，却仍不断分心与走失。记录最后留下的灭火器，反而最能处理她惹出的麻烦。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 21089,
+        "sourceRevisionId": 393474,
+        "sourceUrl": "https://prts.wiki/w/%E8%96%84%E7%BB%BF",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-de8fa95a12d6603c",
+      "sourceTitle": "稀音",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "稀音搭乘摄影器拼成的椅子去往拍摄地点，最终亲自走向眼前的风景。比起构图思考，她更珍惜忠实记录世界的快乐。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 19109,
+        "sourceRevisionId": 417754,
+        "sourceUrl": "https://prts.wiki/w/%E7%A8%80%E9%9F%B3",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-664fccd93ca149c5",
+      "sourceTitle": "麦哲伦",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "麦哲伦的冰原探险笔记记录硅化树枝、受阻的勘探与新的朋友。即使未达成目标，她仍留意黑色雪花，期待下一次发现。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 9000,
+        "sourceRevisionId": 392196,
+        "sourceUrl": "https://prts.wiki/w/%E9%BA%A6%E5%93%B2%E4%BC%A6",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-5888d1194e1b0973",
+      "sourceTitle": "莫斯提马",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "莫斯提马以旅途故事赢得帕夏信任，却婉拒挽留。她解释，继续远行才能带回更多故事，让这场会面成为下一段旅程的起点。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 10089,
+        "sourceRevisionId": 392207,
+        "sourceUrl": "https://prts.wiki/w/%E8%8E%AB%E6%96%AF%E6%8F%90%E9%A9%AC",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-89b134ef04267244",
+      "sourceTitle": "焰狐龙梓兰",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "A6复盘后的烦恼让梓兰走向专用箭靶。射箭宣泄过后，她又想起同伴值得关心的一面，并为未来照顾他们作打算。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 92390,
+        "sourceRevisionId": 422152,
+        "sourceUrl": "https://prts.wiki/w/%E7%84%B0%E7%8B%90%E9%BE%99%E6%A2%93%E5%85%B0",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-ed30d4c9799fae28",
+      "sourceTitle": "提丰",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "幼年的提丰带弓外出，在拾取小物与林间行走中遭遇险境。后来她忘却了那段经历，只留下箭囊底部融雪痕迹所暗示的庇护。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 56131,
+        "sourceRevisionId": 428226,
+        "sourceUrl": "https://prts.wiki/w/%E6%8F%90%E4%B8%B0",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-976642428de5d1e4",
+      "sourceTitle": "雪绒",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "雪绒从父母传授的冰原传统中成长，又把部落外的帮助与知识带回家。奔波疲惫时，落在鼻尖的雪花仍让他想起父亲。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 47227,
+        "sourceRevisionId": 392327,
+        "sourceUrl": "https://prts.wiki/w/%E9%9B%AA%E7%BB%92",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-a9c916539ad6111d",
+      "sourceTitle": "贾维",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "贾维与伙伴通宵制作千斤顶，想把它当作贴心礼物送给来访女孩，却因直白又失礼的解释弄巧成拙，最后把它留作团伙纪念。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 19105,
+        "sourceRevisionId": 392133,
+        "sourceUrl": "https://prts.wiki/w/%E8%B4%BE%E7%BB%B4",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-f806f28a6b9663be",
+      "sourceTitle": "天火",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "天火抄写袭击报告时屡因愤怒烧坏纸张。老师引导她学会把立场写成可沟通的论述，再将她介绍到真正应对感染者困境的罗德岛。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1752,
+        "sourceRevisionId": 392286,
+        "sourceUrl": "https://prts.wiki/w/%E5%A4%A9%E7%81%AB",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-ec05402c9c9547d4",
+      "sourceTitle": "森蚺",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "森蚺的考评表罗列多项工程成果，也记录她对Lancet-2的照料。可露希尔看见她对机械的期待，相信她仍可能创造令自己惊叹的作品。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 19824,
+        "sourceRevisionId": 423359,
+        "sourceUrl": "https://prts.wiki/w/%E6%A3%AE%E8%9A%BA",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-5cf1b6c98807c29d",
+      "sourceTitle": "伯塔尼",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "伯塔尼夜里听见熟悉的呼唤，最终把它理解为自己过去施术讯号的回响。童年、求学与苦难中的声音由此再次与她相遇。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 89480,
+        "sourceRevisionId": 428187,
+        "sourceUrl": "https://prts.wiki/w/%E4%BC%AF%E5%A1%94%E5%B0%BC",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-4770d3f2b09e066a",
+      "sourceTitle": "可颂",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "可颂的日记在购物冲动、节省开支与开杂货店的梦想之间摇摆；新款作战靴让她再次破费，也带来真切的满足。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1759,
+        "sourceRevisionId": 411348,
+        "sourceUrl": "https://prts.wiki/w/%E5%8F%AF%E9%A2%82",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-f4659d6de62a411d",
+      "sourceTitle": "柏喙",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "柏喙原本为自己制作衣服，却把孩子犯错后的歉意转化成新的礼物。她为男孩缝好衬衣，希望针线承载善意与未来。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 13300,
+        "sourceRevisionId": 422138,
+        "sourceUrl": "https://prts.wiki/w/%E6%9F%8F%E5%96%99",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-f01ad415f4965087",
+      "sourceTitle": "杰克",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "家具城劫案的监控显示，一名年轻辅警借钢椅制服歹徒并救出人质。警方的事后说法却与目击者记录相冲突，引发公众质疑。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 22683,
+        "sourceRevisionId": 392141,
+        "sourceUrl": "https://prts.wiki/w/%E6%9D%B0%E5%85%8B",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-20a7c4bbaec8d797",
+      "sourceTitle": "阿米娅",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "DWDB-221E试验首次成功输送他人的经历与情感，研究者共享了人造月亮设计者的记忆。众人随后为项目讨论名为文明存续的愿景。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 1751,
+        "sourceRevisionId": 411434,
+        "sourceUrl": "https://prts.wiki/w/%E9%98%BF%E7%B1%B3%E5%A8%85",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    },
+    {
+      "id": "prts-module-27c0cd7b5ad1167a",
+      "sourceTitle": "凯尔希",
+      "kind": "module",
+      "sections": [
+        {
+          "title": "模组故事提要",
+          "body": "凯尔希回望漫长岁月与一次死亡，意识到文明面临的危机正逼近。她将目光投向卡兹戴尔，并与特蕾西娅谈及彼此终于获得的理解。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 28780,
+        "sourceRevisionId": 411456,
+        "sourceUrl": "https://prts.wiki/w/%E5%87%AF%E5%B0%94%E5%B8%8C",
+        "sourceType": "game-story",
+        "editorialBasis": "据模组基础信息中可核验的物件与事件归纳。"
+      }
+    }
+  ]
+}

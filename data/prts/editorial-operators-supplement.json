@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "prts-operator-95902",
+      "sourceTitle": "埃癸斯",
+      "kind": "operator",
+      "summary": "圣马尔索综合学校的学生，以严谨的学习态度和武装课程表现受到关注。",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "登记为第三类驻留人员后，埃癸斯进入圣马尔索综合学校。她学习认真、责任心强，老师也鼓励她多参与集体生活。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 95902,
+        "sourceRevisionId": 428467,
+        "sourceUrl": "https://prts.wiki/w/%E5%9F%83%E7%99%B8%E6%96%AF",
+        "editorialBasis": "学生概况，初始开放档案"
+      }
+    },
+    {
+      "id": "prts-operator-95900",
+      "sourceTitle": "虎狼丸",
+      "kind": "operator",
+      "summary": "结城理的同伴，被班级接纳为荣誉学生。",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "虎狼丸凭借聪慧与亲近人的表现融入班级；埃癸斯帮助传达它的意思。它还喜欢观看棋赛，赢得了同学的喜爱。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 95900,
+        "sourceRevisionId": 428059,
+        "sourceUrl": "https://prts.wiki/w/%E8%99%8E%E7%8B%BC%E4%B8%B8",
+        "editorialBasis": "学生概况，初始开放档案"
+      }
+    },
+    {
+      "id": "prts-operator-96117",
+      "sourceTitle": "结城理",
+      "kind": "operator",
+      "summary": "圣马尔索综合学校的学生，常参与志愿实践。",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "结城理以拉特兰公民亲属身份登记后入学。老师肯定他处事沉着、尊重他人，也认可他在志愿实践中的表现。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 96117,
+        "sourceRevisionId": 428466,
+        "sourceUrl": "https://prts.wiki/w/%E7%BB%93%E5%9F%8E%E7%90%86",
+        "editorialBasis": "学生概况，初始开放档案"
+      }
+    },
+    {
+      "id": "prts-operator-95904",
+      "sourceTitle": "岳羽由加莉",
+      "kind": "operator",
+      "summary": "圣马尔索综合学校的学生，擅长弓术。",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "岳羽由加莉入学后展现出良好的沟通能力与弓术。老师肯定她的独立性，也希望她遇到困难时能接受身边人的帮助。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourcePageId": 95904,
+        "sourceRevisionId": 428468,
+        "sourceUrl": "https://prts.wiki/w/%E5%B2%B3%E7%BE%BD%E7%94%B1%E5%8A%A0%E8%8E%89",
+        "editorialBasis": "学生概况，初始开放档案"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4982 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "prts-operator-1703",
+      "sourceTitle": "12F",
+      "kind": "operator",
+      "summary": "经验丰富的罗德岛术师，曾以佣兵和保全身份参与作战。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "以12F为常用受雇代号，曾参与多方冲突，部分履历可由佣兵与保全记录佐证。与巨枭一同加入罗德岛，担任常规术师。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1703,
+        "sourceRevisionId": 389278,
+        "sourceUrl": "https://prts.wiki/w/12F",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-11903",
+      "sourceTitle": "阿",
+      "kind": "operator",
+      "summary": "熟悉医疗理论与临床工作的龙门医生，现参与装备与技术研发。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "由老鲤推荐进入罗德岛，曾在龙门灰色地带行医。医疗经验出色，却因治疗风格令人担忧，被安排到医疗装备与技术开发岗位。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 11903,
+        "sourceRevisionId": 401549,
+        "sourceUrl": "https://prts.wiki/w/%E9%98%BF",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-77283",
+      "sourceTitle": "阿兰娜",
+      "kind": "operator",
+      "summary": "精通机械操控与维修的工程干员，服务于第三维修工坊。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "原是雷姆必拓比格皮勒的运载车驾驶员，熟悉多种机械。加入罗德岛工程部后，参与可露希尔主持的新设备研发和调试。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 77283,
+        "sourceRevisionId": 392006,
+        "sourceUrl": "https://prts.wiki/w/%E9%98%BF%E5%85%B0%E5%A8%9C",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-65566",
+      "sourceTitle": "阿罗玛",
+      "kind": "operator",
+      "summary": "来自香氛作坊家庭的后勤人员，负责清洁与外勤保障。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "出身哥伦比亚净味香氛作坊家庭，因感染到罗德岛治疗。与后勤部合作，在舰内负责清洁，也支援补给与灾害应对任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 65566,
+        "sourceRevisionId": 428234,
+        "sourceUrl": "https://prts.wiki/w/%E9%98%BF%E7%BD%97%E7%8E%9B",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-23361",
+      "sourceTitle": "阿米娅(近卫)",
+      "kind": "operator",
+      "summary": "拥有最高执行权的罗德岛领袖，以感染者的未来为行动目标。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "虽以年轻少女的外貌示人，阿米娅已是受众人信任的领导者。她掌握罗德岛最高执行权，带领组织寻求摆脱矿石病阴影的未来。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 23361,
+        "sourceRevisionId": 411995,
+        "sourceUrl": "https://prts.wiki/w/%E9%98%BF%E7%B1%B3%E5%A8%85(%E8%BF%91%E5%8D%AB)",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-67010",
+      "sourceTitle": "阿米娅(医疗)",
+      "kind": "operator",
+      "summary": "罗德岛的公开领导者，致力于改善感染者处境。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "阿米娅在罗德岛承担最高执行职责，以实际能力赢得信任。无论如何投入行动，她始终以感染者和这片大地的未来为重。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 67010,
+        "sourceRevisionId": 422022,
+        "sourceUrl": "https://prts.wiki/w/%E9%98%BF%E7%B1%B3%E5%A8%85(%E5%8C%BB%E7%96%97)",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-65568",
+      "sourceTitle": "阿斯卡纶",
+      "kind": "operator",
+      "summary": "负责罗德岛反渗透工作的S.W.E.E.P.领导者。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "阿斯卡纶曾在巴别塔担任情报官，后来接掌S.W.E.E.P.，为罗德岛承担反渗透及相关安全工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 65568,
+        "sourceRevisionId": 411454,
+        "sourceUrl": "https://prts.wiki/w/%E9%98%BF%E6%96%AF%E5%8D%A1%E7%BA%B6",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1740",
+      "sourceTitle": "阿消",
+      "kind": "operator",
+      "summary": "来自龙门消防局的特种干员，将救灾经验用于战场支援。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "身为龙门消防员，阿消把消防与救援技术转化为多种实战手段。加入特种小组后，也继续为罗德岛提供消防安全服务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1740,
+        "sourceRevisionId": 392012,
+        "sourceUrl": "https://prts.wiki/w/%E9%98%BF%E6%B6%88",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-41455",
+      "sourceTitle": "埃拉托",
+      "kind": "operator",
+      "summary": "来自米诺斯的吟游诗人与反殖民游击队员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "埃拉托曾参加对抗萨尔贡殖民者的游击队，以吟游诗人身份活动。她自述的射箭冠军和第一竖琴手头衔尚无可靠记录佐证。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 41455,
+        "sourceRevisionId": 392014,
+        "sourceUrl": "https://prts.wiki/w/%E5%9F%83%E6%8B%89%E6%89%98",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-64705",
+      "sourceTitle": "艾拉",
+      "kind": "operator",
+      "summary": "善用非致命震荡装置的彩虹小队成员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "独立而善于适应环境的艾拉，兼具领导能力。她以雷鸣地雷产生的巨响与震荡干扰敌人，争取战场主动权。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 64705,
+        "sourceRevisionId": 401057,
+        "sourceUrl": "https://prts.wiki/w/%E8%89%BE%E6%8B%89",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-40675",
+      "sourceTitle": "艾丽妮",
+      "kind": "operator",
+      "summary": "熟悉伊比利亚律法与历史的审判庭信使。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "曾师从达里奥担任审判官，愚人号事件后辞去原职。经凯尔希推荐，她以审判庭信使身份与罗德岛合作，共同应对海洋威胁。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 40675,
+        "sourceRevisionId": 424100,
+        "sourceUrl": "https://prts.wiki/w/%E8%89%BE%E4%B8%BD%E5%A6%AE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1728",
+      "sourceTitle": "艾丝黛尔",
+      "kind": "operator",
+      "summary": "在罗德岛接受治疗，并通过训练投入作战的近卫干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "因感染导致明显体征变化，艾丝黛尔曾向罗德岛寻求庇护与治疗。经过心理辅导和多项测试后，她依个人意愿加入近卫队伍。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1728,
+        "sourceRevisionId": 423762,
+        "sourceUrl": "https://prts.wiki/w/%E8%89%BE%E4%B8%9D%E9%BB%9B%E5%B0%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-25288",
+      "sourceTitle": "爱丽丝",
+      "kind": "operator",
+      "summary": "能够引人入梦并调整梦境内容的维多利亚术师。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "为归还一名干员留下的寄存物，爱丽丝暂住罗德岛。她掌握独特法术，能够使人入睡，并对梦中景象进行适度引导。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 25288,
+        "sourceRevisionId": 392017,
+        "sourceUrl": "https://prts.wiki/w/%E7%88%B1%E4%B8%BD%E4%B8%9D",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-10895",
+      "sourceTitle": "安比尔",
+      "kind": "operator",
+      "summary": "擅长伏击和远程狙击的拉特兰射手。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "通过入职测试后，安比尔加入罗德岛狙击组。她在伏击、远距离打击等非对称作战中表现突出，为队伍提供射击支援。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 10895,
+        "sourceRevisionId": 424083,
+        "sourceUrl": "https://prts.wiki/w/%E5%AE%89%E6%AF%94%E5%B0%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1711",
+      "sourceTitle": "安德切尔",
+      "kind": "operator",
+      "summary": "行动预备组A4成员，在反应速度和精准射击方面富有潜力。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "安德切尔原为拉特兰自由职业者，凭借测试成绩加入罗德岛。现随预备组A4行动，在快速反应、射击和协同支援方面继续成长。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1711,
+        "sourceRevisionId": 347524,
+        "sourceUrl": "https://prts.wiki/w/%E5%AE%89%E5%BE%B7%E5%88%87%E5%B0%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1773",
+      "sourceTitle": "安洁莉娜",
+      "kind": "operator",
+      "summary": "以战场辅助与后勤保障见长的实习术师。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "本名安心院安洁莉娜，曾在叙拉古从事情报递送与货物运输。加入罗德岛后，以实习术师身份参与后勤、辅助及战术协同。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1773,
+        "sourceRevisionId": 411504,
+        "sourceUrl": "https://prts.wiki/w/%E5%AE%89%E6%B4%81%E8%8E%89%E5%A8%9C",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1714",
+      "sourceTitle": "安赛尔",
+      "kind": "operator",
+      "summary": "从制药实习岗位进入医疗组的A4预备干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "来自雷姆必拓的安赛尔，最初在罗德岛制药实习。通过多项测试后调入医疗组，现作为行动预备组A4成员履行职责。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1714,
+        "sourceRevisionId": 347527,
+        "sourceUrl": "https://prts.wiki/w/%E5%AE%89%E8%B5%9B%E5%B0%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-19516",
+      "sourceTitle": "安哲拉",
+      "kind": "operator",
+      "summary": "来自伊比利亚的狙击手，也是白炽的保镖。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "安哲拉随白炽一同接受罗德岛雇佣，原本便有良好狙击基础。经过专业训练后，她开始以狙击干员身份参加各类行动。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 19516,
+        "sourceRevisionId": 392022,
+        "sourceUrl": "https://prts.wiki/w/%E5%AE%89%E5%93%B2%E6%8B%89",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1731",
+      "sourceTitle": "暗索",
+      "kind": "operator",
+      "summary": "擅长绳索与勾爪的情报人员，熟悉龙门街巷。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "原在龙门贫民窟行窃，被捕后由陈推荐为特殊人才。暗索加入罗德岛后负责搜集情报，也在战斗中以绳索和勾爪扰乱敌人。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1731,
+        "sourceRevisionId": 396484,
+        "sourceUrl": "https://prts.wiki/w/%E6%9A%97%E7%B4%A2",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-65564",
+      "sourceTitle": "奥达",
+      "kind": "operator",
+      "summary": "往来卡兹戴尔与罗德岛的信使，偶尔参与地区外勤。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "奥达曾是巴别塔成员，如今居住卡兹戴尔，以送信和运输包裹维系与罗德岛的往来，也会接受当地外勤委托。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 65564,
+        "sourceRevisionId": 411431,
+        "sourceUrl": "https://prts.wiki/w/%E5%A5%A5%E8%BE%BE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-21774",
+      "sourceTitle": "奥斯塔",
+      "kind": "operator",
+      "summary": "追随贾维加入罗德岛的叙拉古游击手。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "奥斯塔曾隶属叙拉古小城家族，后来成为贾维团伙成员。随首领加入罗德岛后，以游击手身份投入前线任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 21774,
+        "sourceRevisionId": 392024,
+        "sourceUrl": "https://prts.wiki/w/%E5%A5%A5%E6%96%AF%E5%A1%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-82805",
+      "sourceTitle": "八幡海铃",
+      "kind": "operator",
+      "summary": "Ave Mujica的贝斯手，在演奏与战斗中都重视专业表现。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "经爱丽丝引荐来到罗德岛，八幡海铃仍以乐队贝斯手的专业态度面对任务，无论舞台演奏还是实战都保持稳定发挥。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 82805,
+        "sourceRevisionId": 396945,
+        "sourceUrl": "https://prts.wiki/w/%E5%85%AB%E5%B9%A1%E6%B5%B7%E9%93%83",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1749",
+      "sourceTitle": "白金",
+      "kind": "operator",
+      "summary": "来自卡西米尔无胄盟的狙击干员，擅长机动与巷战。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "白金的早年记录多有缺失，已知曾为无胄盟刺客。她具备突出的机动、歼灭与街巷战能力，目前在凯尔希指导下服务罗德岛。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1749,
+        "sourceRevisionId": 423779,
+        "sourceUrl": "https://prts.wiki/w/%E7%99%BD%E9%87%91",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-46418",
+      "sourceTitle": "白铁",
+      "kind": "operator",
+      "summary": "兼具机械工程与前线行动经验的伦蒂尼姆干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "曾任市民自救军十一小队队长，白铁在伦蒂尼姆与罗德岛并肩作战。签下长期协议后，他以工程师和行动成员身份继续支援维多利亚。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 46418,
+        "sourceRevisionId": 422146,
+        "sourceUrl": "https://prts.wiki/w/%E7%99%BD%E9%93%81",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1721",
+      "sourceTitle": "白雪",
+      "kind": "operator",
+      "summary": "使用大型手里剑的隐秘护卫，擅长侦察与情报搜集。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "白雪原是文月的贴身护卫，龙门与罗德岛合作后被派来保护博士。她以隐秘行动和情报收集见长，承担安全护卫任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1721,
+        "sourceRevisionId": 394191,
+        "sourceUrl": "https://prts.wiki/w/%E7%99%BD%E9%9B%AA",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-43733",
+      "sourceTitle": "百炼嘉维尔",
+      "kind": "operator",
+      "summary": "仍任职医疗部，也能持战斧投入前线的嘉维尔。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "嘉维尔没有离开医疗岗位；当任务更需要她的战斗力量时，她便拿起战斧冲向前线，以另一种方式支援罗德岛。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 43733,
+        "sourceRevisionId": 421958,
+        "sourceUrl": "https://prts.wiki/w/%E7%99%BE%E7%82%BC%E5%98%89%E7%BB%B4%E5%B0%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-13300",
+      "sourceTitle": "柏喙",
+      "kind": "operator",
+      "summary": "剑术富有节奏的近卫干员，熟悉设计与纺线。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "身为装备设计师之女，柏喙在工厂暴动中感染。到罗德岛接受救助后，依自己的意愿调入作战部门，展现出优雅而有节奏的剑术。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 13300,
+        "sourceRevisionId": 422138,
+        "sourceUrl": "https://prts.wiki/w/%E6%9F%8F%E5%96%99",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-87035",
+      "sourceTitle": "摆渡人",
+      "kind": "operator",
+      "summary": "曾管理运河渡口的赞索斯，现以近卫身份服务罗德岛。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "赞索斯曾负责雅赛努斯特尔斐运河渡口，文物交换仪式后辞去职务。经调香师介绍，他来到罗德岛治疗，并以摆渡人为代号参战。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 87035,
+        "sourceRevisionId": 420875,
+        "sourceUrl": "https://prts.wiki/w/%E6%91%86%E6%B8%A1%E4%BA%BA",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-10088",
+      "sourceTitle": "拜松",
+      "kind": "operator",
+      "summary": "峯驰物流的部门经理，以合作身份提供行动协助。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "拜松曾与企鹅物流紧密合作，也承担峯驰物流的部门管理职责。在合约约定期间，他为罗德岛各类行动提供支持。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 10088,
+        "sourceRevisionId": 392031,
+        "sourceUrl": "https://prts.wiki/w/%E6%8B%9C%E6%9D%BE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-3264",
+      "sourceTitle": "斑点",
+      "kind": "operator",
+      "summary": "从萨尔贡军队转入A6预备组的防御手。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "斑点主动向罗德岛求职，通过考核后加入行动预备组A6。此前的军旅经历让他熟悉守护职责，成为队伍可靠的防御成员。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 3264,
+        "sourceRevisionId": 347522,
+        "sourceUrl": "https://prts.wiki/w/%E6%96%91%E7%82%B9",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-21089",
+      "sourceTitle": "薄绿",
+      "kind": "operator",
+      "summary": "从事地质研究的维多利亚术师，参与环境评测与源石理论工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "薄绿在高校参与实地地质项目时感染，经天火介绍来到罗德岛。治疗期间继续提供环境地质评测与源石研究支持。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 21089,
+        "sourceRevisionId": 393474,
+        "sourceUrl": "https://prts.wiki/w/%E8%96%84%E7%BB%BF",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1779",
+      "sourceTitle": "暴行",
+      "kind": "operator",
+      "summary": "拥有矿业安保经历的近卫，擅长破障与要员保护。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "暴行曾为雷姆必拓矿业公司执行安保工作，在硬目标破坏及人员保护方面表现突出。加入罗德岛后，继续以近卫身份随队作战。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1779,
+        "sourceRevisionId": 411999,
+        "sourceUrl": "https://prts.wiki/w/%E6%9A%B4%E8%A1%8C",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-28119",
+      "sourceTitle": "暴雨",
+      "kind": "operator",
+      "summary": "作战经验丰富的重装干员，曾服役于萨尔贡军队。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "暴雨原在萨尔贡王酋军中服役，遭同僚背叛后离开军队。辗转加入罗德岛后，以积累的战场经验承担重装任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 28119,
+        "sourceRevisionId": 423788,
+        "sourceUrl": "https://prts.wiki/w/%E6%9A%B4%E9%9B%A8",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-88789",
+      "sourceTitle": "贝洛内",
+      "kind": "operator",
+      "summary": "代表叙拉古贝洛内家族与罗德岛合作的现任家主。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "经伺夜引荐，贝洛内以家族领导者身份建立合作，双方开展情报交换、商品贸易等往来。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 88789,
+        "sourceRevisionId": 420887,
+        "sourceUrl": "https://prts.wiki/w/%E8%B4%9D%E6%B4%9B%E5%86%85",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-30163",
+      "sourceTitle": "贝娜",
+      "kind": "operator",
+      "summary": "善于操控人偶的特种干员，通常不被派往前线。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "贝娜原想带爱丽丝返回维多利亚，未能如愿后留在罗德岛。她的特殊人偶技术适用于战场，但考虑年龄与意愿，通常远离一线。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 30163,
+        "sourceRevisionId": 423793,
+        "sourceUrl": "https://prts.wiki/w/%E8%B4%9D%E5%A8%9C",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-21772",
+      "sourceTitle": "鞭刃",
+      "kind": "operator",
+      "summary": "退役竞技骑士佐菲娅，现以训练罗德岛干员为主。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "临光与瑕光的姑母曾闯入特锦赛十六强，伤残后改用右手。如今她把经验投入教官工作，仅在必要时亲自执行任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 21772,
+        "sourceRevisionId": 392039,
+        "sourceUrl": "https://prts.wiki/w/%E9%9E%AD%E5%88%83",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-58740",
+      "sourceTitle": "冰酿",
+      "kind": "operator",
+      "summary": "为罗德岛拓荒地办事处提供支援的合作干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "海伦娜经杰西卡引荐与罗德岛建立合作，以冰酿为代号，在拓荒地为办事处及相关事务提供帮助。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 58740,
+        "sourceRevisionId": 392040,
+        "sourceUrl": "https://prts.wiki/w/%E5%86%B0%E9%85%BF",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-72131",
+      "sourceTitle": "波卜",
+      "kind": "operator",
+      "summary": "来自赤心医疗的交流代表，擅长沟通、救援与情绪安抚。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "埃利西奥以组织代表身份到罗德岛学习交流，随后使用波卜代号参与外勤，主要处理谈判、事故救援和情感支持工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 72131,
+        "sourceRevisionId": 428225,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%A2%E5%8D%9C",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-17429",
+      "sourceTitle": "波登可",
+      "kind": "operator",
+      "summary": "照顾庭院温室的植物培育者，也能提供治疗与干扰支援。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "通过常规招聘入职后，波登可在调香师负责的庭院照料温室与花卉。需要参战时，她把植物知识用于救助队友和牵制敌人。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 17429,
+        "sourceRevisionId": 423769,
+        "sourceUrl": "https://prts.wiki/w/%E6%B3%A2%E7%99%BB%E5%8F%AF",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-89480",
+      "sourceTitle": "伯塔尼",
+      "kind": "operator",
+      "summary": "继续研究源石通讯技术的乌萨斯干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "伯塔尼曾就读圣骏堡帝国理工大学，肄业后经凛冬介绍加入罗德岛。她在舰上延续通讯研究，也参与外勤实践。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 89480,
+        "sourceRevisionId": 428187,
+        "sourceUrl": "https://prts.wiki/w/%E4%BC%AF%E5%A1%94%E5%B0%BC",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-34424",
+      "sourceTitle": "布丁",
+      "kind": "operator",
+      "summary": "来自哥伦比亚的电气工程师，现协助工程部工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "野外考察时感染后，布丁到罗德岛求职并寻求治疗。入职不久便因专业能力被可露希尔留下，成为工程部助手。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 34424,
+        "sourceRevisionId": 392044,
+        "sourceUrl": "https://prts.wiki/w/%E5%B8%83%E4%B8%81",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-10789",
+      "sourceTitle": "布洛卡",
+      "kind": "operator",
+      "summary": "追随贾维来到罗德岛的前家族打手，承担前线攻坚任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "布洛卡原为叙拉古家族效力，后来加入贾维团伙。随众人进入罗德岛后，他把战斗经验用于前线攻坚。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 10789,
+        "sourceRevisionId": 407061,
+        "sourceUrl": "https://prts.wiki/w/%E5%B8%83%E6%B4%9B%E5%8D%A1",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-72842",
+      "sourceTitle": "裁度",
+      "kind": "operator",
+      "summary": "叙拉古德蒙塔诺裁缝店主理人，暂为罗德岛后勤提供支持。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "卢奇诺经叙拉古办事处推介来到罗德岛交流，采用裁度代号。留舰期间，他暂时加入后勤部门，参与各项保障事务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 72842,
+        "sourceRevisionId": 424113,
+        "sourceUrl": "https://prts.wiki/w/%E8%A3%81%E5%BA%A6",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-57345",
+      "sourceTitle": "苍苔",
+      "kind": "operator",
+      "summary": "来自汐斯塔纯白火山餐吧的后勤干员埃尼斯。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "苍苔与家人在汐斯塔经营餐吧。火山喷发之后，他经锡兰引荐到罗德岛接受规范治疗，同时投入后勤部的日常工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 57345,
+        "sourceRevisionId": 392047,
+        "sourceUrl": "https://prts.wiki/w/%E8%8B%8D%E8%8B%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1726",
+      "sourceTitle": "缠丸",
+      "kind": "operator",
+      "summary": "来自东国的流浪武者，凭大型薙刀和勇猛攻势作战。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "缠丸辗转游历后加入罗德岛，虽不擅筹谋，却能以果敢气势与巨大的薙刀冲破战场阻力，承担近身交锋。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1726,
+        "sourceRevisionId": 401373,
+        "sourceUrl": "https://prts.wiki/w/%E7%BC%A0%E4%B8%B8",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-41715",
+      "sourceTitle": "车尔尼",
+      "kind": "operator",
+      "summary": "夕照区的音乐家，也在当地罗德岛办事处兼任重装干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "维谢海姆事件过后，车尔尼在继续音乐生涯的同时，与当地罗德岛办事处合作，以重装干员身份承担任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 41715,
+        "sourceRevisionId": 392049,
+        "sourceUrl": "https://prts.wiki/w/%E8%BD%A6%E5%B0%94%E5%B0%BC",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-42643",
+      "sourceTitle": "承曦格雷伊",
+      "kind": "operator",
+      "summary": "专注新技术研发与实用化的罗德岛工程人员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "格雷伊通过多项工程专业测试后进入工程部，推动新技术研发与应用；根据任务需求，他也参与作战和现场技术验证。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 42643,
+        "sourceRevisionId": 429429,
+        "sourceUrl": "https://prts.wiki/w/%E6%89%BF%E6%9B%A6%E6%A0%BC%E9%9B%B7%E4%BC%8A",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-38414",
+      "sourceTitle": "澄闪",
+      "kind": "operator",
+      "summary": "平时在罗德岛理发室工作，能操纵浮标作战的后勤干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "澄闪以理发室后勤工作为日常，一般不随队外勤。需要战斗时，她使用特殊法杖控制浮标，对敌方发动打击。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 38414,
+        "sourceRevisionId": 392052,
+        "sourceUrl": "https://prts.wiki/w/%E6%BE%84%E9%97%AA",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-77280",
+      "sourceTitle": "骋风",
+      "kind": "operator",
+      "summary": "往来尚蜀的镖客，为罗德岛运输药品并引荐人才。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "骋风常年在尚蜀及周边走镖，因感染前来就医。为拓展镖局事务，他主动签订合作协议，提供药物运输与人员推荐服务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 77280,
+        "sourceRevisionId": 428053,
+        "sourceUrl": "https://prts.wiki/w/%E9%AA%8B%E9%A3%8E",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-47236",
+      "sourceTitle": "斥罪",
+      "kind": "operator",
+      "summary": "罗德岛法律顾问，曾在叙拉古担任法官。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "离开叙拉古的法官岗位后，斥罪经德克萨斯与罗德岛取得联系，转入后勤部门，以法律顾问的身份参与工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 47236,
+        "sourceRevisionId": 424126,
+        "sourceUrl": "https://prts.wiki/w/%E6%96%A5%E7%BD%AA",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-28772",
+      "sourceTitle": "赤冬",
+      "kind": "operator",
+      "summary": "来自东国的剑士，擅长居合剑术与现代战斗。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "赤冬承袭信影流剑法，也具备现代战术训练。加入罗德岛后，她需要让鲜明的个人战斗习惯逐步适应团队协同。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 28772,
+        "sourceRevisionId": 401389,
+        "sourceUrl": "https://prts.wiki/w/%E8%B5%A4%E5%86%AC",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-87881",
+      "sourceTitle": "赤刃明霄陈",
+      "kind": "operator",
+      "summary": "经验丰富的外派干员，为前线提供战斗支援与指导。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "陈曾任龙门高级警司及特别督察组组长，负责打击犯罪。辞职加入罗德岛后，她选择以外派任务为主，持续支援各地危机前线。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 87881,
+        "sourceRevisionId": 428399,
+        "sourceUrl": "https://prts.wiki/w/%E8%B5%A4%E5%88%83%E6%98%8E%E9%9C%84%E9%99%88",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-51055",
+      "sourceTitle": "仇白",
+      "kind": "operator",
+      "summary": "行走炎国各地的剑客，为当地事务提供协助。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "故乡水寨的家庭变故使仇白开始四处游历。她与数位干员陆续相识，随后接受合作邀请，支持罗德岛在炎国开展工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 51055,
+        "sourceRevisionId": 428219,
+        "sourceUrl": "https://prts.wiki/w/%E4%BB%87%E7%99%BD",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-57349",
+      "sourceTitle": "纯烬艾雅法拉",
+      "kind": "operator",
+      "summary": "火山学家与天灾信使，参与研究及科普工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "艾雅法拉将火山研究带入纪录片与出版物，在罗德岛继续治疗的同时，也按需参与天灾研究及相关活动。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 57349,
+        "sourceRevisionId": 415866,
+        "sourceUrl": "https://prts.wiki/w/%E7%BA%AF%E7%83%AC%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-47232",
+      "sourceTitle": "伺夜",
+      "kind": "operator",
+      "summary": "来自叙拉古的合作干员，擅长指挥与中距离作战。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "作为贝洛内家族末任领袖及新沃尔西尼市长候选人，伺夜经德克萨斯牵线代表城市与罗德岛合作，并在任务中展现谋略。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 47232,
+        "sourceRevisionId": 406211,
+        "sourceUrl": "https://prts.wiki/w/%E4%BC%BA%E5%A4%9C",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-59953",
+      "sourceTitle": "刺玫",
+      "kind": "operator",
+      "summary": "来自维多利亚的联络员，曾承担自救军后勤工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "布伦特伍德遭血魔大君仪式摧毁后，玛格达尔加入市民自救军，继而来到罗德岛。事件平息后，她返回故乡参与重建并担任联络员。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 59953,
+        "sourceRevisionId": 417757,
+        "sourceUrl": "https://prts.wiki/w/%E5%88%BA%E7%8E%AB",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-54446",
+      "sourceTitle": "淬羽赫默",
+      "kind": "operator",
+      "summary": "拥有临床经验的医疗合作人员，推动科研伦理工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "赫默发起特里蒙科学伦理联合宣言，并出任莱茵生命顾问。她在罗德岛接受矿石病治疗，也凭借临床经验提供医疗支持。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 54446,
+        "sourceRevisionId": 424843,
+        "sourceUrl": "https://prts.wiki/w/%E6%B7%AC%E7%BE%BD%E8%B5%AB%E9%BB%98",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-26176",
+      "sourceTitle": "嵯峨",
+      "kind": "operator",
+      "summary": "东国云游僧人，使用薙刀承担前线作战。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "嵯峨迷路时走进罗德岛办事处，恰有求职意愿，随后通过测试加入。她以灵活身手和薙刀技艺在先锋岗位上工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 26176,
+        "sourceRevisionId": 398887,
+        "sourceUrl": "https://prts.wiki/w/%E5%B5%AF%E5%B3%A8",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-46412",
+      "sourceTitle": "达格达",
+      "kind": "operator",
+      "summary": "格拉斯哥帮成员，擅长参与前线攻坚任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "曾任伦蒂尼姆塔楼骑士的达格达，后来成为格拉斯哥帮成员。她跟随推进之王加入罗德岛，并在其小队承担攻坚任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 46412,
+        "sourceRevisionId": 421755,
+        "sourceUrl": "https://prts.wiki/w/%E8%BE%BE%E6%A0%BC%E8%BE%BE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-59949",
+      "sourceTitle": "戴菲恩",
+      "kind": "operator",
+      "summary": "熟悉维多利亚情报事务，为当地办事处提供协助。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "戴菲恩曾长期在诺伯特区收集情报，随后随典范军参与伦蒂尼姆周边战事。事件结束后，她以战略合作关系支持罗德岛。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 59949,
+        "sourceRevisionId": 392066,
+        "sourceUrl": "https://prts.wiki/w/%E6%88%B4%E8%8F%B2%E6%81%A9",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-44826",
+      "sourceTitle": "但书",
+      "kind": "operator",
+      "summary": "后勤部法律顾问，曾是卡西米尔的执业律师。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "黛丝特以但书为代号来到罗德岛。离开卡西米尔长缰律所后，她转任后勤部法律顾问，将律师经验用于组织事务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 44826,
+        "sourceRevisionId": 421749,
+        "sourceUrl": "https://prts.wiki/w/%E4%BD%86%E4%B9%A6",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-64700",
+      "sourceTitle": "导火索",
+      "kind": "operator",
+      "summary": "彩虹小队成员，熟悉工程与爆破作战。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "导火索凭借工程经验使用霰射炸药，可隔墙清理封闭空间。由于装备无法识别敌我，每次使用都必须考虑现场条件。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 64700,
+        "sourceRevisionId": 406460,
+        "sourceUrl": "https://prts.wiki/w/%E5%AF%BC%E7%81%AB%E7%B4%A2",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1739",
+      "sourceTitle": "地灵",
+      "kind": "operator",
+      "summary": "地质学家，为战场分析与天灾预警提供支持。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "地灵把地质知识用于环境评估和地形分析，在辅助岗位之外，也承担勘探与天灾信使相关工作，补足队伍的专业能力。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1739,
+        "sourceRevisionId": 392070,
+        "sourceUrl": "https://prts.wiki/w/%E5%9C%B0%E7%81%B5",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-58745",
+      "sourceTitle": "涤火杰西卡",
+      "kind": "operator",
+      "summary": "拓荒地治安官，与当地罗德岛办事处合作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "杰西卡因私人原因离开黑钢基地，转赴拓荒地担任治安官。她继续以合作干员身份，为当地罗德岛办事处提供支持。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 58745,
+        "sourceRevisionId": 429200,
+        "sourceUrl": "https://prts.wiki/w/%E6%B6%A4%E7%81%AB%E6%9D%B0%E8%A5%BF%E5%8D%A1",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-79728",
+      "sourceTitle": "蒂比",
+      "kind": "operator",
+      "summary": "蓝卡坞场景喷绘师，也以特种干员身份参与工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "为改善蓝卡坞感染者员工及演员的医疗条件，蒂比主动向罗德岛寻求合作，并依个人意愿加入特种干员的任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 79728,
+        "sourceRevisionId": 424841,
+        "sourceUrl": "https://prts.wiki/w/%E8%92%82%E6%AF%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-80821",
+      "sourceTitle": "电弧",
+      "kind": "operator",
+      "summary": "罗德岛精英干员，专长为通讯系统与支援。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "电弧早年曾为巴别塔提供通讯保障，随后主导罗德岛初期通讯系统的建设，为后续相关工作建立了基础框架。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 80821,
+        "sourceRevisionId": 411450,
+        "sourceUrl": "https://prts.wiki/w/%E7%94%B5%E5%BC%A7",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1734",
+      "sourceTitle": "调香师",
+      "kind": "operator",
+      "summary": "疗养庭院管理人，擅长香料调制与休养支援。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "莱娜出身米诺斯富裕家庭，凭借格外敏锐的嗅觉发展出调香专长。她通过应聘来到罗德岛，负责疗养庭院的日常管理。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1734,
+        "sourceRevisionId": 422021,
+        "sourceUrl": "https://prts.wiki/w/%E8%B0%83%E9%A6%99%E5%B8%88",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-83993",
+      "sourceTitle": "冬时",
+      "kind": "operator",
+      "summary": "来自乌萨斯的研究人员，在罗德岛延续既有课题。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "科谢尼娅曾在乌萨斯远北中心矿区研究所任职。她以冬时为代号加入罗德岛，继续开展自己此前承担的部分研究。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 83993,
+        "sourceRevisionId": 396971,
+        "sourceUrl": "https://prts.wiki/w/%E5%86%AC%E6%97%B6",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-25286",
+      "sourceTitle": "豆苗",
+      "kind": "operator",
+      "summary": "专业磐蟹饲养员，承担后勤与特殊侦查任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "豆苗生于哥伦比亚农场家庭，创业计划多次未获回应。经人介绍来到罗德岛后，她通过专项测试，将饲养经验用于任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 25286,
+        "sourceRevisionId": 406208,
+        "sourceUrl": "https://prts.wiki/w/%E8%B1%86%E8%8B%97",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1725",
+      "sourceTitle": "杜宾",
+      "kind": "operator",
+      "summary": "负责基础训练的教官，拥有系统军事经验。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "杜宾曾是玻利瓦尔军人，加入罗德岛后主要培训基层及新晋干员。必要时她也参与审讯，并以近卫身份在前线带队。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1725,
+        "sourceRevisionId": 407270,
+        "sourceUrl": "https://prts.wiki/w/%E6%9D%9C%E5%AE%BE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1702",
+      "sourceTitle": "杜林",
+      "kind": "operator",
+      "summary": "A4行动组术师，具备突出的法术潜力。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "杜林的法术天赋受性格与体质限制，尚未充分发挥。她虽然极易入睡、睡眠时间很长，却很少因此遗漏负责的工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1702,
+        "sourceRevisionId": 347358,
+        "sourceUrl": "https://prts.wiki/w/%E6%9D%9C%E6%9E%97",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-68950",
+      "sourceTitle": "渡桥",
+      "kind": "operator",
+      "summary": "负责卡兹戴尔区域的情报收集与联络事务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "珀耳曾以顾问身份参与卡兹戴尔街区秩序管理。经妮芙推荐后，他采用渡桥这一代号，在罗德岛继续承担当地联络工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 68950,
+        "sourceRevisionId": 417027,
+        "sourceUrl": "https://prts.wiki/w/%E6%B8%A1%E6%A1%A5",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-18306",
+      "sourceTitle": "断崖",
+      "kind": "operator",
+      "summary": "擅长护卫、侦查及复杂环境下的渗透游击。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "断崖陪同天灾信使莱恩哈特来到罗德岛，以非制式武器应对中近距离战斗，并将护卫与渗透经验带入团队行动。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 18306,
+        "sourceRevisionId": 423776,
+        "sourceUrl": "https://prts.wiki/w/%E6%96%AD%E5%B4%96",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-13178",
+      "sourceTitle": "断罪者",
+      "kind": "operator",
+      "summary": "以艺术拳法家之名出现于古国传说的人物。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "断罪者也被称作定罪者或艺术拳法家，其名见于古国阿加门的童话、历史故事与传说，带有鲜明的传奇色彩。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 13178,
+        "sourceRevisionId": 407062,
+        "sourceUrl": "https://prts.wiki/w/%E6%96%AD%E7%BD%AA%E8%80%85",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-42646",
+      "sourceTitle": "多萝西",
+      "kind": "operator",
+      "summary": "莱茵生命源石技艺应用科主任，负责合作研究。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "多萝西以本名登记为干员，作为莱茵生命与罗德岛合作项目的负责人参与研究，将源石技艺理论与应用经验带入多个课题。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 42646,
+        "sourceRevisionId": 392080,
+        "sourceUrl": "https://prts.wiki/w/%E5%A4%9A%E8%90%9D%E8%A5%BF",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-51053",
+      "sourceTitle": "铎铃",
+      "kind": "operator",
+      "summary": "炎国西北乡村信使，负责偏远地区的信息传递。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "铎铃长期往来炎国西北乡村，帮助闭塞村落保持联系。因矿石病来到罗德岛求医后，她仍兼职承担信使工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 51053,
+        "sourceRevisionId": 392079,
+        "sourceUrl": "https://prts.wiki/w/%E9%93%8E%E9%93%83",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-21085",
+      "sourceTitle": "芳汀",
+      "kind": "operator",
+      "summary": "具有拉特兰与莱塔尼亚经历的近卫干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "芳汀因涉及遗产铳的事件感染矿石病，被迫离开拉特兰并赴莱塔尼亚求学。通过罗德岛测试后，他边接受治疗边参与任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 21085,
+        "sourceRevisionId": 423763,
+        "sourceUrl": "https://prts.wiki/w/%E8%8A%B3%E6%B1%80",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-72844",
+      "sourceTitle": "菲莱",
+      "kind": "operator",
+      "summary": "信仰生命之河的萨尔贡守卫，参与安保与救灾。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "菲莱原为神庙守卫，后来以虔修者身份游历。途中结识罗德岛人员后，她与萨尔贡办事处长期合作，也承担重装外勤任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 72844,
+        "sourceRevisionId": 424115,
+        "sourceUrl": "https://prts.wiki/w/%E8%8F%B2%E8%8E%B1",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-38916",
+      "sourceTitle": "菲亚梅塔",
+      "kind": "operator",
+      "summary": "拉特兰公证所高级特派员，与罗德岛协同执行事务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "依据罗德岛与拉特兰教廷的合作协议，菲亚梅塔从罗德岛获取补给并提供服务；她要求档案不记录自己不断变化的职务称号。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 38916,
+        "sourceRevisionId": 424110,
+        "sourceUrl": "https://prts.wiki/w/%E8%8F%B2%E4%BA%9A%E6%A2%85%E5%A1%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1704",
+      "sourceTitle": "芬",
+      "kind": "operator",
+      "summary": "行动预备组A1队长，具备警备队实习经验。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "芬和米格鲁、克洛丝一同进入行动预备组。她凭借警备队时期积累的基础迅速适应工作，带领队员继续磨炼独立行动能力。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1704,
+        "sourceRevisionId": 423759,
+        "sourceUrl": "https://prts.wiki/w/%E8%8A%AC",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-82809",
+      "sourceTitle": "丰川祥子",
+      "kind": "operator",
+      "summary": "Ave Mujica键盘手，暂居期间参与罗德岛工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "丰川祥子随乐队成员暂住罗德岛，主动协助舰上事务。她的音乐修养与礼仪表现，也显露出受过良好家庭教育的背景。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 82809,
+        "sourceRevisionId": 405722,
+        "sourceUrl": "https://prts.wiki/w/%E4%B8%B0%E5%B7%9D%E7%A5%A5%E5%AD%90",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-13302",
+      "sourceTitle": "风笛",
+      "kind": "operator",
+      "summary": "接受正规军事训练的前维多利亚军人。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "风笛毕业于维多利亚皇家近卫学校，服役三年后退伍，经陈介绍加入罗德岛，并逐渐把军旅训练融入这里的战斗任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 13302,
+        "sourceRevisionId": 393101,
+        "sourceUrl": "https://prts.wiki/w/%E9%A3%8E%E7%AC%9B",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-38914",
+      "sourceTitle": "风丸",
+      "kind": "operator",
+      "summary": "负责维多利亚地区情报工作的前东国忍者。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "原家主过世后，风丸与继任者的经营方向产生分歧。经家中安排，她转到罗德岛任职，现承担驻维多利亚情报工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 38914,
+        "sourceRevisionId": 425080,
+        "sourceUrl": "https://prts.wiki/w/%E9%A3%8E%E4%B8%B8",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-87874",
+      "sourceTitle": "风絮",
+      "kind": "operator",
+      "summary": "游历各地的医学学徒，兼有驮兽车驾驶经验。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "来自萨尔贡的风絮在旅途中学习医术，也熟悉驮兽车驾驶。为交流学习暂居罗德岛期间，他以临时干员身份提供日常医疗服务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 87874,
+        "sourceRevisionId": 420882,
+        "sourceUrl": "https://prts.wiki/w/%E9%A3%8E%E7%B5%AE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1744",
+      "sourceTitle": "芙兰卡",
+      "kind": "operator",
+      "summary": "黑钢国际安保专员，擅长护卫与战术突击。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "芙兰卡拥有行动护卫和协同作战经验，在罗德岛接受矿石病治疗期间，仍以黑钢行动干员身份承担专业安保任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1744,
+        "sourceRevisionId": 407067,
+        "sourceUrl": "https://prts.wiki/w/%E8%8A%99%E5%85%B0%E5%8D%A1",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1713",
+      "sourceTitle": "芙蓉",
+      "kind": "operator",
+      "summary": "罗德岛医师，擅长照护与日常医疗工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "来自伦蒂尼姆的芙蓉因矿石病接受罗德岛救治。治疗期间，她萌生帮助其他人的愿望，并凭借耐心与努力成长为医师。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1713,
+        "sourceRevisionId": 423761,
+        "sourceUrl": "https://prts.wiki/w/%E8%8A%99%E8%93%89",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-88786",
+      "sourceTitle": "复奏",
+      "kind": "operator",
+      "summary": "新沃尔西尼乐团经理人，与罗德岛开展商业合作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "复奏发现新沃尔西尼多位权力人物与罗德岛关系密切，便主动寻求合作，希望扩大乐团影响，也自愿参与部分外勤任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 88786,
+        "sourceRevisionId": 421681,
+        "sourceUrl": "https://prts.wiki/w/%E5%A4%8D%E5%A5%8F",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-28777",
+      "sourceTitle": "歌蕾蒂娅",
+      "kind": "operator",
+      "summary": "阿戈尔技术执政官，负责罗德岛的阿戈尔相关事务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "歌蕾蒂娅兼具荣誉军团长与深海猎人战争设计师身份，拥有多类军事专长。她保留阿戈尔公职，以合作方式支援罗德岛。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 28777,
+        "sourceRevisionId": 428987,
+        "sourceUrl": "https://prts.wiki/w/%E6%AD%8C%E8%95%BE%E8%92%82%E5%A8%85",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1784",
+      "sourceTitle": "格拉尼",
+      "kind": "operator",
+      "summary": "维多利亚骑警，擅长快速机动与巡逻防卫。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "格拉尼在突袭及纵深机动作战中展现天赋。作为合约干员支援各行动组之余，她还主动承担罗德岛周边的义务巡逻。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1784,
+        "sourceRevisionId": 424288,
+        "sourceUrl": "https://prts.wiki/w/%E6%A0%BC%E6%8B%89%E5%B0%BC",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-7700",
+      "sourceTitle": "格劳克斯",
+      "kind": "operator",
+      "summary": "先端武器测评师，擅长研究装备并执行对空任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "格劳克斯早年离开阿戈尔四处漂泊，后来加入罗德岛。她负责雷神工业装备的测评调整，也亲自执行需要对空能力的任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 7700,
+        "sourceRevisionId": 392090,
+        "sourceUrl": "https://prts.wiki/w/%E6%A0%BC%E5%8A%B3%E5%85%8B%E6%96%AF",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-3265",
+      "sourceTitle": "格雷伊",
+      "kind": "operator",
+      "summary": "具有法术潜力的干员，兼顾基地电力维护。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "格雷伊通过多项测试获准加入罗德岛，在小队中承担施术工作。任务之外，他也利用所长维护基地的电力设施。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 3265,
+        "sourceRevisionId": 392092,
+        "sourceUrl": "https://prts.wiki/w/%E6%A0%BC%E9%9B%B7%E4%BC%8A",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1737",
+      "sourceTitle": "古米",
+      "kind": "operator",
+      "summary": "重装实习干员，擅长乌萨斯烹饪与战地后勤。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "古米在切尔诺伯格事变前是一名学生，也曾在童子军赛事获奖。来到罗德岛后，她凭体能通过测试，并为队伍提供战地餐食。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1737,
+        "sourceRevisionId": 429955,
+        "sourceUrl": "https://prts.wiki/w/%E5%8F%A4%E7%B1%B3",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-73974",
+      "sourceTitle": "瑰盐",
+      "kind": "operator",
+      "summary": "行走伊比利亚的草药医生，为当地工作提供情报。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "瑰盐游历伊比利亚行医，结识了来自不同阶层的人。她将这些联系用于情报搜集，并协助罗德岛开展行动前的地区调研。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 73974,
+        "sourceRevisionId": 406483,
+        "sourceUrl": "https://prts.wiki/w/%E7%91%B0%E7%9B%90",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-85186",
+      "sourceTitle": "哈蒂娅",
+      "kind": "operator",
+      "summary": "罗德岛驻萨尔贡干员，持续接受战斗训练。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "哈蒂娅是萨尔贡裔哥伦比亚人，出身剑角战士后裔。为学习战斗技艺，她主动加入当地罗德岛办事处，同时参与外勤任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 85186,
+        "sourceRevisionId": 423778,
+        "sourceUrl": "https://prts.wiki/w/%E5%93%88%E8%92%82%E5%A8%85",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-61835",
+      "sourceTitle": "哈洛德",
+      "kind": "operator",
+      "summary": "具有丰富战场经验的维多利亚医疗干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "哈洛德身为开斯特家族旁支子爵，长期率军出征并积累战地医疗经验。公开贵族身份后，他坚持以个人身份加入罗德岛行医。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 61835,
+        "sourceRevisionId": 411437,
+        "sourceUrl": "https://prts.wiki/w/%E5%93%88%E6%B4%9B%E5%BE%B7",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-39688",
+      "sourceTitle": "海蒂",
+      "kind": "operator",
+      "summary": "活跃于维多利亚的小说家，也熟悉信使工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "海蒂长期担任凯尔希的私人信使。参与市民自救军行动后，她被萨卡兹军拘捕，获罗德岛救出后正式加入干员队伍。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 39688,
+        "sourceRevisionId": 392097,
+        "sourceUrl": "https://prts.wiki/w/%E6%B5%B7%E8%92%82",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-45461",
+      "sourceTitle": "海沫",
+      "kind": "operator",
+      "summary": "参与伊比利亚周边任务的外勤干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "海沫受到伊比利亚某次行动波及，以伤员身份被带回罗德岛治疗。经过考察与测试，她获准成为干员，支援当地外勤工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 45461,
+        "sourceRevisionId": 421753,
+        "sourceUrl": "https://prts.wiki/w/%E6%B5%B7%E6%B2%AB",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-68217",
+      "sourceTitle": "海霓",
+      "kind": "operator",
+      "summary": "阿戈尔穹顶管理员与洋流测绘员，参与文化交流。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "卢契拉任职于阿戈尔技术院设施管理所。陆地联系建立后，她出于个人兴趣与罗德岛合作，以海霓为代号不定期前来交流。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 68217,
+        "sourceRevisionId": 392099,
+        "sourceUrl": "https://prts.wiki/w/%E6%B5%B7%E9%9C%93",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-37510",
+      "sourceTitle": "寒芒克洛丝",
+      "kind": "operator",
+      "summary": "成长为正式干员的射手，擅长外勤与隐匿行动。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "长期训练与实战使克洛丝晋升为正式干员。在教官指导下，她逐渐形成自己的射击与隐匿方法，如今主要负责外勤任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 37510,
+        "sourceRevisionId": 399977,
+        "sourceUrl": "https://prts.wiki/w/%E5%AF%92%E8%8A%92%E5%85%8B%E6%B4%9B%E4%B8%9D",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-56129",
+      "sourceTitle": "寒檀",
+      "kind": "operator",
+      "summary": "擅长风雪法术的萨米萨满，能适应严寒与低能见度。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "寒檀曾因故离开自己的萨米部族。矿石病得到缓解后，她将罗德岛视作新的归属，并以操纵风雪的能力支援作战。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 56129,
+        "sourceRevisionId": 392101,
+        "sourceUrl": "https://prts.wiki/w/%E5%AF%92%E6%AA%80",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-39690",
+      "sourceTitle": "号角",
+      "kind": "operator",
+      "summary": "维多利亚风暴突击队第二分队指挥官。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "号角毕业于皇家近卫学校，在伦蒂尼姆与罗德岛共同作战。经精英干员Misery引荐，她与罗德岛建立战略合作关系。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 39690,
+        "sourceRevisionId": 401380,
+        "sourceUrl": "https://prts.wiki/w/%E5%8F%B7%E8%A7%92",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-48439",
+      "sourceTitle": "和弦",
+      "kind": "operator",
+      "summary": "以外交使臣身份驻留罗德岛，协助维多利亚事务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "和弦曾为维多利亚军方处理情报，后来成为深池高级军官。她代表威灵顿公爵驻留罗德岛，为部分当地事务提供协助。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 48439,
+        "sourceRevisionId": 392107,
+        "sourceUrl": "https://prts.wiki/w/%E5%92%8C%E5%BC%A6",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-39684",
+      "sourceTitle": "褐果",
+      "kind": "operator",
+      "summary": "掌握矿物疗愈技艺的医生，熟悉地质勘探。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "褐果过去为杜林族承担地质勘探，来到地面后选择行医。他将对矿物的了解转化为治疗技艺，性情沉静而内敛。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 39684,
+        "sourceRevisionId": 392104,
+        "sourceUrl": "https://prts.wiki/w/%E8%A4%90%E6%9E%9C",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-59958",
+      "sourceTitle": "赫德雷",
+      "kind": "operator",
+      "summary": "拥有多年佣兵经验的萨卡兹合作干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "赫德雷先后参与巴别塔转移、切尔诺伯格及伦蒂尼姆事务。取得关键情报后，他离开军事委员会，与阿米娅沟通并恢复合作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 59958,
+        "sourceRevisionId": 392103,
+        "sourceUrl": "https://prts.wiki/w/%E8%B5%AB%E5%BE%B7%E9%9B%B7",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-8756",
+      "sourceTitle": "赫拉格",
+      "kind": "operator",
+      "summary": "熟悉战术指挥的老兵，也是阿撒兹勒诊所管理者。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "赫拉格曾在乌萨斯帝国近卫军服役，后来管理切尔诺伯格感染者地下诊所。依照合作协议，他长期驻留罗德岛提供战术支援。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 8756,
+        "sourceRevisionId": 392105,
+        "sourceUrl": "https://prts.wiki/w/%E8%B5%AB%E6%8B%89%E6%A0%BC",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1754",
+      "sourceTitle": "赫默",
+      "kind": "operator",
+      "summary": "来自莱茵生命的研究员，为行动队提供医疗救护。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "赫默曾主持源石应用研究和矿石病临床试验。来到罗德岛后，她将研究与医疗经验用于各项行动，承担战场救护工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1754,
+        "sourceRevisionId": 410631,
+        "sourceUrl": "https://prts.wiki/w/%E8%B5%AB%E9%BB%98",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-7701",
+      "sourceTitle": "黑",
+      "kind": "operator",
+      "summary": "擅长隐秘行动、侦察与弩术的护卫及训练人员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "黑曾负责汐斯塔市长护卫和城市治安，与锡兰一同加入罗德岛。她现保护博士，也把侦察与生存经验用于基层干员训练。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 7701,
+        "sourceRevisionId": 392108,
+        "sourceUrl": "https://prts.wiki/w/%E9%BB%91",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-41752",
+      "sourceTitle": "黑键",
+      "kind": "operator",
+      "summary": "具有出色源石技艺天赋的莱塔尼亚术师。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "黑键在维谢海姆事件中感染矿石病，经芙蓉介绍来到罗德岛治疗。他的源石技艺获得认可，考核通过后成为外勤干员。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 41752,
+        "sourceRevisionId": 424285,
+        "sourceUrl": "https://prts.wiki/w/%E9%BB%91%E9%94%AE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1700",
+      "sourceTitle": "黑角",
+      "kind": "operator",
+      "summary": "兼顾前线防护与后勤工作的罗德岛基础干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "黑角在战场上总是靠前保护同伴，返回舰上后则投入后勤。他以踏实的行动承担不同岗位的工作，为队伍提供稳定支持。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1700,
+        "sourceRevisionId": 347516,
+        "sourceUrl": "https://prts.wiki/w/%E9%BB%91%E8%A7%92",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-70091",
+      "sourceTitle": "衡沙",
+      "kind": "operator",
+      "summary": "为罗德岛萨尔贡东部事务提供资金与联络支持。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "衡沙曾监管米纳特哈玛仪的宝石交易所，经莎草介绍与罗德岛合作，将自身资金及人脉用于支持萨尔贡东部地区的工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 70091,
+        "sourceRevisionId": 423785,
+        "sourceUrl": "https://prts.wiki/w/%E8%A1%A1%E6%B2%99",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-11902",
+      "sourceTitle": "吽",
+      "kind": "operator",
+      "summary": "由鲤氏侦探事务所推荐的重装干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "吽经龙门鲤氏侦探事务所所长推荐来到罗德岛，凭借高大的体格与充沛体能在前线承担防护，保障队友的安全。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 11902,
+        "sourceRevisionId": 392111,
+        "sourceUrl": "https://prts.wiki/w/%E5%90%BD",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1757",
+      "sourceTitle": "红",
+      "kind": "operator",
+      "summary": "擅长机动、特种及隐秘作战的罗德岛干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "红的身份与过往记录不详，由凯尔希接收并担保。她在多类特殊行动中展现出极高天赋，如今继续在凯尔希指导下工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1757,
+        "sourceRevisionId": 392112,
+        "sourceUrl": "https://prts.wiki/w/%E7%BA%A2",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1724",
+      "sourceTitle": "红豆",
+      "kind": "operator",
+      "summary": "擅长突袭与开辟战场的萨卡兹先锋干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "红豆通过测试后获准加入罗德岛，在遭遇战与战术配合方面展现潜力。她现于小队中承担先锋职责，积极打开作战局面。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1724,
+        "sourceRevisionId": 392113,
+        "sourceUrl": "https://prts.wiki/w/%E7%BA%A2%E8%B1%86",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-63238",
+      "sourceTitle": "红隼",
+      "kind": "operator",
+      "summary": "萨尔贡办事处外勤干员，拥有部落战士经历。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "红隼曾被当地王酋军奴役，逃脱后遇见罗德岛，又返回矿场救出工友。她随后主动入职，在接受治疗的同时执行外勤任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 63238,
+        "sourceRevisionId": 407271,
+        "sourceUrl": "https://prts.wiki/w/%E7%BA%A2%E9%9A%BC",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-9001",
+      "sourceTitle": "红云",
+      "kind": "operator",
+      "summary": "擅长狩猎、狙击与散兵作战的射击干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "红云加入前曾活动于叙拉古荒野，具体出身尚不明确。她凭单兵作战经验进入罗德岛狙击小组，为行动队提供火力援护。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 9001,
+        "sourceRevisionId": 392116,
+        "sourceUrl": "https://prts.wiki/w/%E7%BA%A2%E4%BA%91",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-43731",
+      "sourceTitle": "鸿雪",
+      "kind": "operator",
+      "summary": "经际崖城商业代表引荐而来的狙击干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "自称阿芙朵嘉·锐笔的鸿雪由克罗绮介绍来到罗德岛考察，随后参与外勤。本人未公开真实姓氏，人事部也未继续追问。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 43731,
+        "sourceRevisionId": 421715,
+        "sourceUrl": "https://prts.wiki/w/%E9%B8%BF%E9%9B%AA",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1755",
+      "sourceTitle": "华法琳",
+      "kind": "operator",
+      "summary": "血库建造者与管理人，拥有深厚医学及治疗法术经验。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "华法琳是罗德岛早期成员之一，曾与凯尔希共同建立医疗体系的基础。她负责血库运行，但更早的经历仍缺乏记录。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1755,
+        "sourceRevisionId": 411435,
+        "sourceUrl": "https://prts.wiki/w/%E5%8D%8E%E6%B3%95%E7%90%B3",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-10087",
+      "sourceTitle": "槐琥",
+      "kind": "operator",
+      "summary": "来自龙门的大学生，也具备出色实战能力。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "槐琥经龙门事务所推荐，成为秘密商业交流协议首批录用人员。她在测试中展现了超出普通学生身份的能力与作战经验。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 10087,
+        "sourceRevisionId": 423786,
+        "sourceUrl": "https://prts.wiki/w/%E6%A7%90%E7%90%A5",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-72848",
+      "sourceTitle": "荒芜拉普兰德",
+      "kind": "operator",
+      "summary": "擅长单兵作战，为攻坚及肃清任务提供支援。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "拉普兰德是萨卢佐家主阿尔贝托的独女，如今已脱离家族。她凭借突出的个人战斗能力，经常协助罗德岛完成高强度行动。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 72848,
+        "sourceRevisionId": 405723,
+        "sourceUrl": "https://prts.wiki/w/%E8%8D%92%E8%8A%9C%E6%8B%89%E6%99%AE%E5%85%B0%E5%BE%B7",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-10897",
+      "sourceTitle": "煌",
+      "kind": "operator",
+      "summary": "罗德岛精英干员，擅长突袭、机动及歼灭作战。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "煌以成熟的战斗技术和战术判断参与行动，现由阿米娅带领，担任攻坚队伍的重要核心，在多种作战环境中发挥作用。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 10897,
+        "sourceRevisionId": 422145,
+        "sourceUrl": "https://prts.wiki/w/%E7%85%8C",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-33475",
+      "sourceTitle": "灰毫",
+      "kind": "operator",
+      "summary": "红松骑士团成员，以火炮与坚盾兼顾攻防。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "格蕾纳蒂以灰毫骑士之名参加卡西米尔赛事，赛后加入罗德岛。她既能远程炮击敌人，也能依靠盾牌稳住阵线、保护同伴。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 33475,
+        "sourceRevisionId": 394751,
+        "sourceUrl": "https://prts.wiki/w/%E7%81%B0%E6%AF%AB",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-10896",
+      "sourceTitle": "灰喉",
+      "kind": "operator",
+      "summary": "罗德岛行动队成员，在舰上生活已有多年。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "灰喉的父母曾四处研究矿石病，母亲失踪前将她托付给罗德岛。多年后，她通过考核取得干员身份，开始正式参加行动。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 10896,
+        "sourceRevisionId": 423780,
+        "sourceUrl": "https://prts.wiki/w/%E7%81%B0%E5%96%89",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-27045",
+      "sourceTitle": "灰烬",
+      "kind": "operator",
+      "summary": "彩虹小队代理队长，负责行动规划与爆破支援。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "灰烬暂时领导彩虹小队，以严格自律组织行动。她使用爆破弹发射器攻击重装目标、打通障碍，为队员创造更多战术选择。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 27045,
+        "sourceRevisionId": 421215,
+        "sourceUrl": "https://prts.wiki/w/%E7%81%B0%E7%83%AC",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-51406",
+      "sourceTitle": "火龙S黑角",
+      "kind": "operator",
+      "summary": "使用太刀的新装干员，持续承担前线突破任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "黑角完成东国任务后换上艾露猫打造的装备，放下盾牌、改用太刀。武器改变后，他仍站在队伍前方，为同伴清除障碍。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 51406,
+        "sourceRevisionId": 392125,
+        "sourceUrl": "https://prts.wiki/w/%E7%81%AB%E9%BE%99S%E9%BB%91%E8%A7%92",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-49406",
+      "sourceTitle": "火哨",
+      "kind": "operator",
+      "summary": "雷姆必拓安保公司负责人，也是罗德岛合作干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "火哨经营一家位于雷姆必拓的小型安保公司。她代表公司与罗德岛订立合作协议，也以干员身份直接参与相关工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 49406,
+        "sourceRevisionId": 423789,
+        "sourceUrl": "https://prts.wiki/w/%E7%81%AB%E5%93%A8",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1760",
+      "sourceTitle": "火神",
+      "kind": "operator",
+      "summary": "米诺斯铁匠，负责干员武器的打造与维护。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "火神因矿石病来到罗德岛求医，协商后成为组织成员。平日她主要保障武器装备的制作和维护，必要时也亲自参与行动。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1760,
+        "sourceRevisionId": 392127,
+        "sourceUrl": "https://prts.wiki/w/%E7%81%AB%E7%A5%9E",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-54441",
+      "sourceTitle": "霍尔海雅",
+      "kind": "operator",
+      "summary": "擅长单兵作战与极端环境行动的前特工。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "霍尔海雅曾隶属梅兰德基金会，后经凯尔希与博士引荐加入罗德岛。她能够应对严酷环境，在隐秘任务中发挥特工专长。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 54441,
+        "sourceRevisionId": 406560,
+        "sourceUrl": "https://prts.wiki/w/%E9%9C%8D%E5%B0%94%E6%B5%B7%E9%9B%85",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-94040",
+      "sourceTitle": "机械师",
+      "kind": "operator",
+      "summary": "罗德岛精英干员，负责工程与装备技术支持。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "机械师统筹武器、工程设施和实验器材的研发制造，也负责后续维护，为罗德岛各部门提供开展工作的硬件保障。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 94040,
+        "sourceRevisionId": 422337,
+        "sourceUrl": "https://prts.wiki/w/%E6%9C%BA%E6%A2%B0%E5%B8%88",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-82136",
+      "sourceTitle": "吉星",
+      "kind": "operator",
+      "summary": "珠宝鉴定师出身的狙击干员，曾经营杂货铺。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "吉星原在锻冶町鉴定珠宝并经营同名店铺。金石会事件使她失去住所与生意，随后经介绍到罗德岛治疗，并成为狙击干员。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 82136,
+        "sourceRevisionId": 396940,
+        "sourceUrl": "https://prts.wiki/w/%E5%90%89%E6%98%9F",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-36013",
+      "sourceTitle": "极光",
+      "kind": "operator",
+      "summary": "主攻寒地防御工程，兼任工程与行动队工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "极光从谢拉格赴哥伦比亚留学，因矿石病中断学业。来到罗德岛治疗后，她通过考核，将雪地工程知识用于舰内外任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 36013,
+        "sourceRevisionId": 423337,
+        "sourceUrl": "https://prts.wiki/w/%E6%9E%81%E5%85%89",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-15332",
+      "sourceTitle": "极境",
+      "kind": "operator",
+      "summary": "特殊行动三队队长副手，负责战场通讯保障。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "极境来自伊比利亚，掌握与声讯有关的特殊源石技艺。他在小队中维持通讯、协助秘密行动，也曾试图在履历里自夸相貌。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 15332,
+        "sourceRevisionId": 421596,
+        "sourceUrl": "https://prts.wiki/w/%E6%9E%81%E5%A2%83",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-19518",
+      "sourceTitle": "棘刺",
+      "kind": "operator",
+      "summary": "精通剑术与药剂制作的前线作战干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "棘刺离开伊比利亚后受邀加入罗德岛，以剑术和制药能力服务前线。关于故乡宗教动荡的经历来自其自述，尚未完全核实。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 19518,
+        "sourceRevisionId": 428159,
+        "sourceUrl": "https://prts.wiki/w/%E6%A3%98%E5%88%BA",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1733",
+      "sourceTitle": "嘉维尔",
+      "kind": "operator",
+      "summary": "拥有佣兵经验的医疗干员，具备出色身体素质。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "嘉维尔感染矿石病后离开故乡，辗转加入罗德岛。尽管战斗与破坏能力突出，她仍依自己的意愿选择在战场从事医疗工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1733,
+        "sourceRevisionId": 420945,
+        "sourceUrl": "https://prts.wiki/w/%E5%98%89%E7%BB%B4%E5%B0%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-94666",
+      "sourceTitle": "嘉辛塔",
+      "kind": "operator",
+      "summary": "来自雷姆必拓的先锋干员，在治疗期间参与工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "嘉辛塔出身雷姆必拓坎贝尔矿业家庭，来到罗德岛接受矿石病治疗。依照个人意愿，她同时以先锋干员身份协助任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 94666,
+        "sourceRevisionId": 415602,
+        "sourceUrl": "https://prts.wiki/w/%E5%98%89%E8%BE%9B%E5%A1%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-19105",
+      "sourceTitle": "贾维",
+      "kind": "operator",
+      "summary": "修车厂出身的突击手，擅长前线行动。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "贾维曾在叙拉古小城修车厂工作，后来成为团伙首领。经历某次事件后，他带领两名同伴加入罗德岛，在前线担任突击手。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 19105,
+        "sourceRevisionId": 392133,
+        "sourceUrl": "https://prts.wiki/w/%E8%B4%BE%E7%BB%B4",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-31196",
+      "sourceTitle": "假日威龙陈",
+      "kind": "operator",
+      "summary": "具备执法与指挥经验，主要承担外派支援。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "陈从皇家近卫学校毕业后长期在龙门打击暴力及组织犯罪，随后辞去警职加入罗德岛，选择为各地干员提供现场支援与指导。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 31196,
+        "sourceRevisionId": 392132,
+        "sourceUrl": "https://prts.wiki/w/%E5%81%87%E6%97%A5%E5%A8%81%E9%BE%99%E9%99%88",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-8924",
+      "sourceTitle": "坚雷",
+      "kind": "operator",
+      "summary": "兼任教官的重装干员，熟悉盾牌防护与电刃攻击。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "坚雷曾为哥伦比亚正规军中士，退伍原因未明。她通过正式招录加入罗德岛，在训练和作战中结合特殊盾牌与电刃展开攻防。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 8924,
+        "sourceRevisionId": 392136,
+        "sourceUrl": "https://prts.wiki/w/%E5%9D%9A%E9%9B%B7",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-47234",
+      "sourceTitle": "缄默德克萨斯",
+      "kind": "operator",
+      "summary": "企鹅物流员工，拥有突出的独立作战能力。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "作为德克萨斯家族最后的成员，她如今以企鹅物流员工身份活动。其单兵作战能力尤为出色，是这份简短履历的核心记录。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 47234,
+        "sourceRevisionId": 394096,
+        "sourceUrl": "https://prts.wiki/w/%E7%BC%84%E9%BB%98%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-61837",
+      "sourceTitle": "锏",
+      "kind": "operator",
+      "summary": "曾获三届骑士竞赛冠军，拥有强大的前线突破能力。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "锏原为恩希欧迪斯的贴身保镖，依双方合同无限期加入罗德岛。她主动参与多类任务，以出众战力为同行干员打开通路。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 61837,
+        "sourceRevisionId": 428223,
+        "sourceUrl": "https://prts.wiki/w/%E9%94%8F",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-38911",
+      "sourceTitle": "见行者",
+      "kind": "operator",
+      "summary": "拉特兰公证所执行者，为罗德岛提供特种行动协助。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "见行者完成实训后卷入万国峰会期间的骚乱。事件平息后，经送葬人引荐，他依据公证所合作协议来到罗德岛参与任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 38911,
+        "sourceRevisionId": 412078,
+        "sourceUrl": "https://prts.wiki/w/%E8%A7%81%E8%A1%8C%E8%80%85",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1735",
+      "sourceTitle": "角峰",
+      "kind": "operator",
+      "summary": "来自谢拉格的喀兰贸易外派人员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "角峰隶属喀兰贸易，依据公司与罗德岛的合作协定，以外派身份加入行动，将自身能力投入双方约定的任务中。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1735,
+        "sourceRevisionId": 392139,
+        "sourceUrl": "https://prts.wiki/w/%E8%A7%92%E5%B3%B0",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-19519",
+      "sourceTitle": "孑",
+      "kind": "operator",
+      "summary": "来自龙门的水产小贩，凭精湛刀工成为特种干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "孑原在龙门经营水产生意，经星熊介绍接受罗德岛测试。他通过考核后，将出色的刀工用于战场，在特种岗位上活动。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 19519,
+        "sourceRevisionId": 392140,
+        "sourceUrl": "https://prts.wiki/w/%E5%AD%91",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-22683",
+      "sourceTitle": "杰克",
+      "kind": "operator",
+      "summary": "具有辅警经历的近战干员，擅长贴身格斗。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "杰克曾任哥伦比亚辅警，感染矿石病后来到罗德岛求医。获得父亲支持后，她加入干员队伍，以近身格斗专长参与任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 22683,
+        "sourceRevisionId": 392141,
+        "sourceUrl": "https://prts.wiki/w/%E6%9D%B0%E5%85%8B",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1719",
+      "sourceTitle": "杰西卡",
+      "kind": "operator",
+      "summary": "作为交流项目成员驻留罗德岛的黑钢正式干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "杰西卡隶属黑钢，依据黑钢与罗德岛之间的交流安排驻留学习。她以正式干员身份参与这一项目，积累新的工作经验。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1719,
+        "sourceRevisionId": 392142,
+        "sourceUrl": "https://prts.wiki/w/%E6%9D%B0%E8%A5%BF%E5%8D%A1",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-49404",
+      "sourceTitle": "截云",
+      "kind": "operator",
+      "summary": "来自炎国西北沙漠的阿纳萨外勤干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "截云原本生活在炎国西北的沙漠地区，经槐琥介绍前往罗德岛驻炎国办事处接受治疗，同时承担外勤工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 49404,
+        "sourceRevisionId": 392143,
+        "sourceUrl": "https://prts.wiki/w/%E6%88%AA%E4%BA%91",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-12629",
+      "sourceTitle": "惊蛰",
+      "kind": "operator",
+      "summary": "炎国大理寺官员，具备独特法术与战斗训练。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "惊蛰签署搜查协议后暂居罗德岛，擅长阵地与歼灭作战。因其特殊公务身份及未明动机，档案建议与她交流时保持谨慎。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 12629,
+        "sourceRevisionId": 422570,
+        "sourceUrl": "https://prts.wiki/w/%E6%83%8A%E8%9B%B0",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-37357",
+      "sourceTitle": "九色鹿",
+      "kind": "operator",
+      "summary": "熟悉药草采集及制作的交流访客。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "九色鹿自述来自大炎山林，却未说明具体地点。经干员引荐，她来到罗德岛学习交流，凭药草知识与一定战力随队同行。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 37357,
+        "sourceRevisionId": 421176,
+        "sourceUrl": "https://prts.wiki/w/%E4%B9%9D%E8%89%B2%E9%B9%BF",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-79732",
+      "sourceTitle": "酒神",
+      "kind": "operator",
+      "summary": "游历泰拉的合作干员，为沿途办事处提供支援。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "傀影曾以独立刺客身份受雇于罗德岛。完成蓝卡坞拍摄并达成最初目标后，他选择继续合作，以辅助干员身份支援旅途中的办事处。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 79732,
+        "sourceRevisionId": 428068,
+        "sourceUrl": "https://prts.wiki/w/%E9%85%92%E7%A5%9E",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-87876",
+      "sourceTitle": "矩",
+      "kind": "operator",
+      "summary": "见识广博的炎国游历者，暂任工程技术顾问。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "矩长期游历炎国乡野，拥有丰富经历，本身也具有历史研究价值。应博士邀请，他暂住罗德岛，为日常工程建设提供建议。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 87876,
+        "sourceRevisionId": 428854,
+        "sourceUrl": "https://prts.wiki/w/%E7%9F%A9",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-18304",
+      "sourceTitle": "卡达",
+      "kind": "operator",
+      "summary": "独立影像创作者，负责后方支援与战场记录。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "卡达凭自然风景及野外生存视频获得关注，随后主动加入罗德岛担任术师，将拍摄经验用于行动记录，也承担后方支援。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 18304,
+        "sourceRevisionId": 408275,
+        "sourceUrl": "https://prts.wiki/w/%E5%8D%A1%E8%BE%BE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-24494",
+      "sourceTitle": "卡夫卡",
+      "kind": "operator",
+      "summary": "身手灵活的前园艺师，擅长执行隐秘任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "卡夫卡原在哥伦比亚从事园艺工作，经赫默引荐进入罗德岛。她依靠敏捷的思维与动作，在各类隐秘行动中发挥作用。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 24494,
+        "sourceRevisionId": 394092,
+        "sourceUrl": "https://prts.wiki/w/%E5%8D%A1%E5%A4%AB%E5%8D%A1",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-30165",
+      "sourceTitle": "卡涅利安",
+      "kind": "operator",
+      "summary": "在莱塔尼亚活动的合作干员，来自萨尔贡古老部族。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "卡涅利安离开不受王酋管辖的故乡游学，受雇为霍恩洛厄伯爵侍从并长期留驻莱塔尼亚，现也为罗德岛执行当地任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 30165,
+        "sourceRevisionId": 424091,
+        "sourceUrl": "https://prts.wiki/w/%E5%8D%A1%E6%B6%85%E5%88%A9%E5%AE%89",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1708",
+      "sourceTitle": "卡缇",
+      "kind": "operator",
+      "summary": "行动预备组A4成员，曾在雪橇巡逻队工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "卡缇是莱塔尼亚公民，在正式成为干员前已有雪橇巡逻队经历。她凭借多项测试中的优异表现，获准加入罗德岛行动预备组。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1708,
+        "sourceRevisionId": 347520,
+        "sourceUrl": "https://prts.wiki/w/%E5%8D%A1%E7%BC%87",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-90817",
+      "sourceTitle": "凯尔希·思衡托",
+      "kind": "operator",
+      "summary": "罗德岛创立者及医疗部负责人，参与矿石病药物研究。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "凯尔希曾主持大型战略行动与对外沟通，为罗德岛发展及矿石病研究奠定基础，如今主要以医疗专家身份投入药物研发。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 90817,
+        "sourceRevisionId": 428064,
+        "sourceUrl": "https://prts.wiki/w/%E5%87%AF%E5%B0%94%E5%B8%8C%C2%B7%E6%80%9D%E8%A1%A1%E6%89%98",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-72129",
+      "sourceTitle": "凯瑟琳",
+      "kind": "operator",
+      "summary": "维多利亚工人代表，协调工厂与罗德岛的合作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "凯瑟琳在伦蒂尼姆与市民自救军共同抵抗，随后促成多家工厂及工人组织与罗德岛协作，处理源石污染、疾病预防与救治。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 72129,
+        "sourceRevisionId": 429706,
+        "sourceUrl": "https://prts.wiki/w/%E5%87%AF%E7%91%9F%E7%90%B3",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-90812",
+      "sourceTitle": "可露希尔",
+      "kind": "operator",
+      "summary": "罗德岛总工程师，同时负责采购等多项事务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "可露希尔统筹罗德岛的工程与采购工作，还兼顾数个部门。她更愿意让想了解她的干员直接到采购部见面，而非只阅读档案。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 90812,
+        "sourceRevisionId": 424119,
+        "sourceUrl": "https://prts.wiki/w/%E5%8F%AF%E9%9C%B2%E5%B8%8C%E5%B0%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1759",
+      "sourceTitle": "可颂",
+      "kind": "operator",
+      "summary": "企鹅物流外派干员，以巨锤和怪力承担防守。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "可颂在合作合约期间驻留罗德岛，擅长同时牵制多个敌人。她用出众力量挥动巨锤，在守住阵线时也能击退较轻的目标。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1759,
+        "sourceRevisionId": 411348,
+        "sourceUrl": "https://prts.wiki/w/%E5%8F%AF%E9%A2%82",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1710",
+      "sourceTitle": "克洛丝",
+      "kind": "operator",
+      "summary": "出身雷姆必拓，接受过哥伦比亚警备队训练。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "克洛丝与芬、米格鲁同受训于霍尔姆加德警备队。她做事不急不躁，常带笑容，以温和圆融的态度面对他人，也偶有锋利的言辞。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1710,
+        "sourceRevisionId": 347523,
+        "sourceUrl": "https://prts.wiki/w/%E5%85%8B%E6%B4%9B%E4%B8%9D",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-14736",
+      "sourceTitle": "刻刀",
+      "kind": "operator",
+      "summary": "擅长近距离战斗的前佣兵，承担护送任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "刻刀曾在哥伦比亚偏远地区从事佣兵工作，因矿石病来到罗德岛求医。多次行动证明其近战能力，她现于近卫小队参与要员护送。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 14736,
+        "sourceRevisionId": 410046,
+        "sourceUrl": "https://prts.wiki/w/%E5%88%BB%E5%88%80",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-12630",
+      "sourceTitle": "刻俄柏",
+      "kind": "operator",
+      "summary": "凭顽强意志与敏锐直觉生存下来的流浪者。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "刻俄柏自有记忆起便四处漂泊，在恶劣野外环境中染病。被罗德岛救助后，她通过干员测试，终于有了能够停留的归处。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 12630,
+        "sourceRevisionId": 392154,
+        "sourceUrl": "https://prts.wiki/w/%E5%88%BB%E4%BF%84%E6%9F%8F",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1766",
+      "sourceTitle": "空",
+      "kind": "operator",
+      "summary": "以歌声提供支援的现役偶像，暂居企鹅物流。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "空因故在企鹅物流寄居，并随双方合作参与罗德岛行动。她能够无意识地施展声音相关源石技艺，以歌声支持战场上的同伴。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1766,
+        "sourceRevisionId": 392157,
+        "sourceUrl": "https://prts.wiki/w/%E7%A9%BA",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1780",
+      "sourceTitle": "空爆",
+      "kind": "operator",
+      "summary": "行动预备组A6成员，由患者转为正式参与任务的干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "空爆最初以患者身份被罗德岛接收。因表现出众，在征求本人意愿后接受并通过测试，随后编入行动预备组A6。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1780,
+        "sourceRevisionId": 400685,
+        "sourceUrl": "https://prts.wiki/w/%E7%A9%BA%E7%88%86",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-55364",
+      "sourceTitle": "空构",
+      "kind": "operator",
+      "summary": "拉特兰访学人员，精通铳械辅助与机械通讯技术。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "斯普莉雅任职教皇厅第六厅，安布罗修事件后随里凯莱外派至罗德岛。她以空构为代号，用技术专长协助工程部门。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 55364,
+        "sourceRevisionId": 429889,
+        "sourceUrl": "https://prts.wiki/w/%E7%A9%BA%E6%9E%84",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-25290",
+      "sourceTitle": "空弦",
+      "kind": "operator",
+      "summary": "来自兰登修道院的修士，兼任商业联络与狙击工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "席德佳为促成商业合作暂留罗德岛，积极协调双方往来。她也展现出高超战斗技巧，并主动要求以空弦为代号参加狙击任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 25290,
+        "sourceRevisionId": 392159,
+        "sourceUrl": "https://prts.wiki/w/%E7%A9%BA%E5%BC%A6",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-17431",
+      "sourceTitle": "苦艾",
+      "kind": "operator",
+      "summary": "来自切尔诺伯格的术师，也承担舰内巡逻。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "苦艾在切尔诺伯格事件中获救后主动申请加入罗德岛。经过测试与训练，她进入作战小队，并负责部分舰内巡逻工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 17431,
+        "sourceRevisionId": 423781,
+        "sourceUrl": "https://prts.wiki/w/%E8%8B%A6%E8%89%BE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-14739",
+      "sourceTitle": "傀影",
+      "kind": "operator",
+      "summary": "独立活动的刺客，现于罗德岛执行特种任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "傀影曾往来维多利亚及周边，行踪与背景仍未完全查证。虽然作战能力获得认可，档案仍建议在合作中保持谨慎。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 14739,
+        "sourceRevisionId": 393104,
+        "sourceUrl": "https://prts.wiki/w/%E5%82%80%E5%BD%B1",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-17433",
+      "sourceTitle": "莱恩哈特",
+      "kind": "operator",
+      "summary": "熟悉勘探与天灾预警的信使，兼任术师干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "莱恩哈特曾随雷姆必拓尤立卡矿队担任天灾顾问，擅长勘察地形与破坏硬目标。来到罗德岛后继续参与灾区调查及预警。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 17433,
+        "sourceRevisionId": 392163,
+        "sourceUrl": "https://prts.wiki/w/%E8%8E%B1%E6%81%A9%E5%93%88%E7%89%B9",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-71418",
+      "sourceTitle": "莱欧斯",
+      "kind": "operator",
+      "summary": "拥有丰富探索经验的小队队长，擅长野外作战。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "莱欧斯对所谓迷宫的探索经验颇多，罗德岛尚未弄清其确切含义。尽管经历仍有谜团，他在野外任务中提供的帮助十分可靠。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 71418,
+        "sourceRevisionId": 401377,
+        "sourceUrl": "https://prts.wiki/w/%E8%8E%B1%E6%AC%A7%E6%96%AF",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-62739",
+      "sourceTitle": "莱伊",
+      "kind": "operator",
+      "summary": "熟悉矿井安保，参与防卫、战斗与勘探任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "莱伊在雷姆必拓常以探井人工作维生。偶遇重返故地的阿米娅、博士与暴行后，她主动加入罗德岛，继续发挥安保及勘探经验。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 62739,
+        "sourceRevisionId": 424117,
+        "sourceUrl": "https://prts.wiki/w/%E8%8E%B1%E4%BC%8A",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1748",
+      "sourceTitle": "蓝毒",
+      "kind": "operator",
+      "summary": "使用毒性制剂作战的狙击干员，也协助毒理研究。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "蓝毒的身份与过往资料缺失，却在运用有毒制剂的特别行动中表现突出。除狙击工作外，她定期协助医疗组开展毒理学研究。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1748,
+        "sourceRevisionId": 392166,
+        "sourceUrl": "https://prts.wiki/w/%E8%93%9D%E6%AF%92",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-37517",
+      "sourceTitle": "老鲤",
+      "kind": "operator",
+      "summary": "鲤氏侦探事务所创办者，提供龙门地方信息咨询。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "老鲤在罗德岛拓展龙门业务时与其相识，随后建立合作。他以私家侦探的本地经验提供咨询，也向罗德岛推荐合适的人才。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 37517,
+        "sourceRevisionId": 424739,
+        "sourceUrl": "https://prts.wiki/w/%E8%80%81%E9%B2%A4",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-92388",
+      "sourceTitle": "雷狼龙S空爆",
+      "kind": "operator",
+      "summary": "行动预备组A6近卫干员，擅长重型武器与近身搏斗。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "空爆依个人意愿转任近卫，展现了近战与重武器天赋。除A6任务之外，她也主动奔赴险地，对同伴眼中的改变却很少表态。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 92388,
+        "sourceRevisionId": 401604,
+        "sourceUrl": "https://prts.wiki/w/%E9%9B%B7%E7%8B%BC%E9%BE%99S%E7%A9%BA%E7%88%86",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1758",
+      "sourceTitle": "雷蛇",
+      "kind": "operator",
+      "summary": "黑钢安保顾问，拥有冲突地区的丰富实战经验。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "雷蛇曾为企业、政府及跨国组织提供防卫服务，在冲突地区积累经验。现依据安保条约，为罗德岛提供安全保障与专业咨询。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1758,
+        "sourceRevisionId": 392169,
+        "sourceUrl": "https://prts.wiki/w/%E9%9B%B7%E8%9B%87",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-78320",
+      "sourceTitle": "蕾缪安",
+      "kind": "operator",
+      "summary": "拉特兰教皇厅第七厅枢机，以代表身份访问罗德岛。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "蕾缪安将来舰形容为探望家属，但程序上仍属拉特兰对罗德岛的正式访问。访问期间，她依协议提供多种形式的帮助。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 78320,
+        "sourceRevisionId": 428127,
+        "sourceUrl": "https://prts.wiki/w/%E8%95%BE%E7%BC%AA%E5%AE%89",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-66430",
+      "sourceTitle": "历阵锐枪芬",
+      "kind": "operator",
+      "summary": "熟悉前线沟通及战场指挥的正式干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "芬经过长期训练与多次外勤通过考核，在历练中学会调度队伍、沟通一线需求。面对危机时，她已能以更成熟的耐心处理问题。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 66430,
+        "sourceRevisionId": 394094,
+        "sourceUrl": "https://prts.wiki/w/%E5%8E%86%E9%98%B5%E9%94%90%E6%9E%AA%E8%8A%AC",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1730",
+      "sourceTitle": "砾",
+      "kind": "operator",
+      "summary": "卡西米尔四阶骑士，擅长隐秘行动与近身护卫。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "砾因故留在罗德岛，拥有隐秘行动及暗杀方面的经验。她自愿成为博士近卫之一，将这些能力用于护卫工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1730,
+        "sourceRevisionId": 393105,
+        "sourceUrl": "https://prts.wiki/w/%E7%A0%BE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-61833",
+      "sourceTitle": "烈夏",
+      "kind": "operator",
+      "summary": "外勤小组成员，主要负责中长期任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "罗莎琳曾在切尔诺伯格中学就读，与凛冬同为学生中的领军人物。加入罗德岛后，她以烈夏为代号，承担周期较长的外勤行动。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 61833,
+        "sourceRevisionId": 392173,
+        "sourceUrl": "https://prts.wiki/w/%E7%83%88%E5%A4%8F",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1782",
+      "sourceTitle": "猎蜂",
+      "kind": "operator",
+      "summary": "来自乌萨斯的前地下拳手，承担前线近战工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "猎蜂过去在乌萨斯参加地下搏击，所属组织分裂后转入罗德岛。她将拳场磨炼的力量带到前线，以近卫身份参加战斗。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1782,
+        "sourceRevisionId": 392172,
+        "sourceUrl": "https://prts.wiki/w/%E7%8C%8E%E8%9C%82",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-90809",
+      "sourceTitle": "裂响",
+      "kind": "operator",
+      "summary": "来自泽尔格勒的外勤干员，曾是一名工人。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "瑭雅曾以整合运动之名在乌萨斯泽尔格勒组织反抗。经弑君者介绍来到罗德岛治疗后，她采用裂响的代号正式参与外勤。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 90809,
+        "sourceRevisionId": 407275,
+        "sourceUrl": "https://prts.wiki/w/%E8%A3%82%E5%93%8D",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-49408",
+      "sourceTitle": "林",
+      "kind": "operator",
+      "summary": "来自龙门的合作人员，协助当地感染者收治工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "林雨霞提供的个人资料有限且仍有疑点。玉门事件后，她主动提出与罗德岛正式合作，为龙门地区感染者的医疗收治提供帮助。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 49408,
+        "sourceRevisionId": 421217,
+        "sourceUrl": "https://prts.wiki/w/%E6%9E%97",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-57347",
+      "sourceTitle": "琳琅诗怀雅",
+      "kind": "operator",
+      "summary": "龙门近卫局局长，以私人身份协助罗德岛。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "诗怀雅从汐斯塔度假归来后，继续履行龙门近卫局局长职责。她会视情况向罗德岛提供帮助，目前这些协助均以私人身份进行。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 57347,
+        "sourceRevisionId": 415779,
+        "sourceUrl": "https://prts.wiki/w/%E7%90%B3%E7%90%85%E8%AF%97%E6%80%80%E9%9B%85",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1742",
+      "sourceTitle": "凛冬",
+      "kind": "operator",
+      "summary": "担任作战小队队长的先锋，具有强健体能。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "凛冬在切尔诺伯格事变前仍是学生，已表现出对战斗的热情。加入罗德岛后，她凭力量与体质通过测试，现带队承担先锋任务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1742,
+        "sourceRevisionId": 423771,
+        "sourceUrl": "https://prts.wiki/w/%E5%87%9B%E5%86%AC",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-56488",
+      "sourceTitle": "凛视",
+      "kind": "operator",
+      "summary": "来自萨米北部的独眼巨人，为冰原事务提供协助。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "凛视出身冬牙群山，其族群据称拥有预见未来的法术。为了自己看到的某种未来，她积极寻求合作，现协助罗德岛开展北方事务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 56488,
+        "sourceRevisionId": 392179,
+        "sourceUrl": "https://prts.wiki/w/%E5%87%9B%E8%A7%86",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-85209",
+      "sourceTitle": "凛御银灰",
+      "kind": "operator",
+      "summary": "希瓦艾什家族族长，熟悉经贸、外交与战术规划。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "恩希欧迪斯曾任喀兰贸易董事长，在经贸与政治事务上见解独到。鉴于其特殊身份及谢拉格局势，档案建议慎重确定合作立场。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 85209,
+        "sourceRevisionId": 406826,
+        "sourceUrl": "https://prts.wiki/w/%E5%87%9B%E5%BE%A1%E9%93%B6%E7%81%B0",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1706",
+      "sourceTitle": "翎羽",
+      "kind": "operator",
+      "summary": "前拉特兰戍卫队成员，现负责罗德岛安全巡查。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "翎羽因机缘离开拉特兰来到罗德岛，随后承担基地安保、日常巡逻及重要物资看护，将戍卫队时期的经验用于防护工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1706,
+        "sourceRevisionId": 347362,
+        "sourceUrl": "https://prts.wiki/w/%E7%BF%8E%E7%BE%BD",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-78317",
+      "sourceTitle": "聆音",
+      "kind": "operator",
+      "summary": "来自玻利瓦尔的修女，现任当地办事处近卫干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "聆音经信仰搅拌机推荐加入罗德岛，之后返回自己的家乡玻利瓦尔，在当地办事处以近卫身份参与工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 78317,
+        "sourceRevisionId": 423777,
+        "sourceUrl": "https://prts.wiki/w/%E8%81%86%E9%9F%B3",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-37515",
+      "sourceTitle": "令",
+      "kind": "operator",
+      "summary": "寓居尚蜀的诗人，以访客身份暂住罗德岛。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "令与炎国司岁台等政府部门保持联系，在尚蜀事件中接触罗德岛。经过审核后，她获准以访客身份登舰并暂时驻留。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 37515,
+        "sourceRevisionId": 392180,
+        "sourceUrl": "https://prts.wiki/w/%E4%BB%A4",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-40673",
+      "sourceTitle": "流明",
+      "kind": "operator",
+      "summary": "罗德岛驻伊比利亚干员，负责感染者医疗救助。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "流明由极境与凯尔希引荐，在伊比利亚参与救护。他也列席罗德岛、阿戈尔与审判庭的会议，从自身经历出发推动各方合作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 40673,
+        "sourceRevisionId": 392484,
+        "sourceUrl": "https://prts.wiki/w/%E6%B5%81%E6%98%8E",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1720",
+      "sourceTitle": "流星",
+      "kind": "operator",
+      "summary": "前卡西米尔守林人，擅长弓术、追踪与野外生存。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "流星将守林时期练就的射术与野外经验带到罗德岛，在接受治疗的同时加入狙击队伍，持续于一线行动中提供支援。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1720,
+        "sourceRevisionId": 392184,
+        "sourceUrl": "https://prts.wiki/w/%E6%B5%81%E6%98%9F",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-31194",
+      "sourceTitle": "龙舌兰",
+      "kind": "operator",
+      "summary": "来自多索雷斯的干员，熟悉商务与人际交涉。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "埃内斯托曾任多索雷斯国际贸易管理部副主任，暴乱后被革职。经陈引荐通过测试，他加入罗德岛，并以从容态度处理尴尬关系。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 31194,
+        "sourceRevisionId": 392185,
+        "sourceUrl": "https://prts.wiki/w/%E9%BE%99%E8%88%8C%E5%85%B0",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-80477",
+      "sourceTitle": "录武官",
+      "kind": "operator",
+      "summary": "擅长武功记录与书籍编纂，兼任罗德岛后勤工作。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "云青萍曾为炎国将士记录武功。经左乐介绍，他以司岁台编外文职身份暂住罗德岛，协助观察岁兽代理人，也承担后勤事务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 80477,
+        "sourceRevisionId": 428697,
+        "sourceUrl": "https://prts.wiki/w/%E5%BD%95%E6%AD%A6%E5%AE%98",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-65562",
+      "sourceTitle": "露托",
+      "kind": "operator",
+      "summary": "熟悉玻利瓦尔战地环境，偶尔为外勤提供顾问支持。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "露托曾独自在玻利瓦尔各战区打扫战场，不隶属当地势力。如今她在罗德岛治疗，并与后勤部合作，提供战场环境方面的建议。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 65562,
+        "sourceRevisionId": 423768,
+        "sourceUrl": "https://prts.wiki/w/%E9%9C%B2%E6%89%98",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-40669",
+      "sourceTitle": "掠风",
+      "kind": "operator",
+      "summary": "拥有工程双学位，擅长机械设计与制造。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "掠风修习工学及源石工学，积累了丰富的机械设计制造经验。进入罗德岛工程部后，他制作各类装置，为干员作战提供支持。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 40669,
+        "sourceRevisionId": 392193,
+        "sourceUrl": "https://prts.wiki/w/%E6%8E%A0%E9%A3%8E",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-32344",
+      "sourceTitle": "罗比菈塔",
+      "kind": "operator",
+      "summary": "来自哥伦比亚的化妆师，也精通自动化机械。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "罗比菈塔主动要求参加工程考核，展现了化妆工作之外的机械专业能力。经可露希尔认可，她成为驻舰干员并参与技术事务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 32344,
+        "sourceRevisionId": 397052,
+        "sourceUrl": "https://prts.wiki/w/%E7%BD%97%E6%AF%94%E8%8F%88%E5%A1%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-24498",
+      "sourceTitle": "罗宾",
+      "kind": "operator",
+      "summary": "前哥伦比亚保镖，擅长自制陷阱与远程打击。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "罗宾经赫默介绍并通过测试进入罗德岛，将保镖工作中积累的经验用于特种任务，依靠自制陷阱配合远距离攻击。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 24498,
+        "sourceRevisionId": 424084,
+        "sourceUrl": "https://prts.wiki/w/%E7%BD%97%E5%AE%BE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-92386",
+      "sourceTitle": "罗德岛隐秘队",
+      "kind": "operator",
+      "summary": "由艾露猫政宗与牙猎犬义经组成，擅长调查和素材收集。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "政宗与义经沿用故乡随从隐秘队的编制命名，凭专业训练迅速适应罗德岛任务。他们寻找归乡道路，也乐于在泰拉继续冒险。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 92386,
+        "sourceRevisionId": 401138,
+        "sourceUrl": "https://prts.wiki/w/%E7%BD%97%E5%BE%B7%E5%B2%9B%E9%9A%90%E7%A7%98%E9%98%9F",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-45211",
+      "sourceTitle": "罗小黑",
+      "kind": "operator",
+      "summary": "经鲤氏事务所推荐而来的年轻近卫干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "罗小黑由老鲤推荐来到罗德岛，性格善良而坚定，面对危险勇敢却不莽撞。通过考核后，他正式加入近卫干员队伍。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 45211,
+        "sourceRevisionId": 421751,
+        "sourceUrl": "https://prts.wiki/w/%E7%BD%97%E5%B0%8F%E9%BB%91",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-66435",
+      "sourceTitle": "逻各斯",
+      "kind": "operator",
+      "summary": "精英术师与咒术大师，负责施术评估及情报加密。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "逻各斯曾参与巴别塔与卡兹戴尔内战，成为罗德岛首批精英干员。他建立源石技艺适应性评估流程，现兼顾外勤指挥、术师选拔和敏感情报处理。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 66435,
+        "sourceRevisionId": 428088,
+        "sourceUrl": "https://prts.wiki/w/%E9%80%BB%E5%90%84%E6%96%AF",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-39686",
+      "sourceTitle": "洛洛",
+      "kind": "operator",
+      "summary": "伦蒂尼姆市民自救军成员，熟悉侦察与远程作战。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "洛洛在伦蒂尼姆事件中与罗德岛并肩行动，积累了侦察和远程攻击经验。依个人意愿，她继续与当地办事处保持合作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 39686,
+        "sourceRevisionId": 420538,
+        "sourceUrl": "https://prts.wiki/w/%E6%B4%9B%E6%B4%9B",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-44828",
+      "sourceTitle": "玛恩纳",
+      "kind": "operator",
+      "summary": "临光家前家主，协助罗德岛处理卡西米尔事务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "玛恩纳是临光与瑕光的叔叔，未曾获得骑士封号。特锦赛结束约两个月后，他接受罗德岛邀请，开始支持卡西米尔地区的工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 44828,
+        "sourceRevisionId": 421750,
+        "sourceUrl": "https://prts.wiki/w/%E7%8E%9B%E6%81%A9%E7%BA%B3",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-71422",
+      "sourceTitle": "玛露西尔",
+      "kind": "operator",
+      "summary": "莱欧斯小队魔法师，提供医疗及法术支持。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "玛露西尔自述在迷宫救援法琳时意外来到泰拉。她一边在罗德岛寻找返回原处的方法，一边以魔法与医疗能力协助同伴。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 71422,
+        "sourceRevisionId": 421211,
+        "sourceUrl": "https://prts.wiki/w/%E7%8E%9B%E9%9C%B2%E8%A5%BF%E5%B0%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-9000",
+      "sourceTitle": "麦哲伦",
+      "kind": "operator",
+      "summary": "莱茵生命外勤专员，擅长无人机与探索任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "麦哲伦依合作协议计划以罗德岛为据点展开新一轮探索。她能按环境调整模块化无人机，使其承担攻击或友军支援。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 9000,
+        "sourceRevisionId": 392196,
+        "sourceUrl": "https://prts.wiki/w/%E9%BA%A6%E5%93%B2%E4%BC%A6",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-54448",
+      "sourceTitle": "玫拉",
+      "kind": "operator",
+      "summary": "具有资深武器测试经验的外勤干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "玫拉曾受雇于哥伦比亚的武器测试公司，染上矿石病后解除雇佣关系。来到罗德岛寻求治疗时，她签下合同并转任外勤干员。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 54448,
+        "sourceRevisionId": 392199,
+        "sourceUrl": "https://prts.wiki/w/%E7%8E%AB%E6%8B%89",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1707",
+      "sourceTitle": "玫兰莎",
+      "kind": "operator",
+      "summary": "行动预备组A4组长，来自维多利亚。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "玫兰莎在任职前是一名没有职业的普通感染者，凭借多项测试中的优异成绩获得认可，随后加入罗德岛并担任A4组长。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1707,
+        "sourceRevisionId": 347518,
+        "sourceUrl": "https://prts.wiki/w/%E7%8E%AB%E5%85%B0%E8%8E%8E",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-10086",
+      "sourceTitle": "梅",
+      "kind": "operator",
+      "summary": "自称皇家侦探的狙击干员，活跃于罗德岛任务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "梅称自己曾多次破案、受到上司赏识并奉派来到罗德岛，这些说法均来自本人。她目前以狙击干员身份提供服务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 10086,
+        "sourceRevisionId": 392197,
+        "sourceUrl": "https://prts.wiki/w/%E6%A2%85",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1753",
+      "sourceTitle": "梅尔",
+      "kind": "operator",
+      "summary": "机械装置咪波的创造者，擅长设计与工程开发。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "梅尔来自哥伦比亚，在莱茵生命从事研究，也经营鲁特拉工作室。与罗德岛合作后，她将科研与机械专长投入建筑、设计和开发。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1753,
+        "sourceRevisionId": 392198,
+        "sourceUrl": "https://prts.wiki/w/%E6%A2%85%E5%B0%94",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-48437",
+      "sourceTitle": "谜图",
+      "kind": "operator",
+      "summary": "具有军方背景的情报人员，兼任行动前期调查。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "谜图持开斯特公爵信函来到罗德岛寻求矿石病治疗。双方达成协议后，他继续参与任务，并负责行动前的情报搜集。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 48437,
+        "sourceRevisionId": 392203,
+        "sourceUrl": "https://prts.wiki/w/%E8%B0%9C%E5%9B%BE",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1709",
+      "sourceTitle": "米格鲁",
+      "kind": "operator",
+      "summary": "行动预备组A1前卫队员，具备突出的成长潜力。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "米格鲁与芬、克洛丝一起加入罗德岛。虽然仍有稚嫩之处，她在任务中逐渐展现专业能力和不服输的韧性，获得更多同伴信任。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1709,
+        "sourceRevisionId": 423760,
+        "sourceUrl": "https://prts.wiki/w/%E7%B1%B3%E6%A0%BC%E9%B2%81",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-19107",
+      "sourceTitle": "蜜蜡",
+      "kind": "operator",
+      "summary": "来自萨尔贡沙漠部族，正在游学中的术师干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "蜜蜡登舰寻找亲人，得知对方暂不归来后申请随罗德岛同行。她通过测试成为术师，把这里作为漫长游学试炼的第一站。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 19107,
+        "sourceRevisionId": 392201,
+        "sourceUrl": "https://prts.wiki/w/%E8%9C%9C%E8%9C%A1",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-34431",
+      "sourceTitle": "蜜莓",
+      "kind": "operator",
+      "summary": "兼修心理学的草药医生，关注身心两方面的健康。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "蜜莓出身雷姆必拓，加入罗德岛医疗部后，以草药学知识治疗身体疾病，同时努力照顾干员的心理状态，提供更全面的支持。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 34431,
+        "sourceRevisionId": 392202,
+        "sourceUrl": "https://prts.wiki/w/%E8%9C%9C%E8%8E%93",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-46414",
+      "sourceTitle": "明椒",
+      "kind": "operator",
+      "summary": "萨卡兹佣兵出身，为作战小队提供医疗保障。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "明椒响应曼弗雷德征召从哥伦比亚赴伦蒂尼姆，后因理念分歧带队离开原阵营。途中遇袭获救后，她受雇于罗德岛承担战地医疗。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 46414,
+        "sourceRevisionId": 411438,
+        "sourceUrl": "https://prts.wiki/w/%E6%98%8E%E6%A4%92",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-93658",
+      "sourceTitle": "谬因",
+      "kind": "operator",
+      "summary": "精通应用源石学与计算科学的前大学教师。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "谬因长期居住玻利瓦尔，曾任卢米内斯大学拉乌尼达分校副教授。大行军事件后，她辞去教职，转到罗德岛担任术师。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 93658,
+        "sourceRevisionId": 423042,
+        "sourceUrl": "https://prts.wiki/w/%E8%B0%AC%E5%9B%A0",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-52600",
+      "sourceTitle": "摩根",
+      "kind": "operator",
+      "summary": "格拉斯哥帮成员，协助帮派及维多利亚办事处事务。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "摩根被推进之王戏称为帮派的大脑，在罗德岛协助她处理格拉斯哥帮相关事务，也兼职承担维多利亚办事处的工作。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 52600,
+        "sourceRevisionId": 407057,
+        "sourceUrl": "https://prts.wiki/w/%E6%91%A9%E6%A0%B9",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-66437",
+      "sourceTitle": "魔王",
+      "kind": "operator",
+      "summary": "巴别塔创立者，曾推动卡兹戴尔城市建设与公共事业。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "特蕾西娅建立卡兹戴尔移动城市，创立巴别塔并参与组建军事委员会。执政时推动医疗、教育及外交，后在卡兹戴尔与维多利亚的战争中身亡。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 66437,
+        "sourceRevisionId": 416228,
+        "sourceUrl": "https://prts.wiki/w/%E9%AD%94%E7%8E%8B",
+        "reviewedAt": "2026-10-01"
+      }
+    },
+    {
+      "id": "prts-operator-1732",
+      "sourceTitle": "末药",
+      "kind": "operator",
+      "summary": "药物研发与制作方面颇具潜力的医疗干员。",
+      "summaryStatus": "curated",
+      "sections": [
+        {
+          "title": "履历提要",
+          "body": "末药是一名未公开出身的药师，在研发工作中展现出可观潜力。她现加入罗德岛医疗小组，同时承担药物制作等专业服务。",
+          "spoiler": true,
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "editorialBasis": "据PRTS转录的客观履历逐条归纳；未独立复核完整档案",
+        "sourceKind": "game-profile",
+        "sourcePageId": 1732,
+        "sourceRevisionId": 392209,
+        "sourceUrl": "https://prts.wiki/w/%E6%9C%AB%E8%8D%AF",
+        "reviewedAt": "2026-10-01"
+      }
+    }
+  ],
+  "missing": [
+    {
+      "index": 8,
+      "id": "prts-operator-95902",
+      "sourceTitle": "埃癸斯",
+      "reason": "没有可供改写的客观履历"
+    },
+    {
+      "index": 117,
+      "id": "prts-operator-95900",
+      "sourceTitle": "虎狼丸",
+      "reason": "没有可供改写的客观履历"
+    },
+    {
+      "index": 146,
+      "id": "prts-operator-96117",
+      "sourceTitle": "结城理",
+      "reason": "没有可供改写的客观履历"
+    },
+    {
+      "index": 189,
+      "id": "prts-operator-86038",
+      "sourceTitle": "领主·Sharp",
+      "reason": "没有可供改写的客观履历"
+    },
+    {
+      "index": 210,
+      "id": "prts-operator-86036",
+      "sourceTitle": "盟约·辅助干员",
+      "reason": "没有可供改写的客观履历"
+    }
+  ]
+}

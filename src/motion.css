@@ -1,0 +1,338 @@
+/* Finite atlas choreography. Base styles remain readable when animation is disabled. */
+.map-heading h1 {
+  animation: title-reveal 0.85s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.map-heading .eyebrow {
+  animation: detail-reveal 0.55s 0.1s both;
+}
+.map-heading p {
+  animation: detail-reveal 0.65s 0.22s both;
+}
+.map-heading.compact h1 {
+  animation-duration: 0.65s;
+}
+.map-stage[data-motion="intro"] .map-heading h1 {
+  animation-delay: 0.25s;
+}
+.map-stage[data-motion="intro"] .projected-anchor button {
+  animation: label-reveal 0.7s var(--reveal-delay, 1s) both;
+}
+.map-stage[data-motion="intro"] .explore-prompt {
+  animation: detail-reveal 0.8s 1.7s both;
+}
+.map-stage[data-motion="intro"] .map-edition {
+  animation: detail-reveal 0.8s 0.55s both;
+}
+.survey-sweep {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  overflow: hidden;
+}
+.map-stage[data-motion="intro"] .survey-sweep {
+  display: block;
+}
+.survey-sweep::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -18%;
+  width: 18%;
+  border-right: 1px solid #9fb66060;
+  background: linear-gradient(90deg, transparent, #c7d88917);
+  animation: survey-pass 2.6s cubic-bezier(0.22, 0.6, 0.3, 1) both;
+}
+.replay-map {
+  color: #718740;
+}
+.replay-map:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.map-label,
+.city-label {
+  transition:
+    color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.map-label:hover .label-en {
+  letter-spacing: 1.8px;
+}
+.label-en {
+  transition: letter-spacing 0.25s;
+}
+.map-label.selected .label-dot {
+  box-shadow: 0 0 0 4px #9cb64128;
+}
+.archive-panel {
+  animation: dossier-open 0.45s cubic-bezier(0.16, 0.7, 0.2, 1) both;
+}
+.panel-scroll > .file-portrait {
+  animation: portrait-reveal 0.85s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.panel-scroll > .file-heading {
+  animation: detail-reveal 0.65s 0.08s both;
+}
+.panel-scroll > .file-actions {
+  animation: detail-reveal 0.65s 0.16s both;
+}
+.panel-scroll > .file-summary,
+.panel-scroll > .file-facts {
+  animation: detail-reveal 0.65s 0.24s both;
+}
+.file-portrait .contours {
+  animation: contour-arrive 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.event-peek {
+  animation: detail-reveal 0.5s both;
+}
+.journey-progress {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  overflow: hidden;
+  background: #d3e28815;
+  pointer-events: none;
+}
+.journey-progress > span {
+  display: block;
+  height: 100%;
+  background: #d4e583;
+  transform-origin: left;
+  animation: journey-fill 10s linear both;
+}
+.journey-stops .tour-active > i {
+  animation: stop-arrive 0.6s ease-out;
+}
+.journey-play,
+.outline-button,
+.archive-card,
+.card-art .icon-button {
+  transition:
+    background 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+.journey-play:active,
+.outline-button:active {
+  transform: translateY(1px);
+}
+.archive-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px #304d3c0c;
+}
+.dialog[open] {
+  animation: detail-reveal 0.3s both;
+}
+.flat-map-svg .flat-region > polygon {
+  transition:
+    fill 0.5s,
+    stroke 0.35s;
+}
+.map-stage[data-motion="intro"] .flat-region {
+  animation: flat-unfold 0.8s var(--reveal-delay, 0s) both;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.flat-relation {
+  animation: relation-draw 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.flat-beacon circle {
+  fill: none;
+  stroke: #839a39;
+  stroke-width: 0.06;
+  opacity: 0;
+  transform-origin: 0 0;
+  animation: flat-pulse 1.7s ease-out both;
+}
+.flat-beacon circle + circle {
+  animation-delay: 0.4s;
+}
+.motion-paused *,
+.motion-paused *::before,
+.motion-paused *::after {
+  animation-play-state: paused !important;
+}
+@keyframes title-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+    transform: translateY(12px);
+    opacity: 0.2;
+  }
+  to {
+    clip-path: inset(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes detail-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes label-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes survey-pass {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(680%);
+    opacity: 0;
+  }
+}
+@keyframes dossier-open {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes portrait-reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0);
+  }
+}
+@keyframes contour-arrive {
+  from {
+    transform: translateX(20px) scale(1.12);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes journey-fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes stop-arrive {
+  from {
+    box-shadow: 0 0 0 12px #d4e58300;
+  }
+  to {
+    box-shadow: 0 0 0 4px #899d5133;
+  }
+}
+@keyframes flat-unfold {
+  from {
+    opacity: 0.15;
+    transform: translateY(0.3px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes relation-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes flat-pulse {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.4);
+  }
+}
+@media (max-width: 899px) {
+  .archive-panel {
+    animation-name: dossier-rise;
+    animation-duration: 0.35s;
+  }
+  .map-heading h1 {
+    animation-duration: 0.6s;
+  }
+  .map-stage[data-motion="intro"] .explore-prompt {
+    animation-delay: 0.6s;
+  }
+  .survey-sweep::after {
+    animation-duration: 1.8s;
+  }
+  .archive-card:hover {
+    transform: none;
+  }
+}
+@keyframes dossier-rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+.reduce-motion .survey-sweep,
+.reduce-motion .flat-beacon,
+.reduce-motion .journey-progress {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .map-controls {
+    display: flex;
+    top: 184px;
+    bottom: auto;
+    right: 20px;
+    padding: 2px;
+  }
+  .has-selection .map-controls {
+    top: 84px;
+  }
+  .map-controls .replay-map {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,13 @@
+.emblem {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  overflow: visible;
+}
+.emblem path,
+.emblem polygon,
+.emblem circle,
+.emblem line {
+  vector-effect: non-scaling-stroke;
+}

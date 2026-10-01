@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Terra WebGL 回退验证</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <aside
+      style="
+        position: fixed;
+        top: 3px;
+        right: 3px;
+        z-index: 9999;
+        background: #263d3e;
+        color: white;
+        padding: 8px;
+        font: 11px sans-serif;
+        border: 1px solid white;
+        display: flex;
+        gap: 9px;
+        align-items: center;
+      "
+      aria-label="开发验证面板"
+    >
+      <a style="color: white" href="/qa.html">正常载入</a>
+      <a style="color: white" href="/qa.html?no-webgl=1">禁用 WebGL 创建</a>
+      <button
+        id="lose-context"
+        style="color: white; border: 1px solid #aaa; padding: 3px 7px"
+      >
+        模拟 WebGL 上下文丢失
+      </button>
+      <button id="system-motion" style="color:white;border:1px solid #aaa;padding:3px 7px">模拟系统减少动态效果</button>
+      <output id="qa-result" aria-live="polite">仅用于本地验证</output>
+    </aside>
+    <script type="module">
+      if (new URLSearchParams(location.search).has("no-webgl")) {
+        const original = HTMLCanvasElement.prototype.getContext;
+        HTMLCanvasElement.prototype.getContext = function (type, ...args) {
+          return type === "webgl" ||
+            type === "webgl2" ||
+            type === "experimental-webgl"
+            ? null
+            : original.call(this, type, ...args);
+        };
+      }
+      document.getElementById("lose-context").addEventListener("click", () => {
+        const canvas = document.querySelector("canvas");
+        const context = canvas?.getContext("webgl2");
+        const extension = context?.getExtension("WEBGL_lose_context");
+        document.getElementById("qa-result").textContent = extension
+          ? "正在触发真实上下文丢失"
+          : "当前环境不提供丢失扩展";
+        extension?.loseContext();
+      });
+const realMatchMedia = window.matchMedia.bind(window);
+      const motionMedia = new EventTarget();
+      motionMedia.matches = false;
+      motionMedia.media = "(prefers-reduced-motion: reduce)";
+      window.matchMedia = (query) => query === motionMedia.media ? motionMedia : realMatchMedia(query);
+      document.getElementById("system-motion").addEventListener("click", () => {
+        motionMedia.matches = !motionMedia.matches;
+        motionMedia.dispatchEvent(new Event("change"));
+        document.getElementById("qa-result").textContent = "系统减少动态效果：" + (motionMedia.matches ? "开启" : "关闭");
+      });
+      await import("/src/main.tsx");
+    </script>
+  </body>
+</html>

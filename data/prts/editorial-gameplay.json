@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "prts-mode-82590",
+      "sourceTitle": "全息作战矩阵",
+      "kind": "mode",
+      "summary": "常驻的附加条件挑战，可选择历史关卡的重构批次，作战不消耗理智。",
+      "sections": [
+        {
+          "title": "指标选择",
+          "body": "每组基础指标必须选中一项，其作用是确定作战规则，不计入评分；附加指标可自行选择，并决定最终分数。开始前需检查固定指标造成的规则变化。",
+          "sourceKind": "curated"
+        },
+        {
+          "title": "记录与奖励",
+          "body": "单关达到8分获得蚀刻章，15分使其镀层。批次长期保留，满足该批次的收集要求后，可获得家具、首页背景及纪念蚀刻章。",
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourceType": "gameplay-reference",
+        "pageId": 82590,
+        "revisionId": 407538,
+        "sourceUrl": "https://prts.wiki/w/%E5%85%A8%E6%81%AF%E4%BD%9C%E6%88%98%E7%9F%A9%E9%98%B5",
+        "editorialBasis": "阅读缓存规则正文后归纳，保留模式差异，不覆盖未解析字段的缺口。"
+      }
+    },
+    {
+      "id": "prts-mode-27035",
+      "sourceTitle": "多维合作",
+      "kind": "mode",
+      "summary": "两名玩家分别守卫上、下两层地图，并通过联动装置相互支援的限时协作玩法。",
+      "sections": [
+        {
+          "title": "组队与难度",
+          "body": "可创建项目、按项目编号加入，或随机匹配。每个项目最多两人，编队与负责层级需提前确定；完成高压难度后才能挑战危急难度。作战不消耗理智。",
+          "sourceKind": "curated"
+        },
+        {
+          "title": "上下层协作",
+          "body": "双方只能操作自己层级的干员。上层漏过的敌人会进入下层，保护目标与关卡生命由双方共同承担。上层可为联动装置充能，装置效果在下层发挥。",
+          "sourceKind": "curated"
+        },
+        {
+          "title": "暂停与退出",
+          "body": "战斗固定为一倍速。暂停需要另一方同意，恢复战斗可由任一方执行。主动退出后无法重新加入，且不能取得该局收益；短暂掉线则有重连机会。",
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourceType": "gameplay-reference",
+        "pageId": 27035,
+        "revisionId": 311503,
+        "sourceUrl": "https://prts.wiki/w/%E5%A4%9A%E7%BB%B4%E5%90%88%E4%BD%9C",
+        "editorialBasis": "阅读缓存规则正文后归纳，保留模式差异，不覆盖未解析字段的缺口。"
+      }
+    },
+    {
+      "id": "prts-mode-78213",
+      "sourceTitle": "矢量突破",
+      "kind": "mode",
+      "summary": "以逐层主战场挑战和支线驻防为核心，可用驻防补给调整挑战强度。",
+      "sections": [
+        {
+          "title": "核心突破",
+          "body": "逐层突破会增加考核要求并强化敌人，训练官也将逐步解锁能力。关卡生命值为1；每层首次完成可取得较多积分，重复挑战仍有少量积分。",
+          "sourceKind": "curated"
+        },
+        {
+          "title": "特别战线",
+          "body": "通过核心突破首层后，可派出自己的少量干员限时夺取控制点。驻防会启用对应补给，同时使这些干员无法参加核心突破及其他控制点作战。",
+          "sourceKind": "curated"
+        },
+        {
+          "title": "补给取舍",
+          "body": "驻防可以撤离或替换；撤离会失去对应补给，普通控制点撤离还会联动撤出其高级控制点。补给有数量上限，同类型的普通、高级补给不能同时装备；也可以不驻防直接挑战。",
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourceType": "gameplay-reference",
+        "pageId": 78213,
+        "revisionId": 384912,
+        "sourceUrl": "https://prts.wiki/w/%E7%9F%A2%E9%87%8F%E7%AA%81%E7%A0%B4",
+        "editorialBasis": "阅读缓存规则正文后归纳，保留模式差异，不覆盖未解析字段的缺口。"
+      }
+    },
+    {
+      "id": "prts-mode-82364",
+      "sourceTitle": "争锋频道",
+      "kind": "mode",
+      "summary": "观察双方参赛单位的配置并选择支持队伍，通过礼物点数或连续竞猜参与排名。",
+      "sections": [
+        {
+          "title": "比赛环境",
+          "body": "参赛单位的攻击力调整为原值的150%，最大生命减半。开赛一分钟后出现逐渐收缩的兴奋圈；圈外单位获得攻击强化，同时累积内伤并持续受到真实伤害。",
+          "sourceKind": "curated"
+        },
+        {
+          "title": "两种对决",
+          "body": "礼物对决共10轮，初始有10000点观赛点数，获胜返还投入并增加奖励点数，点数耗尽则淘汰。竞猜对决按成功轮次排名，选错会淘汰；第6轮之前有一次保护机会。",
+          "sourceKind": "curated"
+        },
+        {
+          "title": "参与方式",
+          "body": "单人模式与7名路人共同观赛，仅支持礼物对决；多人模式可匹配或建群，并支持两种对决。主动离场会按当时状态结算。",
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourceType": "gameplay-reference",
+        "pageId": 82364,
+        "revisionId": 421696,
+        "sourceUrl": "https://prts.wiki/w/%E4%BA%89%E9%94%8B%E9%A2%91%E9%81%93",
+        "editorialBasis": "阅读缓存规则正文后归纳，保留模式差异，不覆盖未解析字段的缺口。"
+      }
+    },
+    {
+      "id": "prts-mode-20416",
+      "sourceTitle": "集成战略",
+      "kind": "mode",
+      "summary": "通过随机节点招募干员、收集道具并规划资源的探索玩法，不同主题拥有各自的难度与规则。",
+      "sections": [
+        {
+          "title": "干员与希望",
+          "body": "招募券与希望用于扩充队伍。普通招募初次最高限制在精英一满级，再次招募可解除这一限制，但不会超过干员在常规玩法中的养成程度。临时招募与助战招募采用各自的规则。",
+          "sourceKind": "curated"
+        },
+        {
+          "title": "节点与资源",
+          "body": "作战可取得经验和奖励，不期而遇提供事件选择，诡意行商用于交易。目标生命决定探索能否继续，源石锭是局内通用交易资源；护盾与临时生命的实现随主题不同。",
+          "sourceKind": "curated"
+        },
+        {
+          "title": "常规与特殊探索",
+          "body": "常规行动用于推进探索与解锁内容；月度小队和深入探索提供预设阵容或条件及独立任务，通常不结算常规探索分数，也不能解锁新的收藏品。",
+          "sourceKind": "curated"
+        },
+        {
+          "title": "暂离与结算",
+          "body": "非战斗状态下暂离会保存当前选择与资源。战斗中退出或断线则按探索失败结算。各主题的奖励、难度、招募消耗及特殊结局条件应以对应资料为准。",
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourceType": "gameplay-reference",
+        "pageId": 20416,
+        "revisionId": 420775,
+        "sourceUrl": "https://prts.wiki/w/%E9%9B%86%E6%88%90%E6%88%98%E7%95%A5",
+        "editorialBasis": "阅读缓存规则正文后归纳，保留模式差异，不覆盖未解析字段的缺口。"
+      }
+    },
+    {
+      "id": "prts-mode-76959",
+      "sourceTitle": "试验玩法一览",
+      "kind": "mode",
+      "summary": "收录常规作战之外的特殊模式，包括多人协作、随机探索、驻防挑战与经营玩法。",
+      "sections": [
+        {
+          "title": "玩法方向",
+          "body": "多维合作与促融共竞侧重协作；集成战略以随机探索和招募为主；保全派驻运用干员接力叠加能力；生息演算侧重回合经营与资源安排。危机合约、全息作战矩阵及矢量突破提供不同形式的挑战条件。",
+          "sourceKind": "curated"
+        },
+        {
+          "title": "开放形式",
+          "body": "不同模式可能限时开放、定期举办或长期常驻。玩法曾出现过并不代表目前开放，具体入口与活动时间需查看对应模式及活动记录。",
+          "sourceKind": "curated"
+        }
+      ],
+      "provenance": {
+        "sourceType": "gameplay-reference",
+        "pageId": 76959,
+        "revisionId": 410325,
+        "sourceUrl": "https://prts.wiki/w/%E8%AF%95%E9%AA%8C%E7%8E%A9%E6%B3%95%E4%B8%80%E8%A7%88",
+        "editorialBasis": "阅读缓存规则正文后归纳，保留模式差异，不覆盖未解析字段的缺口。"
+      }
+    }
+  ]
+}

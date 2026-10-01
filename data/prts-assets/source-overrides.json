@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "fallbacks": {
+    "ec225b018ee73fb0dbcfd567cddce94077fa6aa1": {
+      "sourceUrl": "https://media.prts.wiki/7/75/%E4%B8%AD%E5%9D%9A%E5%B9%B2%E5%91%98%E8%BD%AE%E6%8D%A2%E5%8D%A1%E6%B1%A005.jpg",
+      "originalSha1": "ec225b018ee73fb0dbcfd567cddce94077fa6aa1",
+      "url": "https://media.prts.wiki/thumb/7/75/%E4%B8%AD%E5%9D%9A%E5%B9%B2%E5%91%98%E8%BD%AE%E6%8D%A2%E5%8D%A1%E6%B1%A005.jpg/1440px-%E4%B8%AD%E5%9D%9A%E5%B9%B2%E5%91%98%E8%BD%AE%E6%8D%A2%E5%8D%A1%E6%B1%A005.jpg",
+      "sha1": "8c1dc684295e21300f169d08f76d5b315dea64b4",
+      "reason": "PRTS原JPEG的835584字节与公开SHA-1吻合，但JPEG数据截断无法完整解码；展示派生图使用PRTS imageinfo提供的1440px缩略图，原始文件仍完整缓存。",
+      "evidence": "data/prts-assets/source-error-history.json",
+      "checkedAt": "2026-10-01"
+    }
+  }
+}

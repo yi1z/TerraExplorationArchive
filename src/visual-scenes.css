@@ -1,0 +1,450 @@
+.visual-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  contain: paint;
+  --visual-x: 0;
+  --visual-y: 0;
+  color: var(--visual-accent);
+  opacity: 0.84;
+  transition: opacity 0.3s;
+}
+.visual-scene.is-reading {
+  opacity: 0.3;
+}
+.visual-atmosphere,
+.visual-horizon {
+  position: absolute;
+  inset: 0;
+}
+.visual-atmosphere {
+  background: radial-gradient(
+    ellipse at 69% 40%,
+    color-mix(in srgb, var(--visual-accent) 14%, transparent),
+    transparent 55%
+  );
+  transform: translate(
+    calc(var(--visual-x) * 8px),
+    calc(var(--visual-y) * 5px)
+  );
+  transition: transform 0.18s ease-out;
+}
+.visual-horizon {
+  background: linear-gradient(
+    transparent 70%,
+    color-mix(in srgb, var(--visual-accent) 5%, transparent)
+  );
+  mask-image: linear-gradient(90deg, transparent 25%, #000 65%);
+}
+.visual-geometry {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+  opacity: 0.26;
+  transform: translate(
+    calc(var(--visual-x) * -6px),
+    calc(var(--visual-y) * -4px)
+  );
+  transition: transform 0.2s ease-out;
+}
+.visual-geometry > * {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.visual-hairline {
+  stroke-width: 0.55;
+  opacity: 0.5;
+}
+.visual-scene-caption {
+  position: absolute;
+  right: 4.5%;
+  top: 17%;
+  font: 9px/1.6 var(--mono, monospace);
+  letter-spacing: 2px;
+  color: var(--visual-accent);
+  opacity: 0.45;
+  writing-mode: vertical-rl;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.visual-scene-caption i {
+  display: block;
+  width: 1px;
+  height: 30px;
+  background: currentColor;
+}
+.visual-originium .visual-atmosphere {
+  background:
+    radial-gradient(ellipse at 65% 65%, #a3413426, transparent 35%),
+    radial-gradient(ellipse at 79% 26%, #569bb322, transparent 50%);
+}
+.visual-crystals {
+  fill: #5686930d;
+  stroke-width: 1.1;
+  transform: translate(
+    calc(var(--visual-x) * 8px),
+    calc(var(--visual-y) * 4px)
+  );
+}
+.visual-measure {
+  opacity: 0.45;
+}
+.visual-scan {
+  stroke: var(--visual-secondary);
+  opacity: 0.75;
+}
+.is-active .visual-crystals {
+  animation: visual-rise 0.8s cubic-bezier(0.15, 0.8, 0.2, 1) both;
+}
+.is-active .visual-scan {
+  animation: visual-scan 0.9s ease-out both;
+}
+.visual-snow .visual-atmosphere {
+  background:
+    linear-gradient(140deg, transparent 30%, #89cbd40b 57%, #a5dcec20),
+    radial-gradient(ellipse at 72% 32%, #abced71a, transparent 55%);
+}
+.visual-mountains {
+  stroke-width: 0.8;
+  fill: #a8d7e209;
+  opacity: 0.8;
+}
+.visual-snowflakes {
+  fill: #d9eef4;
+  stroke: none;
+  opacity: 0.8;
+}
+.visual-crest {
+  opacity: 0.75;
+  stroke-width: 1.1;
+}
+.is-active .visual-snowflakes circle {
+  animation: visual-snow 0.9s ease-out both;
+}
+.is-active .visual-crest {
+  animation: visual-reveal 0.7s ease-out both;
+}
+.visual-abyss .visual-atmosphere {
+  background:
+    radial-gradient(ellipse at 74% 35%, #214c6c45, transparent 63%),
+    linear-gradient(0deg, #0a273642, transparent 60%);
+}
+.visual-abyss .visual-horizon {
+  background: linear-gradient(
+    174deg,
+    transparent 55%,
+    #42739010 56%,
+    transparent 58%,
+    #6796b215 80%,
+    transparent 85%
+  );
+}
+.visual-tides {
+  stroke-width: 1.2;
+  opacity: 0.8;
+  transform: translate(
+    calc(var(--visual-x) * 9px),
+    calc(var(--visual-y) * 4px)
+  );
+}
+.visual-sonar {
+  opacity: 0.48;
+}
+.visual-deep-dust {
+  fill: currentColor;
+  stroke: none;
+}
+.is-active .visual-tides {
+  animation: visual-tide 0.9s ease-out both;
+}
+.is-active .visual-sonar {
+  animation: visual-reveal 0.9s ease-out both;
+}
+.visual-rhine .visual-atmosphere {
+  background:
+    radial-gradient(ellipse at 78% 22%, #a1d7b529, transparent 44%),
+    radial-gradient(ellipse at 52% 75%, #cc855410, transparent 40%);
+}
+.visual-orbits {
+  stroke-width: 0.9;
+  transform: rotate(calc(var(--visual-x) * 2deg));
+}
+.visual-lab {
+  stroke: var(--visual-secondary);
+  stroke-width: 0.8;
+  opacity: 0.6;
+}
+.is-active .visual-orbits {
+  animation: visual-orbit 0.8s ease-out both;
+}
+.is-active .visual-lab {
+  animation: visual-reveal 0.65s ease-out both;
+}
+.visual-halo .visual-atmosphere {
+  background: radial-gradient(ellipse at 68% 28%, #e6d69b20, transparent 46%);
+}
+.visual-halo .visual-halo {
+  transform: rotate(calc(var(--visual-x) * 3deg));
+  stroke-width: 0.85;
+}
+.visual-feathers {
+  fill: #e0d5b208;
+  opacity: 0.55;
+}
+.is-active .visual-halo {
+  animation: visual-orbit 0.8s ease-out both;
+}
+.is-active .visual-feathers {
+  animation: visual-rise 0.8s ease-out both;
+}
+.visual-babel .visual-atmosphere {
+  background:
+    radial-gradient(ellipse at 70% 38%, #92738d29, transparent 58%),
+    linear-gradient(170deg, transparent 60%, #c9a4b009);
+}
+.visual-memory {
+  stroke: var(--visual-secondary);
+  opacity: 0.4;
+  stroke-width: 0.65;
+  transform: translate(
+    calc(var(--visual-x) * 6px),
+    calc(var(--visual-y) * 3px)
+  );
+}
+.visual-tower {
+  stroke-width: 1.2;
+  fill: #b48b9c07;
+}
+.visual-fracture {
+  stroke-dasharray: 90 12 15 8;
+  stroke: var(--visual-secondary);
+}
+.is-active .visual-memory {
+  animation: visual-memory 0.8s ease-out both;
+}
+.is-active .visual-tower {
+  animation: visual-reveal 0.9s ease-out both;
+}
+.visual-radiant .visual-atmosphere {
+  background:
+    conic-gradient(
+      from 225deg at 68% 50%,
+      transparent 0deg,
+      #e6bc6c12 10deg,
+      transparent 14deg,
+      transparent 34deg,
+      #ffd2880e 40deg,
+      transparent 44deg
+    ),
+    radial-gradient(ellipse at 70% 46%, #b58a3520, transparent 50%);
+}
+.visual-rays {
+  stroke-width: 0.7;
+  opacity: 0.48;
+}
+.visual-radiance {
+  stroke-width: 0.8;
+}
+.visual-lance {
+  stroke: var(--visual-secondary);
+  stroke-width: 2;
+  opacity: 0.8;
+}
+.is-active .visual-rays {
+  animation: visual-reveal 0.75s ease-out both;
+}
+.is-active .visual-lance {
+  animation: visual-lance 0.55s ease-out both;
+}
+.visual-ink .visual-atmosphere {
+  background:
+    radial-gradient(ellipse at 65% 39%, #658d8125, transparent 47%),
+    linear-gradient(150deg, transparent 40%, #d3caba0c);
+}
+.visual-ink .visual-geometry {
+  opacity: 0.29;
+}
+.visual-ink-mountains {
+  fill: #6da99a0b;
+  stroke-width: 0.8;
+  stroke-dasharray: 300 9 15 4;
+  opacity: 0.75;
+}
+.visual-brush {
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 1400;
+  opacity: 0.35;
+  transform: rotate(calc(var(--visual-x) * 1.5deg));
+}
+.visual-brush path + path {
+  stroke-width: 1.5;
+  opacity: 0.5;
+}
+.visual-seal {
+  stroke: var(--visual-secondary);
+  stroke-width: 2;
+  opacity: 0.85;
+}
+.is-active .visual-brush {
+  animation: visual-ink 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.is-active .visual-seal {
+  animation: visual-reveal 0.7s ease-out both;
+}
+@keyframes visual-rise {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes visual-reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes visual-scan {
+  0% {
+    opacity: 0;
+    translate: 0 -140px;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.25;
+    translate: 0 310px;
+  }
+}
+@keyframes visual-snow {
+  from {
+    opacity: 0;
+    translate: 15px -22px;
+  }
+  to {
+    opacity: 0.8;
+    translate: 0 0;
+  }
+}
+@keyframes visual-tide {
+  from {
+    opacity: 0;
+    translate: 12px 17px;
+  }
+  to {
+    opacity: 0.8;
+    translate: 0 0;
+  }
+}
+@keyframes visual-orbit {
+  from {
+    opacity: 0;
+    rotate: -8deg;
+  }
+  to {
+    opacity: 1;
+    rotate: 0deg;
+  }
+}
+@keyframes visual-memory {
+  from {
+    opacity: 0;
+    translate: -8px 5px;
+  }
+  to {
+    opacity: 0.4;
+    translate: 0 0;
+  }
+}
+@keyframes visual-lance {
+  from {
+    opacity: 0;
+    stroke-dasharray: 0 900;
+  }
+  to {
+    opacity: 0.8;
+    stroke-dasharray: 900 0;
+  }
+}
+@keyframes visual-ink {
+  from {
+    opacity: 0;
+    stroke-dashoffset: 1400;
+  }
+  to {
+    opacity: 0.35;
+    stroke-dashoffset: 0;
+  }
+}
+.visual-scene.is-static * {
+  animation: none !important;
+  transition: none !important;
+}
+.visual-scene.is-static .visual-atmosphere,
+.visual-scene.is-static .visual-geometry {
+  transform: none;
+}
+.visual-scene.is-static .visual-scan {
+  opacity: 0.2;
+}
+.reduce-motion .visual-scene *,
+.motion-paused .visual-scene * {
+  animation: none !important;
+  transition: none !important;
+}
+@media (max-width: 899px), (pointer: coarse) {
+  .visual-scene {
+    opacity: 0.6;
+  }
+  .visual-geometry {
+    width: 150%;
+    height: 520px;
+    left: -46%;
+    top: 30px;
+    opacity: 0.2;
+  }
+  .visual-scene-caption {
+    display: none;
+  }
+  .visual-atmosphere {
+    background-size: auto;
+  }
+  .visual-scene * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .visual-snowflakes circle:nth-child(n + 9),
+  .visual-deep-dust circle:nth-child(n + 7) {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .visual-scene * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .visual-atmosphere,
+  .visual-geometry,
+  .visual-crystals,
+  .visual-tides,
+  .visual-orbits,
+  .visual-halo .visual-halo,
+  .visual-memory,
+  .visual-brush {
+    transform: none;
+  }
+}

@@ -1,0 +1,8 @@
+# Preserve identical data bytes on Windows, macOS and Linux.
+* text=auto eol=lf
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.webp -text
+*.woff -text
+*.woff2 -text
